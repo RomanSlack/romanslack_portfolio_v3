@@ -86,42 +86,51 @@ main {
 /* Mobile styles */
 @media (max-width: 768px) {
     body {
-        height: 100vh;
-        overflow: hidden;
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
     }
 
     header {
-        padding: 15px 20px;
+        padding: 30px 20px 20px 20px;
     }
 
     header h1 {
-        font-size: 28px;
+        font-size: 48px;
     }
 
     main {
-        padding: 15px 20px;
-        overflow-y: auto;
+        padding: 20px 20px;
+        overflow-y: visible;
     }
 
     .landing-layout {
         flex-direction: column;
         justify-content: flex-start;
-        gap: 30px;
+        gap: 50px;
         height: auto;
     }
 
     .nav-buttons {
-        gap: 25px;
+        gap: 40px;
         width: 100%;
+        padding-left: 0;
     }
 
     .nav-buttons a {
-        font-size: 32px;
+        font-size: 42px;
+        width: fit-content;
+    }
+
+    .profile-image-container {
+        width: 100%;
+        padding: 0 20px;
     }
 
     .profile-image {
-        max-width: 280px;
-        margin-top: auto;
+        max-width: 100%;
+        width: 100%;
+        margin-top: 0;
     }
 }
 
