@@ -205,8 +205,9 @@ main {
 }
 
 .experience-content {
-    flex: 0 0 auto;
-    max-width: 50%;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 600px;
 }
 
 .experience-title {
@@ -219,6 +220,17 @@ main {
     font-size: 24px;
     margin-bottom: 25px;
     opacity: 0.8;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.company-link {
+    color: #3B82F6;
+    text-decoration: underline;
+}
+
+.company-link:hover {
+    opacity: 0.7;
 }
 
 .experience-bullets {
@@ -235,10 +247,12 @@ main {
 
 .experience-image-container {
     flex: 0 0 auto;
+    padding-right: 120px;
 }
 
 .experience-image {
     width: 400px;
+    max-width: 100%;
     height: 325px;
     object-fit: cover;
 }
@@ -300,11 +314,11 @@ footer {
 
 @media (max-width: 768px) {
     .experience-main {
-        padding: 0 20px;
+        padding-left: 20px;
     }
 
     .experience-container {
-        padding: 30px 0;
+        padding: 30px 20px 30px 0;
         gap: 50px;
     }
 
@@ -312,6 +326,10 @@ footer {
         flex-direction: column;
         gap: 30px;
         align-items: flex-start;
+    }
+
+    .experience-content {
+        max-width: 100%;
     }
 
     .experience-title {
@@ -322,6 +340,11 @@ footer {
     .experience-date {
         font-size: 18px;
         margin-bottom: 20px;
+        white-space: normal;
+    }
+
+    .experience-bullets {
+        padding-left: 20px;
     }
 
     .experience-bullets li {
@@ -332,6 +355,7 @@ footer {
 
     .experience-image-container {
         width: 100%;
+        padding-right: 0;
     }
 
     .experience-image {
