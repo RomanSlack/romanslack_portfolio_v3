@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoRidge Search - AI-Powered Business Intelligence Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            background-color: #0d1117;
+            color: #e6edf3;
+            line-height: 1.6;
+            font-size: 16px;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 2em;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #21262d;
+            color: #e6edf3;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #21262d;
+            color: #e6edf3;
+        }
+
+        h3 {
+            font-size: 1.25em;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            color: #e6edf3;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #e6edf3;
+        }
+
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin: 16px 0;
+        }
+
+        .badges img {
+            height: 28px;
+        }
+
+        .tagline {
+            font-weight: 600;
+            margin: 16px 0;
+            font-size: 1.1em;
+        }
+
+        .nav-links {
+            margin: 16px 0;
+            font-size: 0.95em;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #21262d;
+            margin: 24px 0;
+        }
+
+        .header-image {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        pre {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 16px;
+            overflow-x: auto;
+            margin-bottom: 16px;
+            font-size: 0.85em;
+            line-height: 1.45;
+            max-width: 100%;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+        }
+
+        code {
+            background-color: #161b22;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+            font-size: 0.85em;
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #e6edf3;
+        }
+
+        .emoji {
+            margin-right: 4px;
+        }
+
+        blockquote {
+            border-left: 4px solid #30363d;
+            padding-left: 16px;
+            margin-left: 0;
+            margin-bottom: 16px;
+            color: #8b949e;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+
+        th, td {
+            border: 1px solid #30363d;
+            padding: 8px 13px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #161b22;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #0d1117;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .feature-list li::before {
+            content: "•";
+            color: #58a6ff;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 12px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+                word-wrap: break-word;
+            }
+
+            h2 {
+                font-size: 1.3em;
+                word-wrap: break-word;
+            }
+
+            h3 {
+                font-size: 1.1em;
+                word-wrap: break-word;
+            }
+
+            pre {
+                padding: 10px;
+                font-size: 0.75em;
+                overflow-x: auto;
+            }
+
+            code {
+                font-size: 0.8em;
+                word-break: break-all;
+            }
+
+            .badges {
+                justify-content: center;
+            }
+
+            .badges img {
+                height: 22px;
+                max-width: 100%;
+            }
+
+            .tagline {
+                font-size: 1em;
+            }
+
+            .nav-links {
+                font-size: 0.85em;
+            }
+
+            .header-image {
+                width: 100%;
+                height: auto;
+            }
+
+            ul, ol {
+                margin-left: 16px;
+                padding-left: 8px;
+            }
+
+            table {
+                font-size: 0.85em;
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 16px 10px;
+            }
+
+            h1 {
+                font-size: 1.4em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            h3 {
+                font-size: 1.05em;
+            }
+
+            pre {
+                padding: 8px;
+                font-size: 0.7em;
+            }
+
+            .badges img {
+                height: 20px;
+            }
+
+            .tagline {
+                font-size: 0.95em;
+            }
+
+            .nav-links {
+                font-size: 0.8em;
+            }
+        }
+
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #21262d;
+            text-align: center;
+            color: #8b949e;
+            font-size: 0.9em;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: rgba(33, 38, 45, 0.8);
+            backdrop-filter: blur(10px);
+            color: #e6edf3;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+            border: 1px solid rgba(48, 54, 61, 0.5);
+            margin-bottom: 24px;
+        }
+
+        .back-button:hover {
+            background-color: rgba(48, 54, 61, 0.9);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="javascript:history.back()" class="back-button">← Back</a>
+        <div class="center">
+            <h1>EchoRidge Search - AI-Powered Business Intelligence Platform</h1>
+
+            <div class="badges">
+                <img src="https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python" alt="Python">
+                <img src="https://img.shields.io/badge/Next.js-15+-black?style=for-the-badge&logo=nextdotjs" alt="Next.js">
+                <img src="https://img.shields.io/badge/FastAPI-API-009688?style=for-the-badge&logo=fastapi" alt="FastAPI">
+                <img src="https://img.shields.io/badge/Google_Cloud-Storage-4285F4?style=for-the-badge&logo=googlecloud" alt="GCS">
+                <img src="https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker" alt="Docker">
+            </div>
+
+            <p class="tagline"><strong>Complete business intelligence platform: AI pipeline + cloud storage + real-time visualization</strong></p>
+
+            <p class="nav-links">
+                <a href="#-quick-start">Quick Start</a> •
+                <a href="#-architecture-overview">Architecture</a> •
+                <a href="#pipeline-backend">Pipeline Backend</a> •
+                <a href="#frontend-v2">Frontend v2</a>
+            </p>
+        </div>
+
+        <hr>
+
+        <div class="center">
+            <img src="header_image.png" alt="Project Echo Ridge - AI Business Intelligence Pipeline" class="header-image">
+        </div>
+
+        <hr>
+
+        <h2 id="-architecture-overview">🏗️ Architecture Overview</h2>
+
+        <p>EchoRidge Search consists of three integrated systems:</p>
+
+        <h3 id="pipeline-backend"><strong>Pipeline Backend</strong> (Batch Processing)</h3>
+        <pre><code>CLI Input → Places Discovery → Web Scraping → Hybrid AI Scoring → GCS Storage</code></pre>
+
+        <h3><strong>Pipeline API</strong> (Orchestration)</h3>
+        <pre><code>Frontend → Pipeline API → PMF Backend → GCS Upload → Status Polling</code></pre>
+
+        <h3 id="frontend-v2"><strong>Frontend v2</strong> (Real-time Visualization)</h3>
+        <pre><code>User Interface → Pipeline API → Run Status → GCS Results → Map Visualization</code></pre>
+
+        <h3><strong>Complete Data Flow</strong></h3>
+        <pre><code>User Query → Pipeline API (8082) → PMF Backend → JSONL Files → GCS Bucket
+                                                                    ↓
+Frontend (3000) ← Status Updates ← Pipeline API ← GCS Run Data</code></pre>
+
+        <h3>🎯 Key Features</h3>
+        <ul class="feature-list">
+            <li><strong>Cloud-Native Storage</strong>: Google Cloud Storage for pipeline results</li>
+            <li><strong>Hybrid AI Scoring</strong>: Combined LLM + deterministic echo-ridge scoring</li>
+            <li><strong>Real-time Pipeline</strong>: Live status updates and progress tracking</li>
+            <li><strong>Geographic Visualization</strong>: Map-based results display</li>
+            <li><strong>Production Ready</strong>: GCS integration, status polling, error handling</li>
+            <li><strong>Scalable</strong>: Cloud storage handles unlimited pipeline runs</li>
+        </ul>
+
+        <h2 id="-quick-start">🚀 Quick Start</h2>
+
+        <h3>Prerequisites</h3>
+
+        <ol>
+            <li>
+                <strong>Required API Keys</strong> (add to <code>.env</code> file):
+                <ul>
+                    <li><code>GOOGLE_PLACES_API_KEY</code> - For place discovery</li>
+                    <li><code>FIRECRAWL_API_KEY</code> - For web scraping</li>
+                    <li><code>OPENAI_API_KEY</code> - For AI scoring</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Google Cloud Setup</strong> (for GCS storage):
+                <ul>
+                    <li>Create a GCS bucket</li>
+                    <li>Set up service account credentials</li>
+                    <li>Download credentials JSON file</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>Option 1: Full Stack (Pipeline + Frontend)</h3>
+        <pre><code># 1. Setup environment
+cp .env.example .env
+# Edit .env with your API keys and GCS configuration
+
+# 2. Install backend dependencies
+cd pmf_finder_backend
+pip install -r requirements.txt
+
+# 3. Start Pipeline API
+cd ../services/pipeline
+python main.py &  # Runs on port 8082
+
+# 4. Start Frontend v2
+cd ../../echoridge_search_frontend_v2
+npm install
+npm run dev  # Visit http://localhost:3000</code></pre>
+
+        <h3>Option 2: CLI Pipeline Only</h3>
+        <pre><code># Run pipeline directly with CLI
+cd pmf_finder_backend
+python run_pipeline.py --query "Private schools in Tampa" --max 25
+
+# With GCS upload enabled
+export GCS_ENABLED=true
+export GCS_BUCKET_NAME=your-bucket-name
+export GCS_CREDENTIALS_PATH=/path/to/credentials.json
+python run_pipeline.py --query "Restaurants in Austin" --max 50</code></pre>
+
+        <h3>Option 3: API-Triggered Pipeline</h3>
+        <pre><code># Start Pipeline API
+cd services/pipeline
+python main.py
+
+# Trigger from another terminal
+curl -X POST http://localhost:8082/v1/pipeline/execute \
+  -H "Content-Type: application/json" \
+  -d '{"query": "coffee shops in Seattle", "max_results": 20}'
+
+# Check status
+curl http://localhost:8082/v1/pipeline/status/{job_id}</code></pre>
+
+        <h2>📦 Services Architecture</h2>
+
+        <h3><strong>Pipeline Backend</strong> (<code>pmf_finder_backend/</code>)</h3>
+        <ul>
+            <li><strong>Language</strong>: Python 3.11+ with asyncio</li>
+            <li><strong>Purpose</strong>: Batch business discovery and hybrid AI scoring</li>
+            <li><strong>APIs</strong>: Google Places, OpenAI GPT-4, Firecrawl, echo-ridge</li>
+            <li><strong>Output</strong>: Structured JSONL files (places, scrapes, scores, hybrid results)</li>
+            <li><strong>Storage</strong>: Local filesystem + Google Cloud Storage</li>
+        </ul>
+
+        <h3><strong>Pipeline API</strong> (<code>services/pipeline/</code>)</h3>
+        <ul>
+            <li><strong>Language</strong>: Python FastAPI</li>
+            <li><strong>Port</strong>: 8082</li>
+            <li><strong>Purpose</strong>: Orchestrate pipeline execution and serve results from GCS</li>
+            <li><strong>Key Endpoints</strong>:
+                <ul>
+                    <li><code>/v1/pipeline/execute</code> - Trigger new pipeline run</li>
+                    <li><code>/v1/pipeline/status/{job_id}</code> - Get execution status</li>
+                    <li><code>/v1/runs/list</code> - List all runs from GCS</li>
+                    <li><code>/v1/runs/{run_id}</code> - Get complete run data</li>
+                    <li><code>/v1/runs/{run_id}/map-data</code> - Get visualization data</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3><strong>GCS Storage Client</strong> (<code>pmf_finder_backend/storage/</code>)</h3>
+        <ul>
+            <li><strong>Purpose</strong>: Upload and retrieve pipeline results from cloud</li>
+            <li><strong>Features</strong>:
+                <ul>
+                    <li>Automatic upload after pipeline completion</li>
+                    <li>Organized storage: <code>results/YYYY/MM/DD/run_id/</code></li>
+                    <li>Manifest files with run metadata</li>
+                    <li>Signed URL generation for file access</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3><strong>Frontend v2</strong> (<code>echoridge_search_frontend_v2/</code>)</h3>
+        <ul>
+            <li><strong>Framework</strong>: Next.js 15 + React 19 + TypeScript</li>
+            <li><strong>Port</strong>: 3000</li>
+            <li><strong>Purpose</strong>: Real-time pipeline execution and results visualization</li>
+            <li><strong>Features</strong>:
+                <ul>
+                    <li>Pipeline trigger interface</li>
+                    <li>Live status polling</li>
+                    <li>Run history from GCS</li>
+                    <li>Map-based results display (coming soon)</li>
+                    <li>Responsive dark UI with Tailwind CSS</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3><strong>Storage Layer</strong></h3>
+        <ul>
+            <li><strong>Google Cloud Storage</strong>: Primary storage for pipeline results</li>
+            <li><strong>Local JSONL Files</strong>: Temporary storage during pipeline execution</li>
+            <li><strong>Structure</strong>: Date-organized with run manifests</li>
+        </ul>
+
+        <h2>🛠️ Development Commands</h2>
+        <pre><code># Backend Pipeline
+cd pmf_finder_backend
+python run_pipeline.py --query "Schools in NYC" --max 50
+
+# ETL Operations
+cd services/etl
+python main.py ingest --latest
+python main.py status
+python main.py list-runs
+
+# API Development
+cd services/api
+python main.py  # Start on localhost:8081
+
+# Frontend Development
+cd echoridge_search_frontend
+npm run dev  # Start on localhost:3000</code></pre>
+
+        <h2>🌐 User Interfaces</h2>
+
+        <h3><strong>Modern Search Frontend</strong> (Port 3000)</h3>
+        <ul>
+            <li><strong>🔍 Universal Search</strong>: Query 50k+ companies with instant results</li>
+            <li><strong>📊 Faceted Filtering</strong>: Filter by region, industry, score ranges</li>
+            <li><strong>⚡ SQLite WASM</strong>: Client-side caching for &lt;350ms performance</li>
+            <li><strong>🔗 Evidence Links</strong>: Direct access to scraped web content</li>
+            <li><strong>👤 User Overlays</strong>: Bookmarks, notes, comparisons (local storage)</li>
+        </ul>
+
+        <h3><strong>Legacy Flask Dashboard</strong> (Port 5000)</h3>
+        <ul>
+            <li><strong>📈 Run Analytics</strong>: Cross-run business intelligence</li>
+            <li><strong>🗺️ Heat Maps</strong>: Geographic density visualization</li>
+            <li><strong>📋 Run Management</strong>: Pipeline execution history</li>
+            <li><strong>🔧 Development</strong>: Backend data exploration and debugging</li>
+        </ul>
+
+        <h2>🔌 API Endpoints</h2>
+
+        <h3><strong>Catalog API</strong> (<code>localhost:8081</code>)</h3>
+        <pre><code># Company search with pagination
+GET /v1/catalog/companies?q=schools&region=florida&limit=20
+
+# Single company details
+GET /v1/catalog/companies/{id}
+
+# Evidence for a company
+GET /v1/catalog/companies/{id}/evidence
+
+# Statistics and health
+GET /v1/catalog/stats
+GET /health</code></pre>
+
+        <h3><strong>Legacy Flask API</strong> (<code>localhost:5000</code>)</h3>
+        <pre><code>GET /api/runs           # Available pipeline runs
+GET /api/analytics      # Aggregated statistics
+GET /api/heatmap-data   # Geographic distribution</code></pre>
+
+        <h2>⚙️ Configuration</h2>
+
+        <h3>Pipeline Environment (<code>.env</code>)</h3>
+        <pre><code># Required API Keys
+GOOGLE_PLACES_API_KEY="your_google_places_api_key"
+OPENAI_API_KEY="your_openai_api_key"
+FIRECRAWL_API_KEY="your_firecrawl_api_key"
+
+# Google Cloud Storage Configuration
+GCS_ENABLED=true
+GCS_BUCKET_NAME="your-bucket-name"
+GCS_CREDENTIALS_PATH="/path/to/service-account-key.json"
+GCP_PROJECT_ID="your-project-id"
+
+# Hybrid Scoring Configuration
+HYBRID_SCORING_ENABLED=true
+EMBEDDED_ECHO_RIDGE_ENABLED=true
+ECHO_RIDGE_HOST=127.0.0.1
+ECHO_RIDGE_PORT=8070
+
+# AI Model Configuration
+GPT_MODEL="gpt-4o-mini"
+GOOGLE_PLACES_REQUESTS_PER_MINUTE=600
+OPENAI_REQUESTS_PER_MINUTE=500</code></pre>
+
+        <h3>Frontend v2 Environment (<code>.env.local</code>)</h3>
+        <pre><code># Pipeline API endpoint
+NEXT_PUBLIC_API_URL=http://localhost:8082
+
+# Optional: Disable telemetry
+NEXT_TELEMETRY_DISABLED=1</code></pre>
+
+        <h3>Geographic Coverage</h3>
+        <p><strong>Predefined Metro Areas</strong> (instant resolution):</p>
+        <pre><code>Chicago, NYC, Los Angeles, Boston, Seattle, Denver, Phoenix, Miami,
+Atlanta, Dallas, Houston, San Francisco, Portland, Nashville, Detroit,
+Minneapolis, Tampa, Orlando, Charlotte, Indianapolis, Columbus, Austin,
+Jacksonville, San Antonio, San Diego, Fort Worth, Philadelphia,
+Washington DC, Las Vegas, Rapid City, Syracuse, Madison + more...</code></pre>
+
+        <p><strong>Dynamic Geocoding</strong>: Automatic fallback to Google Geocoding API for unlisted regions</p>
+
+        <h2>Project Structure</h2>
+        <pre><code>pmf_finder_backend/
+├── run_pipeline.py              # Main CLI entry point
+├── input/
+│   ├── cli.py                   # Query processing & orchestration
+│   └── geofence.py              # Geographic boundary resolution
+├── places_search/
+│   └── places_google.py         # Google Places API integration
+├── dedupe.py                    # Multi-strategy deduplication
+├── scraping_module/
+│   └── scrape_firecrawl.py      # Web content extraction
+├── llm_scoring/
+│   └── llm_score.py             # OpenAI GPT-4 DIMB analysis
+├── flask_interface/
+│   ├── app.py                   # Flask web application
+│   ├── templates/               # Web dashboard UI
+│   └── static/                  # Assets & styling
+├── data/                        # Organized output storage
+│   └── YYYY/MM/DD/run_id/       # Timestamped hierarchies
+└── common_models.py             # Pydantic data validation</code></pre>
+
+        <h2>Advanced Usage</h2>
+
+        <h3>Custom Queries</h3>
+        <pre><code># Geographic specificity
+python run_pipeline.py --query "Dentists in Rapid City South Dakota" --max 30
+
+# Category + location patterns
+python run_pipeline.py --query "Coffee shops in Syracuse NY" --max 40
+python run_pipeline.py --query "Tech companies in Madison Wisconsin" --max 50</code></pre>
+
+        <h3>Output Structure</h3>
+        <p>Each run creates organized data locally and in GCS at <code>results/YYYY/MM/DD/run_id/</code>:</p>
+        <pre><code>├── query.json              # Original query & geofence
+├── run.json                # Execution metadata & statistics
+├── manifest.json           # GCS upload metadata
+├── places/
+│   ├── places_raw.jsonl    # Raw API responses
+│   └── places_norm.jsonl   # Discovered & normalized businesses
+├── scrapes/
+│   └── scrapes.jsonl       # Web content snapshots
+└── scores/
+    ├── scores.jsonl        # Full AI scorecards with reasoning
+    ├── scores_condensed.jsonl  # Summary data
+    └── hybrid_results.jsonl    # Combined AI + deterministic scores</code></pre>
+
+        <p><strong>Run ID Format</strong>: <code>YYYYMMDD_HHMMSS_category_region</code></p>
+        <ul>
+            <li>Example: <code>20251012_143025_private_schools_tampa</code></li>
+            <li>Enables date-based organization and easy identification</li>
+        </ul>
+
+        <h2>🔧 Troubleshooting</h2>
+
+        <h3><strong>Common Issues</strong></h3>
+
+        <p><strong>Pipeline API not accessible</strong></p>
+        <pre><code># Check if Pipeline API is running
+curl http://localhost:8082/health
+
+# Start Pipeline API if needed
+cd services/pipeline
+python main.py</code></pre>
+
+        <p><strong>GCS upload failing</strong></p>
+        <pre><code># Verify GCS configuration
+echo $GCS_ENABLED
+echo $GCS_BUCKET_NAME
+
+# Test credentials
+gcloud auth application-default login
+# OR set credentials path
+export GCS_CREDENTIALS_PATH=/path/to/credentials.json
+
+# Verify bucket exists and is accessible
+gsutil ls gs://$GCS_BUCKET_NAME</code></pre>
+
+        <p><strong>Frontend not showing runs</strong></p>
+        <pre><code># Check Pipeline API GCS endpoints
+curl http://localhost:8082/v1/runs/list
+
+# Verify GCS_ENABLED in pipeline environment
+cd services/pipeline
+grep GCS_ENABLED ../../.env
+
+# Check frontend API configuration
+cd echoridge_search_frontend_v2
+cat .env.local | grep NEXT_PUBLIC_API_URL</code></pre>
+
+        <p><strong>No backend data found locally</strong></p>
+        <pre><code># Generate sample data
+cd pmf_finder_backend
+python run_pipeline.py --query "Schools in Tampa" --max 10
+
+# Check data was created
+find data -name "*.jsonl" -type f | head -5
+
+# List recent runs
+python run_pipeline.py --list-runs</code></pre>
+
+        <h3><strong>Performance Optimization</strong></h3>
+
+        <p><strong>Faster ETL processing</strong></p>
+        <pre><code># Use condensed scores for large datasets
+docker-compose -f docker-compose.catalog.yml run --rm catalog-etl python main.py ingest --latest --fast</code></pre>
+
+        <p><strong>Frontend caching</strong></p>
+        <ul>
+            <li>SQLite WASM cache persists between sessions</li>
+            <li>Clear cache: Browser DevTools &gt; Storage &gt; Clear All</li>
+            <li>Disable cache: Set <code>NEXT_PUBLIC_DB_DRIVER=indexeddb</code></li>
+        </ul>
+
+        <h3><strong>Data Pipeline Issues</strong></h3>
+
+        <p><strong>API Rate Limits</strong></p>
+        <pre><code># Reduce concurrency in .env
+GOOGLE_PLACES_REQUESTS_PER_MINUTE=300
+OPENAI_REQUESTS_PER_MINUTE=200</code></pre>
+
+        <p><strong>Incomplete scoring</strong></p>
+        <pre><code># Check scoring logs
+cd pmf_finder_backend
+tail -f data/latest_run/logs/scoring.log</code></pre>
+
+        <ul>
+            <li><strong>API Key Issues</strong>: Verify <code>GOOGLE_PLACES_API_KEY</code>, <code>OPENAI_API_KEY</code>, and <code>FIRECRAWL_API_KEY</code> in <code>.env</code></li>
+            <li><strong>Rate Limits</strong>: Adjust <code>*_REQUESTS_PER_MINUTE</code> variables based on your API tier</li>
+            <li><strong>Geographic Issues</strong>: Check predefined metro list or verify internet for geocoding</li>
+            <li><strong>Web Dashboard</strong>: Ensure Flask dependencies installed: <code>pip install -r flask_interface/requirements.txt</code></li>
+        </ul>
+
+        <hr>
+
+        <div class="footer">
+            <p><strong>Project Echo Ridge</strong> • Production-grade Business Intelligence Pipeline with AI-powered PMF Analysis</p>
+            <p><em>Built for enterprise-scale business discovery and market analysis</em></p>
+        </div>
+    </div>
+</body>
+</html>
