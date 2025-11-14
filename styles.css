@@ -511,6 +511,12 @@ footer {
         padding-top: calc(30px + 1px);
     }
 
+    .back-arrow {
+        font-size: 40px;
+        left: 20px;
+        top: 45px;
+    }
+
     .projects-main {
         padding: 30px 20px;
     }
@@ -544,8 +550,15 @@ footer {
     }
 
     .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    @media (max-width: 500px) {
+        .projects-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
     }
 
     .project-card {
