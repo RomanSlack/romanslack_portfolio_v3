@@ -1,0 +1,299 @@
+[
+  {
+    "id": 1,
+    "title": "Discerio",
+    "description": "Scratch for AI Agents - Discer.io is an interactive platform that teaches agentic AI concepts through a multiplayer battle royale game. Build AI agents using a visual block-based programming interface, deploy them into a live combat arena, and watch them make real-time decisions using large language models. Created for HackPrinceton Fall 2025.",
+    "date": "11-2025",
+    "image": "images/resized_1_portfolio/discerio.png",
+    "link": "https://github.com/RomanSlack/Discerio",
+    "category": "programming"
+  },
+  {
+    "id": 2,
+    "title": "Hlynr Intercept",
+    "description": "A radar based missile interception reinforcement learning environment with a custom Unity simulation layer, currently researching radar observation spaces and a novel implementation of single policy hierarchical learning.",
+    "date": "05-2025",
+    "image": "images/resized_1_portfolio/hlynr_intercept.png",
+    "link": "https://github.com/RomanSlack/Hlynr_Intercept",
+    "category": "programming"
+  },
+  {
+    "id": 3,
+    "title": "AUS-Lab",
+    "description": "(Autonomous UAV Swarm Laboratory) An experimental framework for LLM-driven cognitive control of UAV swarms. It links agentic reasoning with swarm simulation to enable autonomous coordination, adaptive behavior, and hardware-in-the-loop testing.",
+    "date": "10-2025",
+    "image": "images/resized_1_portfolio/aus_lab.png",
+    "link": "https://github.com/RomanSlack/AUS-Lab",
+    "category": "programming"
+  },
+  {
+    "id": 4,
+    "title": "AI Bootcamp",
+    "description": "RIT AI Club thing etc…",
+    "date": "",
+    "image": "images/resized_1_portfolio/aus_lab.png",
+    "link": "https://github.com/RIT-AI-Club/ai_bootcamp_backend",
+    "category": "programming"
+  },
+  {
+    "id": 5,
+    "title": "GapRunner",
+    "description": "(80% Gain on 2025 Data) GapRunner is a backtesting and live-trading engine that simulates a top-gainers momentum strategy using real minute-level equity data. Custom Universe collection system.",
+    "date": "08-2025",
+    "image": "images/resized_1_portfolio/gaprunner.png",
+    "link": "https://github.com/RomanSlack/GapRunner",
+    "category": "programming"
+  },
+  {
+    "id": 6,
+    "title": "SimuVerse",
+    "description": "A revolutionary multi-agent simulation environment where AI agents powered by LLMs live and interact on Mars, paving the way for advanced research in artificial intelligence.",
+    "date": "02-2024",
+    "image": "images/resized_1_portfolio/simuverse.jpeg",
+    "link": "https://simuverse.world/",
+    "category": "programming"
+  },
+  {
+    "id": 7,
+    "title": "VOS",
+    "description": "Virtual Operating System - A multi-agent orchestration system where specialized AI agents collaborate through event-driven communication and a great looking UI designed by me.",
+    "date": "07-2025",
+    "image": "images/resized_1_portfolio/vos.png",
+    "link": "https://github.com/Forkei/VOS",
+    "category": "programming"
+  },
+  {
+    "id": 8,
+    "title": "FengShui.fy",
+    "description": "(Winner of Best Use of AI @ Columbia) An AI-powered interior design analyzer merging traditional feng shui with modern computer vision. Using YOLOv11 object detection, Gemini 2.5 AI reasoning, and Blender-based 3D reconstruction, it evaluates spatial balance, energy flow, and design harmony directly from room photos. Built with Next.js, FastAPI, and a zen-inspired interface for intuitive, meditative interaction.",
+    "date": "10-2025",
+    "image": "images/resized_1_portfolio/feng_shui.jpg",
+    "link": "https://github.com/RomanSlack/fengshui.ai",
+    "category": "programming"
+  },
+  {
+    "id": 9,
+    "title": "EchoRidge Search",
+    "description": "An AI-powered business intelligence pipeline combining discovery, scraping, and hybrid LLM scoring with real-time visualization. Built on Python, FastAPI, and Next.js, it automates market research by aggregating, ranking, and mapping businesses through a cloud-native GCS pipeline.",
+    "date": "06-2025",
+    "image": "images/resized_1_portfolio/echo_ridge.jpg",
+    "link": "/echoridge/index.html",
+    "category": "programming"
+  },
+  {
+    "id": 10,
+    "title": "UltraThinkV2",
+    "description": "A Claude-driven automation framework that converts natural language instructions into structured AI workflows and executable code pipelines. It streamlines SaaS project creation through task decomposition, AI reasoning, and automated debugging, cutting development time by over 80% on large builds.",
+    "date": "07-2025",
+    "image": "images/resized_1_portfolio/ultrathinkv2.png",
+    "link": "https://github.com/RomanSlack/UltraThink_V2",
+    "category": "programming"
+  },
+  {
+    "id": 11,
+    "title": "FaceMusic",
+    "description": "A lightweight Python tool that maps facial expressions to media playback. Using MediaPipe for real-time detection, it lets users trigger YouTube or local audio with gestures like eyebrow raises or winks; turning the webcam into an interactive controller.",
+    "date": "06-2025",
+    "image": "images/resized_1_portfolio/facemusic.png",
+    "link": "https://github.com/RomanSlack/face_music",
+    "category": "programming"
+  },
+  {
+    "id": 12,
+    "title": "Skema",
+    "description": "A clean, AI-integrated productivity dashboard that unifies idea management, scheduling, and journaling into one seamless interface.",
+    "date": "07-2025",
+    "image": "images/resized_1_portfolio/skema.png",
+    "link": "https://github.com/RomanSlack/Skema",
+    "category": "programming"
+  },
+  {
+    "id": 13,
+    "title": "ClickUp Scrape",
+    "description": "A powerful Python tool to download all image attachments from your ClickUp workspace with advanced features like resume capability, duplicate detection, and a built-in image sorting interface.",
+    "date": "06-2025",
+    "image": "images/resized_1_portfolio/clickup.jpg",
+    "link": "https://github.com/RomanSlack/Download_All_Images_from_Clickup",
+    "category": "programming"
+  },
+  {
+    "id": 14,
+    "title": "Sonomancer",
+    "description": "Sonomancer is a vibe-aware ambient e-reader that syncs each chapter of your book with AI-curated background ambience from YouTube. Upload any EPUB or PDF and experience immersive reading with real-time mood-based soundscapes.",
+    "date": "06-2025",
+    "image": "images/resized_1_portfolio/sonomancer.png",
+    "link": "https://github.com/RomanSlack/Sonomancer",
+    "category": "programming"
+  },
+  {
+    "id": 15,
+    "title": "OpenNote Discord Bot",
+    "description": "A Discord bot that transcribes voice channels and generates AI-powered meeting summaries. Forked from volo_discord_bot.",
+    "date": "07-2025",
+    "image": "images/resized_1_portfolio/opennote.png",
+    "link": "https://github.com/RomanSlack/OpenNote_V2_DiscordBot",
+    "category": "programming"
+  },
+  {
+    "id": 16,
+    "title": "ReFaceNet",
+    "description": "(DECA paper implementation) An app that intelligently reconstructs complete faces from multiple occluded/cropped photos. Handles hand-covered selfies, partial crops, and missing facial regions.",
+    "date": "05-2025",
+    "image": "images/resized_1_portfolio/reface.png",
+    "link": "https://github.com/RomanSlack/ReFaceNet",
+    "category": "programming"
+  },
+  {
+    "id": 17,
+    "title": "LLM Collate Code",
+    "description": "A simple Python script that collects code from specified file paths on your OS. It copies each file's content, labels it by programming language, and saves everything into a single JSON file – perfect for feeding into a Large Language Model (LLM).",
+    "date": "03-2025",
+    "image": "images/resized_1_portfolio/collatecode.png",
+    "link": "https://github.com/RomanSlack/LLM_Collate-Code",
+    "category": "programming"
+  },
+  {
+    "id": 18,
+    "title": "QR Code Rater",
+    "description": "A test for claude (took under 15 mins) A Flask web application that allows users to generate QR codes for rating machines or equipment. When scanned, the QR code leads to a unique rating page for that machine.",
+    "date": "03-2025",
+    "image": "images/resized_1_portfolio/qr_rater.png",
+    "link": "https://github.com/RomanSlack/QRCode_Rater",
+    "category": "programming"
+  },
+  {
+    "id": 19,
+    "title": "FirstChat",
+    "description": "(Ignore degenerate project) A full-stack system for personalized dating openers: Playwright scraper ingests Tinder profiles, FastAPI scores text/images with GPT + Google Vision, and a Flask UI returns analytics-backed first messages via a REST API.",
+    "date": "03-2025",
+    "image": "images/resized_1_portfolio/firstchat.png",
+    "link": "https://github.com/RomanSlack/FirstChat_BackEnd",
+    "category": "programming"
+  },
+  {
+    "id": 20,
+    "title": "Akta Life",
+    "description": "(RIT HackCOMS 24 Submission) Akta.life is an AI-driven platform that serves as a personalized course hub. It analyzes individual learning preferences, academic history, and career goals to recommend courses and professors tailored to each student's unique needs.",
+    "date": "11-2024",
+    "image": "images/resized_1_portfolio/aktalife.jpg",
+    "link": "https://github.com/RomanSlack/HackCOMS24gogogo",
+    "category": "programming"
+  },
+  {
+    "id": 21,
+    "title": "UrbanSpark",
+    "description": "(Winning Hack RPI 24 Submission) An AI-driven platform that personalizes urban opportunity discovery for young adults. It uses FastAPI, React, OpenAI, and SerpAPI to recommend jobs, workshops, and community resources tailored to user profiles—empowering local engagement and accessibility.",
+    "date": "11-2024",
+    "image": "images/resized_1_portfolio/urbanspark.png",
+    "link": "https://github.com/RomanSlack/UrbanSpark_HackRPI24",
+    "category": "programming"
+  },
+  {
+    "id": 22,
+    "title": "StereoToMono Chrome Extension",
+    "description": "(Over 200 Active users) A simple Chrome extension that merges any stereo audio into a single mono channel. Whether you're wearing headphones or using a single speaker, enjoy consistent sound from all tabs with a click of a button.",
+    "date": "02-2025",
+    "image": "images/resized_1_portfolio/stereo_to_mono.jpg",
+    "link": "https://github.com/RomanSlack/ChromeExtension_StereoToMono",
+    "category": "programming"
+  },
+  {
+    "id": 23,
+    "title": "Randomized-Timer",
+    "description": "(I use this everyday in the gym for planks) Literally a timer but it adds a random amount at the end to strengthen the mind during exercises.",
+    "date": "09-2024",
+    "image": "images/resized_1_portfolio/randomized_timer.png",
+    "link": "https://randomizedtimer.netlify.app/",
+    "category": "programming"
+  },
+  {
+    "id": 24,
+    "title": "RIT Formula SAE Live Telemetry",
+    "description": "Main repo is owned by org. This was our prototype repository in which we were trying to build from scratch a live telemetry module using LORA. Custom PCB stuff.",
+    "date": "08-2025",
+    "image": "images/resized_1_portfolio/ritracing.jpg",
+    "link": "https://github.com/RomanSlack/FormulaSAELiveTelemetry",
+    "category": "programming"
+  },
+  {
+    "id": 25,
+    "title": "Roman Slack Portfolio 23",
+    "description": "This was my portfolio for 2023 where I combined my frontend skills and 3D modeling / Blender skills.",
+    "date": "05-2023",
+    "image": "images/resized_1_portfolio/portfolio23.png",
+    "link": "https://github.com/RomanSlack/RomanPortfolio23",
+    "category": "programming"
+  },
+  {
+    "id": 26,
+    "title": "Language Learning Website Tutorial",
+    "description": "Language learning website tutorial project",
+    "date": "01-2023",
+    "image": "images/resized_1_portfolio/aus_lab.png",
+    "link": "https://www.youtube.com/watch?v=eVLQF1fYhjA",
+    "category": "programming"
+  },
+  {
+    "id": 27,
+    "title": "LiftView",
+    "description": "A mobile app that allows gym owners to gather data on specific machine utilization and member metrics. Built with Flutter and Firebase.",
+    "date": "11-2022",
+    "image": "images/resized_1_portfolio/aus_lab.png",
+    "link": "#",
+    "category": "programming"
+  },
+  {
+    "id": 28,
+    "title": "TickIt",
+    "description": "A product concept built for a startup attempting to combine gambling and e-commerce using an innovative raffle system.",
+    "date": "07-2024",
+    "image": "images/resized_1_portfolio/aus_lab.png",
+    "link": "https://github.com/RomanSlack/tickit",
+    "category": "programming"
+  },
+  {
+    "id": 29,
+    "title": "ChatGPT-SEO-Description-Generator-from-Tags",
+    "description": "Worked with Jack First firearm supplier to optimize their SEO utilizing the early OpenAI API.",
+    "date": "04-2024",
+    "image": "images/resized_1_portfolio/aus_lab.png",
+    "link": "https://github.com/RomanSlack/ChatGPT-SEO-Description-Generator-from-Tags",
+    "category": "programming"
+  },
+  {
+    "id": 30,
+    "title": "AI Language Tutor",
+    "description": "A video tutorial experiment. Webdev project",
+    "date": "05-2023",
+    "image": "images/resized_1_portfolio/aus_lab.png",
+    "link": "https://github.com/RomanSlack/AI-Language-Tutor-V.1",
+    "category": "programming"
+  },
+  {
+    "id": 31,
+    "title": "Vocal Language App",
+    "description": "Language learning app experiment. Pure HTML, CSS, Javascript",
+    "date": "",
+    "image": "images/resized_1_portfolio/aus_lab.png",
+    "link": "https://github.com/RomanSlack/Vocal-Language-App",
+    "category": "programming"
+  },
+  {
+    "id": 32,
+    "title": "Bike across America",
+    "description": "Raised money for local trails by biking many miles.",
+    "date": "01-2021",
+    "image": "images/resized_1_portfolio/roman_bike.png",
+    "link": "https://www.kotatv.com/2021/01/10/with-a-love-for-mountain-biking-rapid-city-teen-rode-thousands-of-miles-in-2020/",
+    "category": "other"
+  },
+  {
+    "id": 33,
+    "title": "NextGen",
+    "description": "A youth-focused coding initiative designed to teach foundational programming through hands-on lessons in Python, web design, and AI basics. Built to inspire technological curiosity, NextGen empowers students to explore CS careers and creative problem-solving in an immersive, project-based environment.",
+    "date": "01-2024",
+    "image": "images/resized_1_portfolio/nextgen_project_2.png",
+    "link": "https://nextgen-sd.netlify.app/",
+    "category": "other"
+  }
+]

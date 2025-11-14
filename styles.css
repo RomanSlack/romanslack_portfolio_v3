@@ -243,13 +243,15 @@ main {
     position: relative;
     overflow: hidden;
     aspect-ratio: 1;
+    border-radius: 0;
 }
 
 .project-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
+    background-color: #0E0E0E;
 }
 
 .project-info {
@@ -268,6 +270,10 @@ main {
     font-size: 24px;
     font-weight: 800;
     margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 35px;
 }
 
 .project-description {
@@ -275,6 +281,41 @@ main {
     font-size: 16px;
     opacity: 0.9;
     line-height: 1.4;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+.project-link-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: #F5F5F5;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+
+.project-card:hover .project-link-icon {
+    opacity: 1;
+}
+
+.project-link-icon svg {
+    display: block;
+}
+
+.project-date {
+    color: #F5F5F5;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-bottom: 0;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* Experience Page Styles */
@@ -455,10 +496,26 @@ footer {
 
     .project-title {
         font-size: 20px;
+        padding-right: 30px;
     }
 
     .project-description {
         font-size: 14px;
+        -webkit-line-clamp: 2;
+    }
+
+    .project-date {
+        font-size: 11px;
+    }
+
+    .project-link-icon {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .project-link-icon svg {
+        width: 18px;
+        height: 18px;
     }
 
     .experience-main {
