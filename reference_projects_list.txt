@@ -1,0 +1,190 @@
+Programming
+
+Discerio
+Scratch for AI Agents - Discer.io is an interactive platform that teaches agentic AI concepts through a multiplayer battle royale game. Build AI agents using a visual block-based programming interface, deploy them into a live combat arena, and watch them make real-time decisions using large language models. Created for HackPrinceton Fall 2025.
+11-2025
+https://github.com/RomanSlack/Discerio
+
+Hlynr Interecept
+A radar based missile interception reinforcement learning environment with a custom Unity simulation layer, currently researching radar observation spaces and a novel implementation of single policy hierarchical learning.
+05-2025
+https://github.com/RomanSlack/Hlynr_Intercept
+
+AUS-Lab
+(Autonomous UAV Swarm Laboratory) An experimental framework for LLM-driven cognitive control of UAV swarms. It links agentic reasoning with swarm simulation to enable autonomous coordination, adaptive behavior, and hardware-in-the-loop testing.
+10-2025
+https://github.com/RomanSlack/AUS-Lab
+
+AI Bootcamp
+RIT AI Club thing etc…
+https://github.com/RIT-AI-Club/ai_bootcamp_backend
+
+GapRunner
+(80% Gain on 2025 Data) GapRunner is a backtesting and live-trading engine that simulates a top-gainers momentum strategy using real minute-level equity data. Custom Universe collection system.
+08-2025
+https://github.com/RomanSlack/GapRunner
+
+SimuVerse
+A revolutionary multi-agent simulation environment where AI agents powered by LLMs live and interact on Mars, paving the way for advanced research in artificial intelligence.
+02-2024
+https://simuverse.world/
+https://simuverse.world/github
+
+VOS
+Virtual Operating System - A multi-agent orchestration system where specialized AI agents collaborate through event-driven communication and a great looking UI designed by me.
+07-2025
+https://github.com/Forkei/VOS
+
+FengShui.fy
+(Winner of Best Use of AI @ Columbia) An AI-powered interior design analyzer merging traditional feng shui with modern computer vision. Using YOLOv11 object detection, Gemini 2.5 AI reasoning, and Blender-based 3D reconstruction, it evaluates spatial balance, energy flow, and design harmony directly from room photos. Built with Next.js, FastAPI, and a zen-inspired interface for intuitive, meditative interaction.
+10-2025
+https://github.com/RomanSlack/fengshui.ai
+https://devpost.com/software/fengshui-fy
+
+
+EchoRidge Search
+An AI-powered business intelligence pipeline combining discovery, scraping, and hybrid LLM scoring with real-time visualization. Built on Python, FastAPI, and Next.js, it automates market research by aggregating, ranking, and mapping businesses through a cloud-native GCS pipeline.
+06-2025
+/romanslack_portfolio_v3/echoridge
+
+UltraThinkV2
+A Claude-driven automation framework that converts natural language instructions into structured AI workflows and executable code pipelines. It streamlines SaaS project creation through task decomposition, AI reasoning, and automated debugging, cutting development time by over 80% on large builds.
+07-2025
+https://github.com/RomanSlack/UltraThink_V2
+
+FaceMusic
+A lightweight Python tool that maps facial expressions to media playback. Using MediaPipe for real-time detection, it lets users trigger YouTube or local audio with gestures like eyebrow raises or winks; turning the webcam into an interactive controller.
+06-2025
+https://github.com/RomanSlack/face_music
+
+Skema
+A clean, AI-integrated productivity dashboard that unifies idea management, scheduling, and journaling into one seamless interface.
+07-2025
+https://github.com/RomanSlack/Skema
+
+ClickUp Scrape
+A powerful Python tool to download all image attachments from your ClickUp workspace with advanced features like resume capability, duplicate detection, and a built-in image sorting interface.
+06-2025
+https://github.com/RomanSlack/Download_All_Images_from_Clickup
+
+Sonomancer
+Sonomancer is a vibe-aware ambient e-reader that syncs each chapter of your book with AI-curated background ambience from YouTube. Upload any EPUB or PDF and experience immersive reading with real-time mood-based soundscapes.
+06-2025
+https://github.com/RomanSlack/Sonomancer
+
+
+OpenNote Discord Bot
+A Discord bot that transcribes voice channels and generates AI-powered meeting summaries. Forked from volo_discord_bot.
+07-2025
+https://github.com/RomanSlack/OpenNote_V2_DiscordBot
+
+ReFaceNet
+(DECA paper implementation) An app that intelligently reconstructs complete faces from multiple occluded/cropped photos. Handles hand-covered selfies, partial crops, and missing facial regions.
+05-2025
+https://github.com/RomanSlack/ReFaceNet
+
+LLM Collate Code
+A simple Python script that collects code from specified file paths on your OS. It copies each file’s content, labels it by programming language, and saves everything into a single JSON file – perfect for feeding into a Large Language Model (LLM).
+03-2025
+https://github.com/RomanSlack/LLM_Collate-Code
+
+QR Code Rater
+A test for claude (took under 15 mins) A Flask web application that allows users to generate QR codes for rating machines or equipment. When scanned, the QR code leads to a unique rating page for that machine.
+03-2025
+https://github.com/RomanSlack/QRCode_Rater
+
+FirstChat
+(Ignore degenerate project) A full-stack system for personalized dating openers: Playwright scraper ingests Tinder profiles, FastAPI scores text/images with GPT + Google Vision, and a Flask UI returns analytics-backed first messages via a REST API.
+03-2025
+https://github.com/RomanSlack/FirstChat_BackEnd
+
+
+
+
+
+
+
+
+
+
+Akta Life
+(RIT HackCOMS 24 Submission) Akta.life is an AI-driven platform that serves as a personalized course hub. It analyzes individual learning preferences, academic history, and career goals to recommend courses and professors tailored to each student’s unique needs.
+11-2025
+https://github.com/RomanSlack/HackCOMS24gogogo
+https://devpost.com/software/akta-life
+
+UrbanSpark
+(Winning Hack RPI 24 Submission) An AI-driven platform that personalizes urban opportunity discovery for young adults. It uses FastAPI, React, OpenAI, and SerpAPI to recommend jobs, workshops, and community resources tailored to user profiles—empowering local engagement and accessibility.
+11-2025
+https://github.com/RomanSlack/UrbanSpark_HackRPI24
+https://devpost.com/software/urbanspark
+
+SteroToMono Chrome Extension
+(Over 200 Active users) A simple Chrome extension that merges any stereo audio into a single mono channel. Whether you’re wearing headphones or using a single speaker, enjoy consistent sound from all tabs with a click of a button.
+02-2025
+https://github.com/RomanSlack/ChromeExtension_StereoToMono
+
+Randomized-Timer
+(I use this everyday in the gym for planks) Literally a timer but it adds a random amount at the end to strengthen the mind during exercises.
+09-2024
+https://github.com/RomanSlack/Randomized-Timer
+https://randomizedtimer.netlify.app/
+
+RIT Formula SAE Live Telemetry
+Main repo is owned by org. This was our prototype repository in which we were trying to build from scratch a live telemetry module using LORA. Custom PCB stuff.
+08-2025
+https://github.com/RomanSlack/FormulaSAELiveTelemetry
+
+
+
+
+
+
+
+Roman Slack Portfolio 23
+This was my portfolio for 2023 where I combined my frontend skills and 3D modeling / Blender skills.
+05-2023
+https://github.com/RomanSlack/RomanPortfolio23
+
+
+
+
+Language Learning Website Tutorial
+01-2023
+https://github.com/RomanSlack/Language-Learning-Website-Tutorial-
+https://www.youtube.com/watch?v=eVLQF1fYhjA
+
+LiftView
+A mobile app that allows gym owners to gather data on specific machine utilization and member metrics. Built with Flutter and Firebase.
+11-2022
+
+TickIt
+A product concept built for a startup attempting to combine gambling and e-commerce using an innovative raffle system.
+https://github.com/RomanSlack/tickit
+07-2024
+
+ChatGPT-SEO-Description-Generator-from-Tags
+Worked with Jack First firearm supplier to optimize their SEO utilizing the early OpenAI API.
+https://github.com/RomanSlack/ChatGPT-SEO-Description-Generator-from-Tags
+04-2024
+
+AI Language Tutor
+A video tutorial experiment. Webdev project
+https://github.com/RomanSlack/AI-Language-Tutor-V.1
+05-2023
+
+Vocal Language App
+Language learning app experiment. Pure HTML, CSS, Javascript
+https://github.com/RomanSlack/Vocal-Language-App
+
+Other
+
+Bike across America
+Raised money for local trails by biking many miles.
+01-2021
+https://www.kotatv.com/2021/01/10/with-a-love-for-mountain-biking-rapid-city-teen-rode-thousands-of-miles-in-2020/
+
+NextGen
+A youth-focused coding initiative designed to teach foundational programming through hands-on lessons in Python, web design, and AI basics. Built to inspire technological curiosity, NextGen empowers students to explore CS careers and creative problem-solving in an immersive, project-based environment.
+01-2024
+https://nextgen-sd.netlify.app/
