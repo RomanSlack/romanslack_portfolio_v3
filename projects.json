@@ -6,7 +6,8 @@
     "date": "11-2025",
     "image": "images/resized_1_portfolio/discerio.png",
     "link": "https://github.com/RomanSlack/Discerio",
-    "category": "programming"
+    "category": "programming",
+    "hours": 33
   },
   {
     "id": 2,
@@ -15,7 +16,9 @@
     "date": "05-2025",
     "image": "images/resized_1_portfolio/hlynr_intercept.png",
     "link": "https://github.com/RomanSlack/Hlynr_Intercept",
-    "category": "programming"
+    "category": "programming",
+    "hours": 56,
+    "inProgress": true
   },
   {
     "id": 3,
@@ -24,16 +27,20 @@
     "date": "10-2025",
     "image": "images/resized_1_portfolio/aus_lab.png",
     "link": "https://github.com/RomanSlack/AUS-Lab",
-    "category": "programming"
+    "category": "programming",
+    "hours": 9,
+    "inProgress": true
   },
   {
     "id": 4,
     "title": "AI Bootcamp",
     "description": "RIT AI Club thing etc…",
-    "date": "",
+    "date": "08-2025",
     "image": "images/resized_1_portfolio/aus_lab.png",
     "link": "https://github.com/RIT-AI-Club/ai_bootcamp_backend",
-    "category": "programming"
+    "category": "programming",
+    "hours": 15,
+    "inProgress": true
   },
   {
     "id": 5,
@@ -42,7 +49,8 @@
     "date": "08-2025",
     "image": "images/resized_1_portfolio/gaprunner.png",
     "link": "https://github.com/RomanSlack/GapRunner",
-    "category": "programming"
+    "category": "programming",
+    "hours": 4
   },
   {
     "id": 6,
@@ -51,7 +59,8 @@
     "date": "02-2024",
     "image": "images/resized_1_portfolio/simuverse.jpeg",
     "link": "https://simuverse.world/",
-    "category": "programming"
+    "category": "programming",
+    "hours": 70
   },
   {
     "id": 7,
@@ -60,7 +69,9 @@
     "date": "07-2025",
     "image": "images/resized_1_portfolio/vos.png",
     "link": "https://github.com/Forkei/VOS",
-    "category": "programming"
+    "category": "programming",
+    "hours": 24,
+    "inProgress": true
   },
   {
     "id": 8,
@@ -69,7 +80,8 @@
     "date": "10-2025",
     "image": "images/resized_1_portfolio/feng_shui.jpg",
     "link": "https://github.com/RomanSlack/fengshui.ai",
-    "category": "programming"
+    "category": "programming",
+    "hours": 24
   },
   {
     "id": 9,
@@ -78,7 +90,8 @@
     "date": "06-2025",
     "image": "images/resized_1_portfolio/echo_ridge.jpg",
     "link": "/echoridge/index.html",
-    "category": "programming"
+    "category": "programming",
+    "hours": 17
   },
   {
     "id": 10,
@@ -87,7 +100,8 @@
     "date": "07-2025",
     "image": "images/resized_1_portfolio/ultrathinkv2.png",
     "link": "https://github.com/RomanSlack/UltraThink_V2",
-    "category": "programming"
+    "category": "programming",
+    "hours": 3
   },
   {
     "id": 11,
@@ -96,7 +110,8 @@
     "date": "06-2025",
     "image": "images/resized_1_portfolio/facemusic.png",
     "link": "https://github.com/RomanSlack/face_music",
-    "category": "programming"
+    "category": "programming",
+    "hours": 1
   },
   {
     "id": 12,
@@ -105,7 +120,8 @@
     "date": "07-2025",
     "image": "images/resized_1_portfolio/skema.png",
     "link": "https://github.com/RomanSlack/Skema",
-    "category": "programming"
+    "category": "programming",
+    "hours": 4
   },
   {
     "id": 13,
@@ -114,7 +130,8 @@
     "date": "06-2025",
     "image": "images/resized_1_portfolio/clickup.jpg",
     "link": "https://github.com/RomanSlack/Download_All_Images_from_Clickup",
-    "category": "programming"
+    "category": "programming",
+    "hours": 2
   },
   {
     "id": 14,
@@ -123,7 +140,8 @@
     "date": "06-2025",
     "image": "images/resized_1_portfolio/sonomancer.png",
     "link": "https://github.com/RomanSlack/Sonomancer",
-    "category": "programming"
+    "category": "programming",
+    "hours": 2
   },
   {
     "id": 15,
@@ -132,7 +150,8 @@
     "date": "07-2025",
     "image": "images/resized_1_portfolio/opennote.png",
     "link": "https://github.com/RomanSlack/OpenNote_V2_DiscordBot",
-    "category": "programming"
+    "category": "programming",
+    "hours": 2
   },
   {
     "id": 16,
@@ -141,7 +160,8 @@
     "date": "05-2025",
     "image": "images/resized_1_portfolio/reface.png",
     "link": "https://github.com/RomanSlack/ReFaceNet",
-    "category": "programming"
+    "category": "programming",
+    "hours": 1
   },
   {
     "id": 17,
@@ -150,7 +170,8 @@
     "date": "03-2025",
     "image": "images/resized_1_portfolio/collatecode.png",
     "link": "https://github.com/RomanSlack/LLM_Collate-Code",
-    "category": "programming"
+    "category": "programming",
+    "hours": 1
   },
   {
     "id": 18,
@@ -159,7 +180,8 @@
     "date": "03-2025",
     "image": "images/resized_1_portfolio/qr_rater.png",
     "link": "https://github.com/RomanSlack/QRCode_Rater",
-    "category": "programming"
+    "category": "programming",
+    "hours": 0.2
   },
   {
     "id": 19,
@@ -168,7 +190,8 @@
     "date": "03-2025",
     "image": "images/resized_1_portfolio/firstchat.png",
     "link": "https://github.com/RomanSlack/FirstChat_BackEnd",
-    "category": "programming"
+    "category": "programming",
+    "hours": 5
   },
   {
     "id": 20,
@@ -177,7 +200,8 @@
     "date": "11-2024",
     "image": "images/resized_1_portfolio/aktalife.jpg",
     "link": "https://github.com/RomanSlack/HackCOMS24gogogo",
-    "category": "programming"
+    "category": "programming",
+    "hours": 15
   },
   {
     "id": 21,
@@ -186,7 +210,8 @@
     "date": "11-2024",
     "image": "images/resized_1_portfolio/urbanspark.png",
     "link": "https://github.com/RomanSlack/UrbanSpark_HackRPI24",
-    "category": "programming"
+    "category": "programming",
+    "hours": 24
   },
   {
     "id": 22,
@@ -195,7 +220,8 @@
     "date": "02-2025",
     "image": "images/resized_1_portfolio/stereo_to_mono.jpg",
     "link": "https://github.com/RomanSlack/ChromeExtension_StereoToMono",
-    "category": "programming"
+    "category": "programming",
+    "hours": 2
   },
   {
     "id": 23,
@@ -204,7 +230,8 @@
     "date": "09-2024",
     "image": "images/resized_1_portfolio/randomized_timer.png",
     "link": "https://randomizedtimer.netlify.app/",
-    "category": "programming"
+    "category": "programming",
+    "hours": 1
   },
   {
     "id": 24,
@@ -213,7 +240,8 @@
     "date": "08-2025",
     "image": "images/resized_1_portfolio/ritracing.jpg",
     "link": "https://github.com/RomanSlack/FormulaSAELiveTelemetry",
-    "category": "programming"
+    "category": "programming",
+    "hours": 30
   },
   {
     "id": 25,
@@ -222,7 +250,8 @@
     "date": "05-2023",
     "image": "images/resized_1_portfolio/portfolio23.png",
     "link": "https://github.com/RomanSlack/RomanPortfolio23",
-    "category": "programming"
+    "category": "programming",
+    "hours": 10
   },
   {
     "id": 26,
@@ -231,7 +260,8 @@
     "date": "01-2023",
     "image": "images/resized_1_portfolio/aus_lab.png",
     "link": "https://www.youtube.com/watch?v=eVLQF1fYhjA",
-    "category": "programming"
+    "category": "programming",
+    "hours": 7
   },
   {
     "id": 27,
@@ -240,7 +270,8 @@
     "date": "11-2022",
     "image": "images/resized_1_portfolio/aus_lab.png",
     "link": "#",
-    "category": "programming"
+    "category": "programming",
+    "hours": 13
   },
   {
     "id": 28,
@@ -249,7 +280,8 @@
     "date": "07-2024",
     "image": "images/resized_1_portfolio/aus_lab.png",
     "link": "https://github.com/RomanSlack/tickit",
-    "category": "programming"
+    "category": "programming",
+    "hours": 6
   },
   {
     "id": 29,
@@ -258,7 +290,8 @@
     "date": "04-2024",
     "image": "images/resized_1_portfolio/aus_lab.png",
     "link": "https://github.com/RomanSlack/ChatGPT-SEO-Description-Generator-from-Tags",
-    "category": "programming"
+    "category": "programming",
+    "hours": 5
   },
   {
     "id": 30,
@@ -267,7 +300,8 @@
     "date": "05-2023",
     "image": "images/resized_1_portfolio/aus_lab.png",
     "link": "https://github.com/RomanSlack/AI-Language-Tutor-V.1",
-    "category": "programming"
+    "category": "programming",
+    "hours": 4
   },
   {
     "id": 31,
@@ -276,7 +310,8 @@
     "date": "",
     "image": "images/resized_1_portfolio/aus_lab.png",
     "link": "https://github.com/RomanSlack/Vocal-Language-App",
-    "category": "programming"
+    "category": "programming",
+    "hours": 7
   },
   {
     "id": 32,
@@ -285,7 +320,8 @@
     "date": "01-2021",
     "image": "images/resized_1_portfolio/roman_bike.png",
     "link": "https://www.kotatv.com/2021/01/10/with-a-love-for-mountain-biking-rapid-city-teen-rode-thousands-of-miles-in-2020/",
-    "category": "other"
+    "category": "other",
+    "hours": 800
   },
   {
     "id": 33,
@@ -294,6 +330,7 @@
     "date": "01-2024",
     "image": "images/resized_1_portfolio/nextgen_project_2.png",
     "link": "https://nextgen-sd.netlify.app/",
-    "category": "other"
+    "category": "other",
+    "hours": 70
   }
 ]

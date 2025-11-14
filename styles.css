@@ -187,15 +187,41 @@ main {
     scrollbar-color: #333333 transparent;
 }
 
-.projects-filter {
+.projects-header {
     display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+}
+
+.projects-stats {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.stat-item {
+    color: #F5F5F5;
+    font-family: 'Eloquia', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    opacity: 0.8;
+}
+
+.stat-separator {
+    color: #F5F5F5;
+    opacity: 0.5;
+    font-size: 18px;
+}
+
+.projects-filter {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 .filter-btn {
@@ -233,6 +259,7 @@ main {
     text-decoration: none;
     display: block;
     transition: transform 0.3s;
+    padding-bottom: 40px;
 }
 
 .project-card:hover {
@@ -241,7 +268,7 @@ main {
 
 .project-image-wrapper {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     aspect-ratio: 1;
     border-radius: 0;
 }
@@ -256,11 +283,11 @@ main {
 
 .project-info {
     position: absolute;
-    bottom: 0;
+    bottom: -40px;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(14, 14, 14, 0.95) 0%, rgba(14, 14, 14, 0.85) 50%, transparent 100%);
-    padding: 60px 20px 20px;
+    background: linear-gradient(to top, rgba(14, 14, 14, 1) 0%, rgba(14, 14, 14, 0.98) 30%, rgba(14, 14, 14, 0.90) 60%, transparent 100%);
+    padding: 80px 20px 20px;
     transform: translateY(0);
     transition: transform 0.3s;
 }
@@ -475,12 +502,39 @@ footer {
 }
 
 @media (max-width: 768px) {
+    header {
+        position: sticky;
+        top: 0;
+        background-color: #0E0E0E;
+        z-index: 101;
+        margin-top: -1px;
+        padding-top: calc(30px + 1px);
+    }
+
     .projects-main {
         padding: 30px 20px;
     }
 
-    .projects-filter {
+    .projects-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
         margin-bottom: 30px;
+    }
+
+    .projects-stats {
+        gap: 10px;
+    }
+
+    .stat-item {
+        font-size: 16px;
+    }
+
+    .stat-separator {
+        font-size: 16px;
+    }
+
+    .projects-filter {
         gap: 15px;
     }
 
@@ -492,6 +546,14 @@ footer {
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+
+    .project-card {
+        padding-bottom: 35px;
+    }
+
+    .project-info {
+        bottom: -35px;
     }
 
     .project-title {
@@ -576,6 +638,10 @@ footer {
 
     footer {
         padding: 15px 20px;
+        position: sticky;
+        bottom: 0;
+        background-color: #0E0E0E;
+        z-index: 100;
     }
 
     .footer-copyright {

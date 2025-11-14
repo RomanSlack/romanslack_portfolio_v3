@@ -6,9 +6,19 @@ async function loadProjects() {
         const response = await fetch('projects.json');
         projectsData = await response.json();
         renderProjects(projectsData);
+        updateStats();
     } catch (error) {
         console.error('Error loading projects:', error);
     }
+}
+
+// Update statistics display
+function updateStats() {
+    const projectCount = projectsData.length;
+    const totalHours = projectsData.reduce((sum, project) => sum + (project.hours || 0), 0);
+
+    document.getElementById('projectCount').textContent = `${projectCount} Project${projectCount !== 1 ? 's' : ''}`;
+    document.getElementById('totalHours').textContent = `${totalHours.toLocaleString()} Hours`;
 }
 
 // Render projects to the grid
@@ -64,7 +74,7 @@ function createProjectCard(project) {
     if (project.date) {
         const date = document.createElement('p');
         date.className = 'project-date';
-        date.textContent = project.date;
+        date.textContent = project.inProgress ? `${project.date} - Present` : project.date;
         projectInfo.appendChild(date);
     }
 
@@ -129,8 +139,12 @@ filterBtns.forEach(btn => {
         let sortedProjects = [...projectsData];
 
         if (filter === 'timeline') {
-            // Sort by date (most recent first)
+            // Sort by date (most recent first, in-progress at top)
             sortedProjects.sort((a, b) => {
+                // In-progress projects always come first
+                if (a.inProgress && !b.inProgress) return -1;
+                if (!a.inProgress && b.inProgress) return 1;
+
                 // Handle empty dates
                 if (!a.date && !b.date) return a.id - b.id;
                 if (!a.date) return 1;

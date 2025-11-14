@@ -13,9 +13,16 @@
     </header>
 
     <main class="projects-main">
-        <div class="projects-filter">
-            <button class="filter-btn active" data-filter="relevancy">Standout</button>
-            <button class="filter-btn" data-filter="timeline">Timeline</button>
+        <div class="projects-header">
+            <div class="projects-stats">
+                <span id="projectCount" class="stat-item">0 Projects</span>
+                <span class="stat-separator">|</span>
+                <span id="totalHours" class="stat-item">0 Hours</span>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="relevancy">Standout</button>
+                <button class="filter-btn" data-filter="timeline">Timeline</button>
+            </div>
         </div>
 
         <div class="projects-grid" id="projectsGrid">
