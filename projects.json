@@ -34,10 +34,10 @@
   {
     "id": 4,
     "title": "AI Bootcamp",
-    "description": "RIT AI Club thing etc…",
+    "description": "AI Bootcamp was created to provide a free, accessible resource for learning AI tools and techniques in today's rapidly evolving landscape. This project represents a commitment to democratizing AI education and spreading knowledge to everyone who wants to learn.",
     "date": "08-2025",
-    "image": "images/resized_1_portfolio/aus_lab.png",
-    "link": "https://github.com/RIT-AI-Club/ai_bootcamp_backend",
+    "image": "images/resized_1_portfolio/bootcamp.jpg",
+    "link": "https://www.aiclub-bootcamp.com/about",
     "category": "programming",
     "hours": 15,
     "inProgress": true
@@ -258,7 +258,7 @@
     "title": "Language Learning Website Tutorial",
     "description": "Language learning website tutorial project",
     "date": "01-2023",
-    "image": "images/resized_1_portfolio/aus_lab.png",
+    "image": "images/resized_1_portfolio/language_site.jpg",
     "link": "https://www.youtube.com/watch?v=eVLQF1fYhjA",
     "category": "programming",
     "hours": 7
@@ -268,7 +268,7 @@
     "title": "LiftView",
     "description": "A mobile app that allows gym owners to gather data on specific machine utilization and member metrics. Built with Flutter and Firebase.",
     "date": "11-2022",
-    "image": "images/resized_1_portfolio/aus_lab.png",
+    "image": "images/resized_1_portfolio/liftview.jpg",
     "link": "#",
     "category": "programming",
     "hours": 13
