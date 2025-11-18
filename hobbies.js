@@ -1,5 +1,15 @@
 let hobbiesData = [];
 
+// Shuffle array function
+function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
 // Load hobbies from JSON and images from folder
 async function loadHobbies() {
     try {
@@ -18,8 +28,25 @@ async function loadHobbies() {
             alt: `Hobby image ${index + 1}`
         }));
 
-        // Combine text and images
-        hobbiesData = [...textItems, ...imageItems];
+        // Combine and bias text items toward the top
+        const shuffledImages = shuffleArray(imageItems);
+        const shuffledText = shuffleArray(textItems);
+
+        // Place some text items at the beginning (biased toward top)
+        const topTextCount = Math.min(Math.ceil(shuffledText.length * 0.6), shuffledText.length);
+        const topText = shuffledText.slice(0, topTextCount);
+        const bottomText = shuffledText.slice(topTextCount);
+
+        // Interleave text among first ~40% of images
+        const topImageCount = Math.ceil(shuffledImages.length * 0.4);
+        const topImages = shuffledImages.slice(0, topImageCount);
+        const bottomImages = shuffledImages.slice(topImageCount);
+
+        // Mix top items together
+        const topItems = shuffleArray([...topText, ...topImages]);
+
+        // Combine with remaining items
+        hobbiesData = [...topItems, ...shuffleArray([...bottomText, ...bottomImages])];
 
         renderMasonryGrid(hobbiesData);
     } catch (error) {
@@ -41,8 +68,11 @@ function renderMasonryGrid(items) {
 // Create a grid item element
 function createGridItem(item) {
     const element = document.createElement('div');
-    element.className = `hobby-item hobby-${item.type} hobby-size-${item.size}`;
-    element.dataset.id = item.id;
+    element.className = `hobby-item hobby-${item.type}`;
+
+    if (item.size) {
+        element.classList.add(`hobby-size-${item.size}`);
+    }
 
     if (item.type === 'image') {
         const img = document.createElement('img');
@@ -50,26 +80,6 @@ function createGridItem(item) {
         img.alt = item.alt;
         img.className = 'hobby-image';
         img.loading = 'lazy';
-
-        // Load image to determine natural dimensions
-        img.onload = function() {
-            const aspectRatio = this.naturalWidth / this.naturalHeight;
-            const isWide = aspectRatio > 1.3;
-            const isTall = aspectRatio < 0.7;
-            const isLarge = this.naturalWidth > 800 || this.naturalHeight > 800;
-
-            // Determine grid span based on image dimensions
-            element.classList.remove('hobby-size-small', 'hobby-size-medium', 'hobby-size-large');
-
-            if (isLarge && (isWide || isTall)) {
-                element.classList.add('hobby-size-large');
-            } else if (isWide || isTall) {
-                element.classList.add('hobby-size-medium');
-            } else {
-                element.classList.add('hobby-size-small');
-            }
-        };
-
         element.appendChild(img);
     } else if (item.type === 'text') {
         const textContainer = document.createElement('div');

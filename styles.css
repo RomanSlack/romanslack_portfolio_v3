@@ -682,14 +682,15 @@ footer {
 }
 
 .hobbies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 250px;
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     width: 100%;
     height: fit-content;
     overflow-y: auto;
     padding-bottom: 40px;
+    align-items: flex-start;
+    align-content: flex-start;
 }
 
 .hobbies-grid::-webkit-scrollbar {
@@ -715,46 +716,30 @@ footer {
 }
 
 .hobby-item {
-    background: #1A1A1A;
-    overflow: hidden;
+    background: transparent;
+    overflow: visible;
     position: relative;
-}
-
-/* Size variations for tetris-style layout */
-.hobby-size-small {
-    grid-column: span 1;
-    grid-row: span 1;
-}
-
-.hobby-size-medium {
-    grid-column: span 2;
-    grid-row: span 1;
-}
-
-.hobby-size-large {
-    grid-column: span 2;
-    grid-row: span 2;
+    flex-shrink: 0;
 }
 
 /* Image items */
 .hobby-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
     display: block;
-    max-width: 100%;
-    max-height: 100%;
+    width: auto;
+    height: auto;
+    max-width: 600px;
+    max-height: 600px;
+    object-fit: contain;
 }
 
 /* Text items */
 .hobby-text-container {
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 30px 50px;
     background: linear-gradient(135deg, #1A1A1A 0%, #2A2A2A 100%);
+    min-width: 200px;
 }
 
 .hobby-text {
@@ -764,21 +749,33 @@ footer {
     font-weight: 800;
     text-align: center;
     line-height: 1.2;
-    white-space: pre-line;
+    white-space: nowrap;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.hobby-size-small .hobby-text-container {
+    padding: 20px 35px;
 }
 
 .hobby-size-small .hobby-text {
     font-size: 32px;
 }
 
+.hobby-size-medium .hobby-text-container {
+    padding: 30px 50px;
+}
+
 .hobby-size-medium .hobby-text {
-    font-size: 56px;
+    font-size: 48px;
+}
+
+.hobby-size-large .hobby-text-container {
+    padding: 40px 60px;
 }
 
 .hobby-size-large .hobby-text {
-    font-size: 72px;
+    font-size: 64px;
 }
 
 /* Mobile responsiveness for hobbies */
@@ -788,9 +785,12 @@ footer {
     }
 
     .hobbies-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-auto-rows: 200px;
         gap: 15px;
+    }
+
+    .hobby-image {
+        max-width: 500px;
+        max-height: 500px;
     }
 
     .hobby-text {
@@ -802,11 +802,11 @@ footer {
     }
 
     .hobby-size-medium .hobby-text {
-        font-size: 42px;
+        font-size: 36px;
     }
 
     .hobby-size-large .hobby-text {
-        font-size: 56px;
+        font-size: 48px;
     }
 }
 
@@ -816,21 +816,12 @@ footer {
     }
 
     .hobbies-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 150px;
         gap: 10px;
     }
 
-    /* On mobile, make all items smaller and simpler */
-    .hobby-size-small,
-    .hobby-size-medium {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-
-    .hobby-size-large {
-        grid-column: span 2;
-        grid-row: span 2;
+    .hobby-image {
+        max-width: 400px;
+        max-height: 400px;
     }
 
     .hobby-text {
@@ -843,38 +834,141 @@ footer {
     }
 
     .hobby-size-medium .hobby-text {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .hobby-size-large .hobby-text {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .hobby-text-container {
-        padding: 20px;
+        padding: 15px 25px;
+    }
+
+    .hobby-size-small .hobby-text-container {
+        padding: 12px 20px;
+    }
+
+    .hobby-size-large .hobby-text-container {
+        padding: 20px 35px;
     }
 }
 
 @media (max-width: 480px) {
     .hobbies-grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 200px;
+        gap: 8px;
     }
 
-    .hobby-size-small,
-    .hobby-size-medium,
-    .hobby-size-large {
-        grid-column: span 1;
-        grid-row: span 1;
+    .hobby-image {
+        max-width: 100%;
+        max-height: 300px;
     }
 
     .hobby-text {
-        font-size: 28px;
+        font-size: 20px;
     }
 
     .hobby-size-small .hobby-text,
     .hobby-size-medium .hobby-text,
     .hobby-size-large .hobby-text {
-        font-size: 28px;
+        font-size: 20px;
+    }
+
+    .hobby-text-container,
+    .hobby-size-small .hobby-text-container,
+    .hobby-size-medium .hobby-text-container,
+    .hobby-size-large .hobby-text-container {
+        padding: 12px 20px;
+    }
+}
+
+/* Contact Page Styles */
+.contact-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.contact-email {
+    color: #F5F5F5;
+    font-family: 'Eloquia', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0;
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.contact-link:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.contact-link svg {
+    width: 80px;
+    height: 80px;
+    fill: #F5F5F5;
+}
+
+/* Mobile responsiveness for contact */
+@media (max-width: 768px) {
+    .contact-main {
+        padding: 20px;
+    }
+
+    .contact-container {
+        gap: 30px;
+    }
+
+    .contact-email {
+        font-size: 24px;
+    }
+
+    .contact-links {
+        gap: 40px;
+    }
+
+    .contact-link svg {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-email {
+        font-size: 20px;
+    }
+
+    .contact-links {
+        gap: 30px;
+    }
+
+    .contact-link svg {
+        width: 50px;
+        height: 50px;
     }
 }
