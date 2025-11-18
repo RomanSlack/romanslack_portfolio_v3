@@ -1,0 +1,81 @@
+[
+  {
+    "id": 1,
+    "type": "image",
+    "src": "images/roman_rectangular_landing.jpg",
+    "alt": "Placeholder 1",
+    "size": "large"
+  },
+  {
+    "id": 2,
+    "type": "text",
+    "content": "BUILDING\nTHINGS",
+    "size": "medium"
+  },
+  {
+    "id": 3,
+    "type": "image",
+    "src": "images/roman_rectangular_landing.jpg",
+    "alt": "Placeholder 2",
+    "size": "medium"
+  },
+  {
+    "id": 4,
+    "type": "text",
+    "content": "ALWAYS\nLEARNING",
+    "size": "small"
+  },
+  {
+    "id": 5,
+    "type": "image",
+    "src": "images/roman_rectangular_landing.jpg",
+    "alt": "Placeholder 3",
+    "size": "small"
+  },
+  {
+    "id": 6,
+    "type": "text",
+    "content": "CREATE",
+    "size": "small"
+  },
+  {
+    "id": 7,
+    "type": "image",
+    "src": "images/roman_rectangular_landing.jpg",
+    "alt": "Placeholder 4",
+    "size": "medium"
+  },
+  {
+    "id": 8,
+    "type": "text",
+    "content": "EXPLORE\nNEW IDEAS",
+    "size": "large"
+  },
+  {
+    "id": 9,
+    "type": "image",
+    "src": "images/roman_rectangular_landing.jpg",
+    "alt": "Placeholder 5",
+    "size": "small"
+  },
+  {
+    "id": 10,
+    "type": "image",
+    "src": "images/roman_rectangular_landing.jpg",
+    "alt": "Placeholder 6",
+    "size": "medium"
+  },
+  {
+    "id": 11,
+    "type": "text",
+    "content": "DREAM\nBIG",
+    "size": "small"
+  },
+  {
+    "id": 12,
+    "type": "image",
+    "src": "images/roman_rectangular_landing.jpg",
+    "alt": "Placeholder 7",
+    "size": "large"
+  }
+]

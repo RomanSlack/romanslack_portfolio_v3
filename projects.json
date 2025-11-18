@@ -84,6 +84,16 @@
     "hours": 24
   },
   {
+    "id": 33,
+    "title": "NextGen",
+    "description": "A youth-focused coding initiative designed to teach foundational programming through hands-on lessons in Python, web design, and AI basics. Built to inspire technological curiosity, NextGen empowers students to explore CS careers and creative problem-solving in an immersive, project-based environment.",
+    "date": "01-2024",
+    "image": "images/resized_1_portfolio/nextgen_project_2.png",
+    "link": "https://nextgen-sd.netlify.app/",
+    "category": "other",
+    "hours": 70
+  },
+  {
     "id": 9,
     "title": "EchoRidge Search",
     "description": "An AI-powered business intelligence pipeline combining discovery, scraping, and hybrid LLM scoring with real-time visualization. Built on Python, FastAPI, and Next.js, it automates market research by aggregating, ranking, and mapping businesses through a cloud-native GCS pipeline.",
@@ -208,7 +218,7 @@
     "title": "UrbanSpark",
     "description": "(Winning Hack RPI 24 Submission) An AI-driven platform that personalizes urban opportunity discovery for young adults. It uses FastAPI, React, OpenAI, and SerpAPI to recommend jobs, workshops, and community resources tailored to user profiles—empowering local engagement and accessibility.",
     "date": "11-2024",
-    "image": "images/resized_1_portfolio/urbanspark.png",
+    "image": "images/resized_1_portfolio/urban_spark_2.jpg",
     "link": "https://github.com/RomanSlack/UrbanSpark_HackRPI24",
     "category": "programming",
     "hours": 24
@@ -219,7 +229,7 @@
     "description": "(Over 200 Active users) A simple Chrome extension that merges any stereo audio into a single mono channel. Whether you're wearing headphones or using a single speaker, enjoy consistent sound from all tabs with a click of a button.",
     "date": "02-2025",
     "image": "images/resized_1_portfolio/stereo_to_mono.jpg",
-    "link": "https://github.com/RomanSlack/ChromeExtension_StereoToMono",
+    "link": "https://chromewebstore.google.com/detail/stereotomono/lciockipefmcmeambghkinkjlckjkbmn?hl=en",
     "category": "programming",
     "hours": 2
   },
@@ -253,6 +263,16 @@
     "category": "programming",
     "hours": 10
   },
+   {
+    "id": 31,
+    "title": "Vocal Language App",
+    "description": "Language learning app experiment. Pure HTML, CSS, Javascript",
+    "date": "07-2023",
+    "image": "images/resized_1_portfolio/vocal.jpg",
+    "link": "https://github.com/RomanSlack/Vocal-Language-App",
+    "category": "programming",
+    "hours": 7
+  },
   {
     "id": 26,
     "title": "Language Learning Website Tutorial",
@@ -278,7 +298,7 @@
     "title": "TickIt",
     "description": "A product concept built for a startup attempting to combine gambling and e-commerce using an innovative raffle system.",
     "date": "07-2024",
-    "image": "images/resized_1_portfolio/aus_lab.png",
+    "image": "images/resized_1_portfolio/tickit.jpg",
     "link": "https://github.com/RomanSlack/tickit",
     "category": "programming",
     "hours": 6
@@ -288,7 +308,7 @@
     "title": "ChatGPT-SEO-Description-Generator-from-Tags",
     "description": "Worked with Jack First firearm supplier to optimize their SEO utilizing the early OpenAI API.",
     "date": "04-2024",
-    "image": "images/resized_1_portfolio/aus_lab.png",
+    "image": "images/resized_1_portfolio/jack_first.jpg",
     "link": "https://github.com/RomanSlack/ChatGPT-SEO-Description-Generator-from-Tags",
     "category": "programming",
     "hours": 5
@@ -296,22 +316,12 @@
   {
     "id": 30,
     "title": "AI Language Tutor",
-    "description": "A video tutorial experiment. Webdev project",
+    "description": "A video tutorial experiment. Webdev project, using OpenAI's released GPT-3.5",
     "date": "05-2023",
-    "image": "images/resized_1_portfolio/aus_lab.png",
+    "image": "images/resized_1_portfolio/ai_language_app.jpg",
     "link": "https://github.com/RomanSlack/AI-Language-Tutor-V.1",
     "category": "programming",
     "hours": 4
-  },
-  {
-    "id": 31,
-    "title": "Vocal Language App",
-    "description": "Language learning app experiment. Pure HTML, CSS, Javascript",
-    "date": "",
-    "image": "images/resized_1_portfolio/aus_lab.png",
-    "link": "https://github.com/RomanSlack/Vocal-Language-App",
-    "category": "programming",
-    "hours": 7
   },
   {
     "id": 32,
@@ -322,15 +332,5 @@
     "link": "https://www.kotatv.com/2021/01/10/with-a-love-for-mountain-biking-rapid-city-teen-rode-thousands-of-miles-in-2020/",
     "category": "other",
     "hours": 800
-  },
-  {
-    "id": 33,
-    "title": "NextGen",
-    "description": "A youth-focused coding initiative designed to teach foundational programming through hands-on lessons in Python, web design, and AI basics. Built to inspire technological curiosity, NextGen empowers students to explore CS careers and creative problem-solving in an immersive, project-based environment.",
-    "date": "01-2024",
-    "image": "images/resized_1_portfolio/nextgen_project_2.png",
-    "link": "https://nextgen-sd.netlify.app/",
-    "category": "other",
-    "hours": 70
   }
 ]
