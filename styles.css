@@ -30,6 +30,25 @@ header {
 header h1 {
     font-size: 72px;
     font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.header-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    color: #F5F5F5;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.subtitle-link {
+    color: #5DADE2;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.subtitle-link:hover {
+    opacity: 0.7;
 }
 
 .back-arrow {
@@ -117,6 +136,10 @@ main {
         font-size: 48px;
     }
 
+    .header-subtitle {
+        font-size: 16px;
+    }
+
     main {
         padding: 20px 20px;
         overflow-y: visible;
@@ -149,6 +172,20 @@ main {
         max-width: 100%;
         width: 100%;
         margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 36px;
+    }
+
+    .header-subtitle {
+        font-size: 13px;
+    }
+
+    .nav-buttons a {
+        font-size: 32px;
     }
 }
 
