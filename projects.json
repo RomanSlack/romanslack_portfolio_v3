@@ -33,6 +33,22 @@
   },
   {
     "id": 4,
+    "title": "Family House",
+    "description": "A concept home designed, created, and shot by me. Using Blender, UE5, & Davinci",
+    "date": "03-2024",
+    "images": [
+      "images/architecture_projects/family_house/fh_1.jpg",
+      "images/architecture_projects/family_house/fh_2.jpg",
+      "images/architecture_projects/family_house/fh_3.jpg",
+      "images/architecture_projects/family_house/fh_4.jpg"
+    ],
+    "link": "https://www.youtube.com/watch?v=TC4ymi2G0GQ",
+    "category": "architecture",
+    "hours": 50,
+    "inProgress": false
+  },
+  {
+    "id": 4,
     "title": "AI Bootcamp",
     "description": "AI Bootcamp was created to provide a free, accessible resource for learning AI tools and techniques in today's rapidly evolving landscape. This project represents a commitment to democratizing AI education and spreading knowledge to everyone who wants to learn.",
     "date": "08-2025",
@@ -42,6 +58,23 @@
     "hours": 15,
     "inProgress": true
   },
+  {
+    "id": 56,
+    "title": "Tujia",
+    "description": "A concept building design inspired by Tujia architecture, designed, created, and shot by me",
+    "date": "02-2024",
+    "images": [
+      "images/architecture_projects/tujia/tujia_1.jpg",
+      "images/architecture_projects/tujia/tujia_2.jpg",
+      "images/architecture_projects/tujia/tujia_3.jpg"
+    ],
+    "link": "https://www.youtube.com/watch?v=WLrkrDmMBvg",
+    "category": "architecture",
+    "hours": 50,
+    "inProgress": false
+  },
+
+
   {
     "id": 5,
     "title": "GapRunner",

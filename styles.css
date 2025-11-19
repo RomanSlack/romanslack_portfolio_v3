@@ -318,6 +318,29 @@ main {
     background-color: #0E0E0E;
 }
 
+/* Carousel for architecture projects */
+.project-carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #0E0E0E;
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
 .project-info {
     position: absolute;
     bottom: -40px;

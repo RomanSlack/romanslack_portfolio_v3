@@ -47,11 +47,39 @@ function createProjectCard(project) {
     const imageWrapper = document.createElement('div');
     imageWrapper.className = 'project-image-wrapper';
 
-    // Create image
-    const img = document.createElement('img');
-    img.src = project.image || 'images/roman_rectangular_landing.jpg';
-    img.alt = project.title;
-    img.className = 'project-image';
+    // Check if project has multiple images (carousel) or single image
+    if (project.images && Array.isArray(project.images) && project.images.length > 1) {
+        // Create carousel container
+        const carouselContainer = document.createElement('div');
+        carouselContainer.className = 'project-carousel';
+
+        // Create all images
+        project.images.forEach((imageSrc, index) => {
+            const img = document.createElement('img');
+            img.src = imageSrc;
+            img.alt = `${project.title} - Image ${index + 1}`;
+            img.className = `project-image carousel-image ${index === 0 ? 'active' : ''}`;
+            carouselContainer.appendChild(img);
+        });
+
+        imageWrapper.appendChild(carouselContainer);
+
+        // Start carousel auto-rotation (every 5 seconds)
+        let currentImageIndex = 0;
+        setInterval(() => {
+            const images = carouselContainer.querySelectorAll('.carousel-image');
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].classList.add('active');
+        }, 5000);
+    } else {
+        // Single image (legacy support)
+        const img = document.createElement('img');
+        img.src = project.image || project.images?.[0] || 'images/roman_rectangular_landing.jpg';
+        img.alt = project.title;
+        img.className = 'project-image';
+        imageWrapper.appendChild(img);
+    }
 
     // Create project info overlay
     const projectInfo = document.createElement('div');
@@ -103,7 +131,6 @@ function createProjectCard(project) {
         projectInfo.appendChild(linkIcon);
     }
 
-    imageWrapper.appendChild(img);
     imageWrapper.appendChild(projectInfo);
     card.appendChild(imageWrapper);
 
