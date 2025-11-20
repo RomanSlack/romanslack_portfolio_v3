@@ -1,0 +1,14 @@
+# Project management scripts (private use only)
+add_project.py
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
