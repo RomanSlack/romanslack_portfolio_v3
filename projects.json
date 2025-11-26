@@ -18,7 +18,8 @@
     "link": "https://github.com/RomanSlack/Hlynr_Intercept",
     "category": "programming",
     "hours": 56,
-    "inProgress": true
+    "inProgress": true,
+    "research": true
   },
   {
     "id": 3,
@@ -29,7 +30,8 @@
     "link": "https://github.com/RomanSlack/AUS-Lab",
     "category": "programming",
     "hours": 9,
-    "inProgress": true
+    "inProgress": true,
+    "research": true
   },
   {
     "id": 4,
@@ -91,7 +93,8 @@
     "image": "images/resized_1_portfolio/simuverse.jpeg",
     "link": "https://simuverse.world/",
     "category": "programming",
-    "hours": 70
+    "hours": 70,
+    "research": true
   },
   {
     "id": 9,

@@ -47,6 +47,14 @@ function createProjectCard(project) {
     const imageWrapper = document.createElement('div');
     imageWrapper.className = 'project-image-wrapper';
 
+    // Add research badge if flagged
+    if (project.research) {
+        const researchBadge = document.createElement('span');
+        researchBadge.className = 'project-research-badge';
+        researchBadge.textContent = 'Research';
+        imageWrapper.appendChild(researchBadge);
+    }
+
     // Check if project has multiple images (carousel) or single image
     if (project.images && Array.isArray(project.images) && project.images.length > 1) {
         // Create carousel container
