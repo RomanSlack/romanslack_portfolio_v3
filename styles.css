@@ -310,36 +310,39 @@ main {
     border-radius: 0;
 }
 
+.project-title-container {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    flex-wrap: wrap;
+}
+
 .project-research-badge {
-    position: absolute;
-    top: calc(9.5% + 10px);
-    right: 10px;
     background-color: rgba(50, 50, 50, 0.85); /* RESEARCH BADGE COLOR */
     color: #fff;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
-    padding: 4px 10px;
+    padding: 3px 8px;
     border-radius: 4px;
-    z-index: 15;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    pointer-events: none;
+    white-space: nowrap;
+    transform: translateY(-3px);
+    margin-left: 2px;
 }
 
 .project-product-badge {
-    position: absolute;
-    top: calc(9.5% + 10px);
-    right: 10px;
     background-color: rgba(34, 139, 34, 0.85); /* PRODUCT BADGE COLOR - green */
     color: #fff;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
-    padding: 4px 10px;
+    padding: 3px 8px;
     border-radius: 4px;
-    z-index: 15;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    pointer-events: none;
+    white-space: nowrap;
+    transform: translateY(-3px);
+    margin-left: 2px;
 }
 
 .project-image {

@@ -47,21 +47,6 @@ function createProjectCard(project) {
     const imageWrapper = document.createElement('div');
     imageWrapper.className = 'project-image-wrapper';
 
-    // Add research badge if flagged
-    if (project.research) {
-        const researchBadge = document.createElement('span');
-        researchBadge.className = 'project-research-badge';
-        researchBadge.textContent = 'Research';
-        imageWrapper.appendChild(researchBadge);
-    }
-
-    // Add product badge if flagged
-    if (project.product) {
-        const productBadge = document.createElement('span');
-        productBadge.className = 'project-product-badge';
-        productBadge.textContent = 'Product';
-        imageWrapper.appendChild(productBadge);
-    }
 
     // Check if project has multiple images (carousel) or single image
     if (project.images && Array.isArray(project.images) && project.images.length > 1) {
@@ -101,17 +86,38 @@ function createProjectCard(project) {
     const projectInfo = document.createElement('div');
     projectInfo.className = 'project-info';
 
+    // Create title container (for title + badges)
+    const titleContainer = document.createElement('div');
+    titleContainer.className = 'project-title-container';
+
     // Create title
     const title = document.createElement('h3');
     title.className = 'project-title';
     title.textContent = project.title;
+    titleContainer.appendChild(title);
+
+    // Add research badge if flagged (next to title)
+    if (project.research) {
+        const researchBadge = document.createElement('span');
+        researchBadge.className = 'project-research-badge';
+        researchBadge.textContent = 'Research';
+        titleContainer.appendChild(researchBadge);
+    }
+
+    // Add product badge if flagged (next to title)
+    if (project.product) {
+        const productBadge = document.createElement('span');
+        productBadge.className = 'project-product-badge';
+        productBadge.textContent = 'Product';
+        titleContainer.appendChild(productBadge);
+    }
 
     // Create description
     const description = document.createElement('p');
     description.className = 'project-description';
     description.textContent = project.description;
 
-    projectInfo.appendChild(title);
+    projectInfo.appendChild(titleContainer);
     projectInfo.appendChild(description);
 
     // Create date if exists
