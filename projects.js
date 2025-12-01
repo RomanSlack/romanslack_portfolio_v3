@@ -55,6 +55,14 @@ function createProjectCard(project) {
         imageWrapper.appendChild(researchBadge);
     }
 
+    // Add product badge if flagged
+    if (project.product) {
+        const productBadge = document.createElement('span');
+        productBadge.className = 'project-product-badge';
+        productBadge.textContent = 'Product';
+        imageWrapper.appendChild(productBadge);
+    }
+
     // Check if project has multiple images (carousel) or single image
     if (project.images && Array.isArray(project.images) && project.images.length > 1) {
         // Create carousel container
