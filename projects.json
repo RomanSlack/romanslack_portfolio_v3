@@ -111,6 +111,16 @@
   },
   {
     "id": 10,
+    "title": "RIT Formula SAE Live Telemetry",
+    "description": "Main repo is owned by org. This was our prototype repository in which we were trying to build from scratch a live telemetry module using LORA. Custom PCB stuff.",
+    "date": "08-2025",
+    "image": "images/resized_1_portfolio/ritracing.jpg",
+    "link": "https://github.com/RomanSlack/FormulaSAELiveTelemetry",
+    "category": "programming",
+    "hours": 30
+  },
+  {
+    "id": 11,
     "title": "AI Bootcamp",
     "description": "AI Bootcamp was created to provide a free, accessible resource for learning AI tools and techniques in today's rapidly evolving landscape. This project represents a commitment to democratizing AI education and spreading knowledge to everyone who wants to learn.",
     "date": "08-2025",
@@ -121,7 +131,7 @@
     "inProgress": true
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "GapRunner",
     "description": "(80% Gain on 2025 Data) GapRunner is a backtesting and live-trading engine that simulates a top-gainers momentum strategy using real minute-level equity data. Custom Universe collection system.",
     "date": "08-2025",
@@ -131,7 +141,7 @@
     "hours": 4
   },
   {
-    "id": 12,
+    "id": 13,
     "title": "SimuVerse",
     "description": "A revolutionary multi-agent simulation environment where AI agents powered by LLMs live and interact on Mars, paving the way for advanced research in artificial intelligence.",
     "date": "02-2024",
@@ -142,7 +152,7 @@
     "research": true
   },
   {
-    "id": 13,
+    "id": 14,
     "title": "FengShui.fy",
     "description": "(Winner of Best Use of AI @ Columbia) An AI-powered interior design analyzer merging traditional feng shui with modern computer vision. Using YOLOv11 object detection, Gemini 2.5 AI reasoning, and Blender-based 3D reconstruction, it evaluates spatial balance, energy flow, and design harmony directly from room photos. Built with Next.js, FastAPI, and a zen-inspired interface for intuitive, meditative interaction.",
     "date": "10-2025",
@@ -152,7 +162,7 @@
     "hours": 24
   },
   {
-    "id": 14,
+    "id": 15,
     "title": "EchoRidge Search",
     "description": "An AI-powered business intelligence pipeline combining discovery, scraping, and hybrid LLM scoring with real-time visualization. Built on Python, FastAPI, and Next.js, it automates market research by aggregating, ranking, and mapping businesses through a cloud-native GCS pipeline.",
     "date": "06-2025",
@@ -162,7 +172,7 @@
     "hours": 17
   },
   {
-    "id": 15,
+    "id": 16,
     "title": "UltraThinkV2",
     "description": "A Claude-driven automation framework that converts natural language instructions into structured AI workflows and executable code pipelines. It streamlines SaaS project creation through task decomposition, AI reasoning, and automated debugging, cutting development time by over 80% on large builds.",
     "date": "07-2025",
@@ -172,7 +182,7 @@
     "hours": 3
   },
   {
-    "id": 16,
+    "id": 17,
     "title": "World Record Speedrun Childrens Book Author",
     "description": "I use AI to become a published author as fast as possible, Book: Understanding Nuclear Physics for Kids",
     "date": "07-2023",
@@ -182,7 +192,7 @@
     "link": "https://youtu.be/eG19ER6lvtY?t=3721"
   },
   {
-    "id": 17,
+    "id": 18,
     "title": "FaceMusic",
     "description": "A lightweight Python tool that maps facial expressions to media playback. Using MediaPipe for real-time detection, it lets users trigger YouTube or local audio with gestures like eyebrow raises or winks; turning the webcam into an interactive controller.",
     "date": "06-2025",
@@ -192,7 +202,7 @@
     "hours": 1
   },
   {
-    "id": 18,
+    "id": 19,
     "title": "Skema",
     "description": "A clean, AI-integrated productivity dashboard that unifies idea management, scheduling, and journaling into one seamless interface.",
     "date": "07-2025",
@@ -202,7 +212,7 @@
     "hours": 4
   },
   {
-    "id": 19,
+    "id": 20,
     "title": "ClickUp Scrape",
     "description": "A powerful Python tool to download all image attachments from your ClickUp workspace with advanced features like resume capability, duplicate detection, and a built-in image sorting interface.",
     "date": "06-2025",
@@ -212,7 +222,7 @@
     "hours": 2
   },
   {
-    "id": 20,
+    "id": 21,
     "title": "Sonomancer",
     "description": "Sonomancer is a vibe-aware ambient e-reader that syncs each chapter of your book with AI-curated background ambience from YouTube. Upload any EPUB or PDF and experience immersive reading with real-time mood-based soundscapes.",
     "date": "06-2025",
@@ -222,7 +232,7 @@
     "hours": 2
   },
   {
-    "id": 21,
+    "id": 22,
     "title": "OpenNote Discord Bot",
     "description": "A Discord bot that transcribes voice channels and generates AI-powered meeting summaries. Forked from volo_discord_bot.",
     "date": "07-2025",
@@ -232,7 +242,7 @@
     "hours": 2
   },
   {
-    "id": 22,
+    "id": 23,
     "title": "ReFaceNet",
     "description": "(DECA paper implementation) An app that intelligently reconstructs complete faces from multiple occluded/cropped photos. Handles hand-covered selfies, partial crops, and missing facial regions.",
     "date": "05-2025",
@@ -242,7 +252,7 @@
     "hours": 1
   },
   {
-    "id": 23,
+    "id": 24,
     "title": "QR Code Rater",
     "description": "A test for claude (took under 15 mins) A Flask web application that allows users to generate QR codes for rating machines or equipment. When scanned, the QR code leads to a unique rating page for that machine.",
     "date": "03-2025",
@@ -252,7 +262,7 @@
     "hours": 0.2
   },
   {
-    "id": 24,
+    "id": 25,
     "title": "LLM Collate Code",
     "description": "A simple Python script that collects code from specified file paths on your OS. It copies each file's content, labels it by programming language, and saves everything into a single JSON file \u2013 perfect for feeding into a Large Language Model (LLM).",
     "date": "03-2025",
@@ -262,7 +272,7 @@
     "hours": 1
   },
   {
-    "id": 25,
+    "id": 26,
     "title": "FirstChat",
     "description": "(Ignore degenerate project) A full-stack system for personalized dating openers: Playwright scraper ingests Tinder profiles, FastAPI scores text/images with GPT + Google Vision, and a Flask UI returns analytics-backed first messages via a REST API.",
     "date": "03-2025",
@@ -272,7 +282,7 @@
     "hours": 5
   },
   {
-    "id": 26,
+    "id": 27,
     "title": "Akta Life",
     "description": "(RIT HackCOMS 24 Submission) Akta.life is an AI-driven platform that serves as a personalized course hub. It analyzes individual learning preferences, academic history, and career goals to recommend courses and professors tailored to each student's unique needs.",
     "date": "11-2024",
@@ -282,7 +292,7 @@
     "hours": 15
   },
   {
-    "id": 27,
+    "id": 28,
     "title": "UrbanSpark",
     "description": "(Winning Hack RPI 24 Submission) An AI-driven platform that personalizes urban opportunity discovery for young adults. It uses FastAPI, React, OpenAI, and SerpAPI to recommend jobs, workshops, and community resources tailored to user profiles\u2014empowering local engagement and accessibility.",
     "date": "11-2024",
@@ -292,7 +302,7 @@
     "hours": 24
   },
   {
-    "id": 28,
+    "id": 29,
     "title": "StereoToMono Chrome Extension",
     "description": "(Over 200 Active users) A simple Chrome extension that merges any stereo audio into a single mono channel. Whether you're wearing headphones or using a single speaker, enjoy consistent sound from all tabs with a click of a button.",
     "date": "02-2025",
@@ -302,7 +312,7 @@
     "hours": 2
   },
   {
-    "id": 29,
+    "id": 30,
     "title": "Randomized-Timer",
     "description": "(I use this everyday in the gym for planks) Literally a timer but it adds a random amount at the end to strengthen the mind during exercises.",
     "date": "09-2024",
@@ -310,16 +320,6 @@
     "link": "https://randomizedtimer.netlify.app/",
     "category": "programming",
     "hours": 1
-  },
-  {
-    "id": 30,
-    "title": "RIT Formula SAE Live Telemetry",
-    "description": "Main repo is owned by org. This was our prototype repository in which we were trying to build from scratch a live telemetry module using LORA. Custom PCB stuff.",
-    "date": "08-2025",
-    "image": "images/resized_1_portfolio/ritracing.jpg",
-    "link": "https://github.com/RomanSlack/FormulaSAELiveTelemetry",
-    "category": "programming",
-    "hours": 30
   },
   {
     "id": 31,
