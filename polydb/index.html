@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poly-DB - Polymarket Vector Derivatives</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            background-color: #0d1117;
+            color: #e6edf3;
+            line-height: 1.6;
+            font-size: 16px;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 2em;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #21262d;
+            color: #e6edf3;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #21262d;
+            color: #e6edf3;
+        }
+
+        h3 {
+            font-size: 1.25em;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            color: #e6edf3;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #e6edf3;
+        }
+
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin: 16px 0;
+        }
+
+        .badges img {
+            height: 28px;
+        }
+
+        .tagline {
+            font-weight: 600;
+            margin: 16px 0;
+            font-size: 1.1em;
+        }
+
+        .nav-links {
+            margin: 16px 0;
+            font-size: 0.95em;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #21262d;
+            margin: 24px 0;
+        }
+
+        .header-image {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        pre {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 16px;
+            overflow-x: auto;
+            margin-bottom: 16px;
+            font-size: 0.85em;
+            line-height: 1.45;
+            max-width: 100%;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+        }
+
+        code {
+            background-color: #161b22;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+            font-size: 0.85em;
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #e6edf3;
+        }
+
+        .emoji {
+            margin-right: 4px;
+        }
+
+        blockquote {
+            border-left: 4px solid #30363d;
+            padding-left: 16px;
+            margin-left: 0;
+            margin-bottom: 16px;
+            color: #8b949e;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+
+        th, td {
+            border: 1px solid #30363d;
+            padding: 8px 13px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #161b22;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #0d1117;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .feature-list li::before {
+            content: "•";
+            color: #58a6ff;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 12px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+                word-wrap: break-word;
+            }
+
+            h2 {
+                font-size: 1.3em;
+                word-wrap: break-word;
+            }
+
+            h3 {
+                font-size: 1.1em;
+                word-wrap: break-word;
+            }
+
+            pre {
+                padding: 10px;
+                font-size: 0.75em;
+                overflow-x: auto;
+            }
+
+            code {
+                font-size: 0.8em;
+                word-break: break-all;
+            }
+
+            .badges {
+                justify-content: center;
+            }
+
+            .badges img {
+                height: 22px;
+                max-width: 100%;
+            }
+
+            .tagline {
+                font-size: 1em;
+            }
+
+            .nav-links {
+                font-size: 0.85em;
+            }
+
+            .header-image {
+                width: 100%;
+                height: auto;
+            }
+
+            ul, ol {
+                margin-left: 16px;
+                padding-left: 8px;
+            }
+
+            table {
+                font-size: 0.85em;
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 16px 10px;
+            }
+
+            h1 {
+                font-size: 1.4em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            h3 {
+                font-size: 1.05em;
+            }
+
+            pre {
+                padding: 8px;
+                font-size: 0.7em;
+            }
+
+            .badges img {
+                height: 20px;
+            }
+
+            .tagline {
+                font-size: 0.95em;
+            }
+
+            .nav-links {
+                font-size: 0.8em;
+            }
+        }
+
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #21262d;
+            text-align: center;
+            color: #8b949e;
+            font-size: 0.9em;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: rgba(33, 38, 45, 0.8);
+            backdrop-filter: blur(10px);
+            color: #e6edf3;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+            border: 1px solid rgba(48, 54, 61, 0.5);
+            margin-bottom: 24px;
+        }
+
+        .back-button:hover {
+            background-color: rgba(48, 54, 61, 0.9);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="javascript:history.back()" class="back-button">← Back</a>
+        <div class="center">
+            <h1>Poly-DB - Polymarket Vector Derivatives</h1>
+
+            <div class="badges">
+                <img src="https://img.shields.io/badge/Python-3.12+-blue?style=for-the-badge&logo=python" alt="Python">
+                <img src="https://img.shields.io/badge/FastAPI-API-009688?style=for-the-badge&logo=fastapi" alt="FastAPI">
+                <img src="https://img.shields.io/badge/ChromaDB-Vector_DB-orange?style=for-the-badge" alt="ChromaDB">
+                <img src="https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker" alt="Docker">
+            </div>
+
+            <p class="tagline"><strong>Find similar markets, detect derivatives, and discover arbitrage opportunities through semantic vector search</strong></p>
+
+            <p class="nav-links">
+                <a href="#quick-start">Quick Start</a> •
+                <a href="#features">Features</a> •
+                <a href="#cli-usage">CLI Usage</a> •
+                <a href="#api-endpoints">API Endpoints</a>
+            </p>
+        </div>
+
+        <hr>
+
+        <h2 id="features">Features</h2>
+
+        <ul class="feature-list">
+            <li><strong>Semantic Search</strong>: Find markets using natural language queries</li>
+            <li><strong>Derivative Detection</strong>: Identify related markets based on semantic similarity</li>
+            <li><strong>Arbitrage Detection</strong>: Find pricing inefficiencies between similar markets</li>
+            <li><strong>Market Clustering</strong>: Group markets by topic automatically</li>
+            <li><strong>FastAPI Backend</strong>: Production-ready REST API</li>
+            <li><strong>Minimal Web UI</strong>: Clean Flask frontend for exploration</li>
+            <li><strong>CLI Tool</strong>: Command-line interface for batch operations</li>
+            <li><strong>Docker Support</strong>: Fully containerized deployment</li>
+        </ul>
+
+        <h2>Architecture</h2>
+
+        <ul>
+            <li><strong>Embedding Model</strong>: Sentence Transformers (all-MiniLM-L6-v2, 384 dimensions)</li>
+            <li><strong>Vector Database</strong>: ChromaDB with persistent local storage</li>
+            <li><strong>Market Data</strong>: Polymarket Gamma API (political markets)</li>
+            <li><strong>Backend</strong>: FastAPI with async support</li>
+            <li><strong>Frontend</strong>: Flask with minimal vanilla JavaScript</li>
+            <li><strong>Storage</strong>: Local ChromaDB for vectors, no external dependencies</li>
+        </ul>
+
+        <h2 id="quick-start">Quick Start</h2>
+
+        <h3>1. Install Dependencies</h3>
+        <pre><code>pip install -r requirements.txt</code></pre>
+
+        <h3>2. Scrape and Vectorize Markets</h3>
+        <pre><code>python cli.py scrape --max-markets 1000</code></pre>
+        <p>This will fetch political markets from Polymarket, extract text, generate embeddings using Sentence Transformers, and store in ChromaDB. Progress: ~5-10 minutes for 1000 markets.</p>
+
+        <h3>3. Run API Server</h3>
+        <pre><code>python api.py</code></pre>
+        <p>API available at <code>http://localhost:8000</code></p>
+
+        <h3>4. Run Frontend</h3>
+        <pre><code>python frontend.py</code></pre>
+        <p>UI available at <code>http://localhost:5000</code></p>
+
+        <h2>Docker Deployment</h2>
+        <pre><code># Build and Run
+docker-compose up -d
+
+# Initial Scrape
+docker-compose exec api python cli.py scrape --max-markets 1000</code></pre>
+
+        <h2 id="cli-usage">CLI Usage</h2>
+
+        <h3>Scrape Markets</h3>
+        <pre><code># Scrape active political markets
+python cli.py scrape --max-markets 1000
+
+# Include closed markets
+python cli.py scrape --max-markets 1000 --closed
+
+# Custom database path
+python cli.py scrape --db-path /path/to/db --max-markets 500</code></pre>
+
+        <h3>Search Markets</h3>
+        <pre><code># Natural language search
+python cli.py search "Trump wins 2024" --limit 10
+
+# Custom similarity threshold
+python cli.py search "senate control" --limit 20</code></pre>
+
+        <h3>Find Similar Markets</h3>
+        <pre><code>python cli.py similar 12345 --limit 10</code></pre>
+
+        <h3>Find Derivatives</h3>
+        <pre><code>python cli.py derivatives 12345 --min-similarity 0.75 --limit 20</code></pre>
+
+        <h3>Detect Arbitrage</h3>
+        <pre><code>python cli.py arbitrage 12345 --min-similarity 0.90 --min-price-diff 0.05</code></pre>
+
+        <h2 id="api-endpoints">API Endpoints</h2>
+
+        <h3>GET /stats</h3>
+        <p>Get database statistics</p>
+        <pre><code>{
+  "total_markets": 847,
+  "name": "polymarket_political_markets",
+  "metadata": {
+    "embedding_model": "all-MiniLM-L6-v2",
+    "embedding_dimensions": 384
+  }
+}</code></pre>
+
+        <h3>POST /search</h3>
+        <p>Natural language search</p>
+        <pre><code>// Request
+{
+  "query": "Trump wins 2024",
+  "limit": 10
+}
+
+// Response
+{
+  "query": "Trump wins 2024",
+  "results": [
+    {
+      "id": "12345",
+      "similarity": 0.92,
+      "metadata": {
+        "question": "Will Trump win the 2024 election?",
+        "volume": 150000,
+        "last_price": 0.65,
+        "active": true
+      }
+    }
+  ]
+}</code></pre>
+
+        <h3>POST /derivatives</h3>
+        <p>Find derivative markets</p>
+        <pre><code>// Request
+{
+  "market_id": "12345",
+  "min_similarity": 0.75,
+  "max_results": 20
+}
+
+// Response
+{
+  "market_id": "12345",
+  "derivatives": [
+    {
+      "id": "67890",
+      "similarity": 0.88,
+      "relationship": "strong_derivative",
+      "metadata": {...}
+    }
+  ]
+}</code></pre>
+
+        <h3>POST /arbitrage</h3>
+        <p>Find arbitrage opportunities</p>
+        <pre><code>// Request
+{
+  "market_id": "12345",
+  "min_similarity": 0.90,
+  "min_price_diff": 0.05
+}
+
+// Response
+{
+  "market_id": "12345",
+  "opportunities": [
+    {
+      "market_a": {
+        "id": "12345",
+        "question": "Trump wins 2024",
+        "price": 0.65
+      },
+      "market_b": {
+        "id": "67890",
+        "question": "Republican wins 2024",
+        "price": 0.60
+      },
+      "similarity": 0.93,
+      "price_diff": 0.05,
+      "arb_type": "subset",
+      "expected_profit": 0.05,
+      "confidence": "high"
+    }
+  ]
+}</code></pre>
+
+        <h2>Similarity Interpretation</h2>
+
+        <table>
+            <tr>
+                <th>Score Range</th>
+                <th>Interpretation</th>
+            </tr>
+            <tr>
+                <td>0.95-1.00</td>
+                <td>Near duplicates (same question, different outcome)</td>
+            </tr>
+            <tr>
+                <td>0.85-0.95</td>
+                <td>Strong derivatives (closely related)</td>
+            </tr>
+            <tr>
+                <td>0.75-0.85</td>
+                <td>Moderate derivatives (related but distinct)</td>
+            </tr>
+            <tr>
+                <td>0.65-0.75</td>
+                <td>Weak correlation</td>
+            </tr>
+            <tr>
+                <td>&lt; 0.65</td>
+                <td>Unrelated</td>
+            </tr>
+        </table>
+
+        <h2>Performance</h2>
+
+        <h3>Initial Scrape (1000 markets)</h3>
+        <ul>
+            <li>Scraping: 2-5 minutes</li>
+            <li>Text processing: 5 seconds</li>
+            <li>Embedding generation: 2-5 minutes (CPU)</li>
+            <li>Storage: 10 seconds</li>
+            <li><strong>Total: ~5-10 minutes</strong></li>
+        </ul>
+
+        <h3>Query Performance</h3>
+        <ul>
+            <li>Single market search: &lt; 50ms</li>
+            <li>Batch query (10 markets): &lt; 200ms</li>
+            <li>Text search: &lt; 100ms</li>
+        </ul>
+
+        <h3>Storage</h3>
+        <ul>
+            <li>1000 markets: ~150-200 MB</li>
+            <li>Per market: ~3-7 KB</li>
+            <li>Embedding size: 384 floats × 4 bytes = 1.5 KB</li>
+        </ul>
+
+        <h2>Project Structure</h2>
+        <pre><code>vectorization_derivatives/
+├── gamma_api.py              # Polymarket API client
+├── text_processor.py         # Text extraction
+├── embeddings.py             # Sentence Transformers wrapper
+├── chroma_client.py          # ChromaDB interface
+├── derivatives.py            # Analysis functions
+├── market_vectorizer.py      # Orchestrator
+├── cli.py                    # CLI tool
+├── api.py                    # FastAPI backend
+├── frontend.py               # Flask frontend
+├── templates/
+│   └── index.html            # Web UI
+├── requirements.txt          # Dependencies
+├── docker-compose.yml        # Docker orchestration
+├── Dockerfile.api            # API container
+├── Dockerfile.frontend       # Frontend container
+└── README.md                 # Documentation</code></pre>
+
+        <hr>
+
+        <div class="footer">
+            <p><strong>Poly-DB</strong> • Polymarket Vector Derivatives System</p>
+            <p><em>Built with Python 3.12+, ChromaDB, Sentence Transformers, FastAPI, Flask</em></p>
+        </div>
+    </div>
+</body>
+</html>
