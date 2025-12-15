@@ -5,9 +5,9 @@
     "description": "Free, open-source alternative to Draw.io (diagrams.net), Lucidchart, and Figma for technical diagrams \u2014 Create beautiful architecture diagrams, flowcharts, system designs, and network diagrams with a modern, publication-ready aesthetic.",
     "date": "12-2025",
     "image": "images/resized_1_portfolio/rcds_image.jpg",
-    "link": "https://github.com/RomanSlack/Romans_Cool_Diagram_Software",
+    "link": "https://romans-cool-diagram-software.vercel.app/",
     "category": "programming",
-    "hours": 6.0,
+    "hours": 10.0,
     "inProgress": true,
     "product": true
   },
