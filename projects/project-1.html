@@ -20,8 +20,9 @@
 
     <footer>
         <div class="footer-copyright">
-            Copyright © 2025 Roman Slack
+            Copyright © <span id="year"></span> Roman Slack
         </div>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
         <div class="footer-links">
             <a href="https://www.linkedin.com/in/roman-slack-a91a6a266" target="_blank" aria-label="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
