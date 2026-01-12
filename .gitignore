@@ -1,6 +1,3 @@
-# Project management scripts (private use only)
-add_project.py
-
 # IDE
 .idea/
 .vscode/

@@ -107,17 +107,29 @@ main {
 .profile-image-container {
     width: 50%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
     padding-right: 80px;
+    overflow: visible;
 }
 
 .profile-image {
     max-width: 700px;
+    max-height: calc(100% - 40px);
     width: 100%;
     height: auto;
     object-fit: contain;
+}
+
+.image-caption {
+    color: #F5F5F5;
+    font-size: 14px;
+    opacity: 0.6;
+    text-align: center;
+    margin-top: 12px;
+    font-weight: 400;
 }
 
 /* Mobile styles */
@@ -173,6 +185,11 @@ main {
         width: 100%;
         margin-top: 0;
     }
+
+    .image-caption {
+        font-size: 12px;
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -186,6 +203,11 @@ main {
 
     .nav-buttons a {
         font-size: 32px;
+    }
+
+    .image-caption {
+        font-size: 11px;
+        margin-top: 8px;
     }
 }
 
