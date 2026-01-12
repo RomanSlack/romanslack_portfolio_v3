@@ -1,6 +1,16 @@
 [
   {
     "id": 1,
+    "title": "Discerio",
+    "description": "Scratch for AI Agents - Discer.io is an interactive platform that teaches agentic AI concepts through a multiplayer battle royale game. Build AI agents using a visual block-based programming interface, deploy them into a live combat arena, and watch them make real-time decisions using large language models. Created for HackPrinceton Fall 2025.",
+    "date": "11-2025",
+    "image": "images/resized_1_portfolio/discerio.png",
+    "link": "https://github.com/RomanSlack/Discerio",
+    "category": "programming",
+    "hours": 33
+  },
+  {
+    "id": 2,
     "title": "Romans Cool Diagram Software",
     "description": "Free, open-source alternative to Draw.io (diagrams.net), Lucidchart, and Figma for technical diagrams \u2014 Create beautiful architecture diagrams, flowcharts, system designs, and network diagrams with a modern, publication-ready aesthetic.",
     "date": "12-2025",
@@ -10,16 +20,6 @@
     "hours": 10.0,
     "inProgress": true,
     "product": true
-  },
-  {
-    "id": 2,
-    "title": "Discerio",
-    "description": "Scratch for AI Agents - Discer.io is an interactive platform that teaches agentic AI concepts through a multiplayer battle royale game. Build AI agents using a visual block-based programming interface, deploy them into a live combat arena, and watch them make real-time decisions using large language models. Created for HackPrinceton Fall 2025.",
-    "date": "11-2025",
-    "image": "images/resized_1_portfolio/discerio.png",
-    "link": "https://github.com/RomanSlack/Discerio",
-    "category": "programming",
-    "hours": 33
   },
   {
     "id": 3,
