@@ -47,6 +47,17 @@
   },
   {
     "id": 5,
+    "title": "Free eSign Website",
+    "description": "Free, open-source e-signature website for signing simple documents online. This is a hosted, single-page web app that lets you upload a PDF, add a signature, and download the signed file instantly, with no login, no accounts, and no restrictions.",
+    "date": "01-2026",
+    "category": "programming",
+    "hours": 1,
+    "image": "images/resized_1_portfolio/free_esign_Image.jpg",
+    "link": "https://github.com/RomanSlack/free_esign_website",
+    "product": true
+  },
+  {
+    "id": 6,
     "title": "Emotional Design in Messaging Applications",
     "description": "How do messaging platforms engineer emotional responses? This case study examines the symbolic manipulation of Snapchat versus the infrastructural dependence of WeChat.",
     "date": "12-2025",
@@ -57,7 +68,7 @@
     "research": true
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Hlynr Intercept",
     "description": "A radar based missile interception reinforcement learning environment with a custom Unity simulation layer, currently researching radar observation spaces and a novel implementation of single policy hierarchical learning.",
     "date": "05-2025",
@@ -69,7 +80,7 @@
     "research": true
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Xscape",
     "description": "I hate MacOS, Xscape lets you develop iOS apps on Linux by orchestrating a macOS VM (or remote Mac) that handles the actual Xcode builds and simulator runs. You get a clean terminal UI on Linux, and the iOS Simulator streams to your browser via VNC.",
     "date": "12-2025",
@@ -81,7 +92,7 @@
     "product": true
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "Objectionary.AI",
     "description": "Real-time AI sales objection handler that listens to live calls, detects objections, and delivers script suggestions through an elegant teleprompter interface with PiP support.",
     "date": "11-2025",
@@ -93,7 +104,7 @@
     "product": true
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "AUS-Lab",
     "description": "(Autonomous UAV Swarm Laboratory) An experimental framework for LLM-driven cognitive control of UAV swarms. It links agentic reasoning with swarm simulation to enable autonomous coordination, adaptive behavior, and hardware-in-the-loop testing.",
     "date": "10-2025",
@@ -105,7 +116,7 @@
     "research": true
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "Vibe OS",
     "description": "Vibe OS - A multi-agent orchestration system where specialized AI agents collaborate through event-driven communication and a great looking UI designed by me.",
     "date": "07-2025",
@@ -117,7 +128,7 @@
     "research": true
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "VoiceDeck",
     "description": "A desktop voice recorder with speech-to-text transcription for Ubuntu. Record from any microphone, click stop, and get your transcript. Uses OpenAI's Speech-to-Text API with support for recordings up to 60 minutes.",
     "date": "12-2025",
@@ -128,7 +139,7 @@
     "product": true
   },
   {
-    "id": 12,
+    "id": 13,
     "title": "NextGen",
     "description": "A youth-focused coding initiative designed to teach foundational programming through hands-on lessons in Python, web design, and AI basics. Built to inspire technological curiosity, NextGen empowers students to explore CS careers and creative problem-solving in an immersive, project-based environment.",
     "date": "01-2024",
@@ -138,7 +149,7 @@
     "hours": 70
   },
   {
-    "id": 13,
+    "id": 14,
     "title": "SimuVerse",
     "description": "A revolutionary multi-agent simulation environment where AI agents powered by LLMs live and interact on Mars, paving the way for advanced research in artificial intelligence.",
     "date": "02-2024",
@@ -149,7 +160,7 @@
     "research": true
   },
   {
-    "id": 14,
+    "id": 15,
     "title": "Poly-DB",
     "description": "A Polymarket scraper that vectorizes markets using semantic embeddings, enabling lightning-fast derivative detection, arbitrage discovery, and natural language search through a simple CLI and API interface.",
     "date": "11-2025",
@@ -160,7 +171,7 @@
     "inProgress": true
   },
   {
-    "id": 15,
+    "id": 16,
     "title": "Family House",
     "description": "A concept home designed, created, and shot by me. Using Blender, UE5, & Davinci",
     "date": "03-2024",
@@ -176,7 +187,7 @@
     "inProgress": false
   },
   {
-    "id": 16,
+    "id": 17,
     "title": "Tujia",
     "description": "A concept building design inspired by Tujia architecture, designed, created, and shot by me",
     "date": "02-2024",
@@ -191,7 +202,7 @@
     "inProgress": false
   },
   {
-    "id": 17,
+    "id": 18,
     "title": "RIT Formula SAE Live Telemetry",
     "description": "Main repo is owned by org. This was our prototype repository in which we were trying to build from scratch a live telemetry module using LORA. Custom PCB stuff.",
     "date": "08-2025",
@@ -201,7 +212,7 @@
     "hours": 30
   },
   {
-    "id": 18,
+    "id": 19,
     "title": "AI Bootcamp",
     "description": "AI Bootcamp was created to provide a free, accessible resource for learning AI tools and techniques in today's rapidly evolving landscape. This project represents a commitment to democratizing AI education and spreading knowledge to everyone who wants to learn.",
     "date": "08-2025",
@@ -212,7 +223,7 @@
     "inProgress": true
   },
   {
-    "id": 19,
+    "id": 20,
     "title": "GapRunner",
     "description": "(80% Gain on 2025 Data) GapRunner is a backtesting and live-trading engine that simulates a top-gainers momentum strategy using real minute-level equity data. Custom Universe collection system.",
     "date": "08-2025",
@@ -222,7 +233,7 @@
     "hours": 4
   },
   {
-    "id": 20,
+    "id": 21,
     "title": "FengShui.fy",
     "description": "(Winner of Best Use of AI @ Columbia) An AI-powered interior design analyzer merging traditional feng shui with modern computer vision. Using YOLOv11 object detection, Gemini 2.5 AI reasoning, and Blender-based 3D reconstruction, it evaluates spatial balance, energy flow, and design harmony directly from room photos. Built with Next.js, FastAPI, and a zen-inspired interface for intuitive, meditative interaction.",
     "date": "10-2025",
@@ -232,7 +243,7 @@
     "hours": 24
   },
   {
-    "id": 21,
+    "id": 22,
     "title": "EchoRidge Search",
     "description": "An AI-powered business intelligence pipeline combining discovery, scraping, and hybrid LLM scoring with real-time visualization. Built on Python, FastAPI, and Next.js, it automates market research by aggregating, ranking, and mapping businesses through a cloud-native GCS pipeline.",
     "date": "06-2025",
@@ -242,7 +253,7 @@
     "hours": 17
   },
   {
-    "id": 22,
+    "id": 23,
     "title": "UltraThinkV2",
     "description": "A Claude-driven automation framework that converts natural language instructions into structured AI workflows and executable code pipelines. It streamlines SaaS project creation through task decomposition, AI reasoning, and automated debugging, cutting development time by over 80% on large builds.",
     "date": "07-2025",
@@ -252,7 +263,7 @@
     "hours": 3
   },
   {
-    "id": 23,
+    "id": 24,
     "title": "World Record Speedrun Childrens Book Author",
     "description": "I use AI to become a published author as fast as possible, Book: Understanding Nuclear Physics for Kids",
     "date": "07-2023",
@@ -262,7 +273,7 @@
     "link": "https://youtu.be/eG19ER6lvtY?t=3721"
   },
   {
-    "id": 24,
+    "id": 25,
     "title": "FaceMusic",
     "description": "A lightweight Python tool that maps facial expressions to media playback. Using MediaPipe for real-time detection, it lets users trigger YouTube or local audio with gestures like eyebrow raises or winks; turning the webcam into an interactive controller.",
     "date": "06-2025",
@@ -272,7 +283,7 @@
     "hours": 1
   },
   {
-    "id": 25,
+    "id": 26,
     "title": "Skema",
     "description": "A clean, AI-integrated productivity dashboard that unifies idea management, scheduling, and journaling into one seamless interface.",
     "date": "07-2025",
@@ -282,7 +293,7 @@
     "hours": 4
   },
   {
-    "id": 26,
+    "id": 27,
     "title": "ClickUp Scrape",
     "description": "A powerful Python tool to download all image attachments from your ClickUp workspace with advanced features like resume capability, duplicate detection, and a built-in image sorting interface.",
     "date": "06-2025",
@@ -292,7 +303,7 @@
     "hours": 2
   },
   {
-    "id": 27,
+    "id": 28,
     "title": "Sonomancer",
     "description": "Sonomancer is a vibe-aware ambient e-reader that syncs each chapter of your book with AI-curated background ambience from YouTube. Upload any EPUB or PDF and experience immersive reading with real-time mood-based soundscapes.",
     "date": "06-2025",
@@ -302,7 +313,7 @@
     "hours": 2
   },
   {
-    "id": 28,
+    "id": 29,
     "title": "OpenNote Discord Bot",
     "description": "A Discord bot that transcribes voice channels and generates AI-powered meeting summaries. Forked from volo_discord_bot.",
     "date": "07-2025",
@@ -312,7 +323,7 @@
     "hours": 2
   },
   {
-    "id": 29,
+    "id": 30,
     "title": "ReFaceNet",
     "description": "(DECA paper implementation) An app that intelligently reconstructs complete faces from multiple occluded/cropped photos. Handles hand-covered selfies, partial crops, and missing facial regions.",
     "date": "05-2025",
@@ -322,7 +333,7 @@
     "hours": 1
   },
   {
-    "id": 30,
+    "id": 31,
     "title": "QR Code Rater",
     "description": "A test for claude (took under 15 mins) A Flask web application that allows users to generate QR codes for rating machines or equipment. When scanned, the QR code leads to a unique rating page for that machine.",
     "date": "03-2025",
@@ -332,7 +343,7 @@
     "hours": 0.2
   },
   {
-    "id": 31,
+    "id": 32,
     "title": "LLM Collate Code",
     "description": "A simple Python script that collects code from specified file paths on your OS. It copies each file's content, labels it by programming language, and saves everything into a single JSON file \u2013 perfect for feeding into a Large Language Model (LLM).",
     "date": "03-2025",
@@ -342,7 +353,7 @@
     "hours": 1
   },
   {
-    "id": 32,
+    "id": 33,
     "title": "FirstChat",
     "description": "(Ignore degenerate project) A full-stack system for personalized dating openers: Playwright scraper ingests Tinder profiles, FastAPI scores text/images with GPT + Google Vision, and a Flask UI returns analytics-backed first messages via a REST API.",
     "date": "03-2025",
@@ -352,7 +363,7 @@
     "hours": 5
   },
   {
-    "id": 33,
+    "id": 34,
     "title": "Akta Life",
     "description": "(RIT HackCOMS 24 Submission) Akta.life is an AI-driven platform that serves as a personalized course hub. It analyzes individual learning preferences, academic history, and career goals to recommend courses and professors tailored to each student's unique needs.",
     "date": "11-2024",
@@ -362,7 +373,7 @@
     "hours": 15
   },
   {
-    "id": 34,
+    "id": 35,
     "title": "UrbanSpark",
     "description": "(Winning Hack RPI 24 Submission) An AI-driven platform that personalizes urban opportunity discovery for young adults. It uses FastAPI, React, OpenAI, and SerpAPI to recommend jobs, workshops, and community resources tailored to user profiles\u2014empowering local engagement and accessibility.",
     "date": "11-2024",
@@ -372,7 +383,7 @@
     "hours": 24
   },
   {
-    "id": 35,
+    "id": 36,
     "title": "StereoToMono Chrome Extension",
     "description": "(Over 200 Active users) A simple Chrome extension that merges any stereo audio into a single mono channel. Whether you're wearing headphones or using a single speaker, enjoy consistent sound from all tabs with a click of a button.",
     "date": "02-2025",
@@ -382,7 +393,7 @@
     "hours": 2
   },
   {
-    "id": 36,
+    "id": 37,
     "title": "Randomized-Timer",
     "description": "(I use this everyday in the gym for planks) Literally a timer but it adds a random amount at the end to strengthen the mind during exercises.",
     "date": "09-2024",
@@ -392,7 +403,7 @@
     "hours": 1
   },
   {
-    "id": 37,
+    "id": 38,
     "title": "Roman Slack Portfolio 23",
     "description": "This was my portfolio for 2023 where I combined my frontend skills and 3D modeling / Blender skills.",
     "date": "05-2023",
@@ -402,7 +413,7 @@
     "hours": 10
   },
   {
-    "id": 38,
+    "id": 39,
     "title": "Language Learning Website Tutorial",
     "description": "Language learning website tutorial project",
     "date": "01-2023",
@@ -412,7 +423,7 @@
     "hours": 7
   },
   {
-    "id": 39,
+    "id": 40,
     "title": "LiftView",
     "description": "A mobile app that allows gym owners to gather data on specific machine utilization and member metrics. Built with Flutter and Firebase.",
     "date": "11-2022",
@@ -422,7 +433,7 @@
     "hours": 13
   },
   {
-    "id": 40,
+    "id": 41,
     "title": "TickIt",
     "description": "A product concept built for a startup attempting to combine gambling and e-commerce using an innovative raffle system.",
     "date": "07-2024",
@@ -432,7 +443,7 @@
     "hours": 6
   },
   {
-    "id": 41,
+    "id": 42,
     "title": "ChatGPT-SEO-Description-Generator-from-Tags",
     "description": "Worked with Jack First firearm supplier to optimize their SEO utilizing the early OpenAI API.",
     "date": "04-2024",
@@ -442,7 +453,7 @@
     "hours": 5
   },
   {
-    "id": 42,
+    "id": 43,
     "title": "AI Language Tutor",
     "description": "A video tutorial experiment. Webdev project, using OpenAI's released GPT-3.5",
     "date": "05-2023",
@@ -452,7 +463,7 @@
     "hours": 4
   },
   {
-    "id": 43,
+    "id": 44,
     "title": "Vocal Language App",
     "description": "Language learning app experiment. Pure HTML, CSS, Javascript",
     "date": "07-2023",
@@ -462,7 +473,7 @@
     "hours": 7
   },
   {
-    "id": 44,
+    "id": 45,
     "title": "Bike across America",
     "description": "Raised money for local trails by biking many miles.",
     "date": "01-2021",
