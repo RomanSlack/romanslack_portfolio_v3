@@ -4,7 +4,7 @@
     "title": "Discerio",
     "description": "Scratch for AI Agents - Discer.io is an interactive platform that teaches agentic AI concepts through a multiplayer battle royale game. Build AI agents using a visual block-based programming interface, deploy them into a live combat arena, and watch them make real-time decisions using large language models. Created for HackPrinceton Fall 2025.",
     "date": "11-2025",
-    "image": "images/resized_1_portfolio/discerio.png",
+    "image": "images/resized_1_portfolio/discerio.jpg",
     "link": "https://github.com/RomanSlack/Discerio",
     "category": "programming",
     "hours": 33
@@ -129,7 +129,7 @@
     "title": "Xscape",
     "description": "I hate MacOS, Xscape lets you develop iOS apps on Linux by orchestrating a macOS VM (or remote Mac) that handles the actual Xcode builds and simulator runs. You get a clean terminal UI on Linux, and the iOS Simulator streams to your browser via VNC.",
     "date": "12-2025",
-    "image": "images/resized_1_portfolio/xscape.png",
+    "image": "images/resized_1_portfolio/xscape.jpg",
     "link": "https://github.com/RomanSlack/Xscape",
     "category": "programming",
     "hours": 4.0,
@@ -151,7 +151,7 @@
     "title": "AUS-Lab",
     "description": "(Autonomous UAV Swarm Laboratory) An experimental framework for LLM-driven cognitive control of UAV swarms. It links agentic reasoning with swarm simulation to enable autonomous coordination, adaptive behavior, and hardware-in-the-loop testing.",
     "date": "10-2025",
-    "image": "images/resized_1_portfolio/aus_lab.png",
+    "image": "images/resized_1_portfolio/aus_lab.jpg",
     "link": "https://github.com/RomanSlack/AUS-Lab",
     "category": "programming",
     "hours": 15,
@@ -267,7 +267,7 @@
     "title": "GapRunner",
     "description": "(80% Gain on 2025 Data) GapRunner is a backtesting and live-trading engine that simulates a top-gainers momentum strategy using real minute-level equity data. Custom Universe collection system.",
     "date": "08-2025",
-    "image": "images/resized_1_portfolio/gaprunner.png",
+    "image": "images/resized_1_portfolio/gaprunner.jpg",
     "link": "https://github.com/RomanSlack/GapRunner",
     "category": "programming",
     "hours": 4
@@ -317,7 +317,7 @@
     "title": "FaceMusic",
     "description": "A lightweight Python tool that maps facial expressions to media playback. Using MediaPipe for real-time detection, it lets users trigger YouTube or local audio with gestures like eyebrow raises or winks; turning the webcam into an interactive controller.",
     "date": "06-2025",
-    "image": "images/resized_1_portfolio/facemusic.png",
+    "image": "images/resized_1_portfolio/facemusic.jpg",
     "link": "https://github.com/RomanSlack/face_music",
     "category": "programming",
     "hours": 1
@@ -387,7 +387,7 @@
     "title": "LLM Collate Code",
     "description": "A simple Python script that collects code from specified file paths on your OS. It copies each file's content, labels it by programming language, and saves everything into a single JSON file \u2013 perfect for feeding into a Large Language Model (LLM).",
     "date": "03-2025",
-    "image": "images/resized_1_portfolio/collatecode.png",
+    "image": "images/resized_1_portfolio/collatecode.jpg",
     "link": "https://github.com/RomanSlack/LLM_Collate-Code",
     "category": "programming",
     "hours": 1
@@ -397,7 +397,7 @@
     "title": "FirstChat",
     "description": "(Ignore degenerate project) A full-stack system for personalized dating openers: Playwright scraper ingests Tinder profiles, FastAPI scores text/images with GPT + Google Vision, and a Flask UI returns analytics-backed first messages via a REST API.",
     "date": "03-2025",
-    "image": "images/resized_1_portfolio/firstchat.png",
+    "image": "images/resized_1_portfolio/firstchat.jpg",
     "link": "https://github.com/RomanSlack/FirstChat_BackEnd",
     "category": "programming",
     "hours": 5

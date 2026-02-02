@@ -60,6 +60,8 @@ function createProjectCard(project) {
             img.src = imageSrc;
             img.alt = `${project.title} - Image ${index + 1}`;
             img.className = `project-image carousel-image ${index === 0 ? 'active' : ''}`;
+            img.loading = 'lazy';
+            img.decoding = 'async';
             carouselContainer.appendChild(img);
         });
 
@@ -79,6 +81,8 @@ function createProjectCard(project) {
         img.src = project.image || project.images?.[0] || 'images/roman_rectangular_landing.jpg';
         img.alt = project.title;
         img.className = 'project-image';
+        img.loading = 'lazy';
+        img.decoding = 'async';
         imageWrapper.appendChild(img);
     }
 
