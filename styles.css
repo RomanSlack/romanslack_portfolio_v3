@@ -367,6 +367,20 @@ main {
     margin-left: 2px;
 }
 
+.project-blog-badge {
+    background-color: rgba(59, 130, 246, 0.85); /* BLOG BADGE COLOR - blue */
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    transform: translateY(-3px);
+    margin-left: 2px;
+}
+
 .project-image {
     width: 100%;
     height: 100%;

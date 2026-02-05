@@ -116,6 +116,14 @@ function createProjectCard(project) {
         titleContainer.appendChild(productBadge);
     }
 
+    // Add blog badge if flagged (next to title)
+    if (project.blog) {
+        const blogBadge = document.createElement('span');
+        blogBadge.className = 'project-blog-badge';
+        blogBadge.textContent = 'Blog';
+        titleContainer.appendChild(blogBadge);
+    }
+
     // Create description
     const description = document.createElement('p');
     description.className = 'project-description';
