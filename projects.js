@@ -124,6 +124,14 @@ function createProjectCard(project) {
         titleContainer.appendChild(blogBadge);
     }
 
+    // Add hackathon badge if flagged (next to title)
+    if (project.hackathon) {
+        const hackathonBadge = document.createElement('span');
+        hackathonBadge.className = 'project-hackathon-badge';
+        hackathonBadge.textContent = 'Hackathon';
+        titleContainer.appendChild(hackathonBadge);
+    }
+
     // Create description
     const description = document.createElement('p');
     description.className = 'project-description';

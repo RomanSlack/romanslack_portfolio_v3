@@ -1,36 +1,36 @@
 [
   {
     "id": 1,
-    "title": "Why Isn't AI Good Yet?",
-    "description": "A long-form editorial arguing that businesses are implementing AI incorrectly by layering excessive guardrails and approvals, when instead they should grant autonomous systems full operational control within defined boundaries. Written in collaboration with Opus 4.6.",
-    "date": "02-2026",
-    "category": "other",
-    "hours": 7,
-    "image": "images/resized_1_portfolio/ai_blog.jpg",
-    "link": "https://www.whyisntaigoodyet.com/",
-    "blog": true
+    "title": "SimuVerse",
+    "description": "A revolutionary multi-agent simulation environment where AI agents powered by LLMs live and interact on Mars, paving the way for advanced research in artificial intelligence.",
+    "date": "02-2024",
+    "image": "images/resized_1_portfolio/simuverse.jpeg",
+    "link": "https://simuverse-site.vercel.app",
+    "category": "programming",
+    "hours": 70,
+    "research": true
   },
   {
     "id": 2,
+    "title": "Vibe OS",
+    "description": "Vibe OS - A multi-agent orchestration system where specialized AI agents collaborate through event-driven communication and a great looking UI designed by me.",
+    "date": "01-2026",
+    "image": "images/resized_1_portfolio/vibe_os_new.jpg",
+    "link": "https://github.com/RomanSlack/VOS_frontend",
+    "category": "programming",
+    "hours": 75,
+    "product": true
+  },
+  {
+    "id": 3,
     "title": "Discerio",
-    "description": "Scratch for AI Agents - Discer.io is an interactive platform that teaches agentic AI concepts through a multiplayer battle royale game. Build AI agents using a visual block-based programming interface, deploy them into a live combat arena, and watch them make real-time decisions using large language models. Created for HackPrinceton Fall 2025.",
+    "description": "🥇 First Place winner of the Y Combinator Challenge at HackPrinceton F25 (guaranteeing all members a YC interview), and 🥇 First Place winner of the Dedalus Labs Challenge. Scratch for AI Agents - Discer.io is an interactive platform that teaches agentic AI concepts through a multiplayer battle royale game. Build AI agents using a visual block-based programming interface, deploy them into a live combat arena, and watch them make real-time decisions using large language models.",
     "date": "11-2025",
     "image": "images/resized_1_portfolio/discerio.jpg",
     "link": "https://github.com/RomanSlack/Discerio",
     "category": "programming",
-    "hours": 33
-  },
-  {
-    "id": 3,
-    "title": "Rookery",
-    "description": "A feed for discovering research papers you'd otherwise miss. X is great at surfacing content\u2014Rookery does the same for academic research. No ads. No slop. Just papers, code, and ideas.",
-    "date": "01-2026",
-    "category": "programming",
-    "hours": 15,
-    "image": "images/resized_1_portfolio/rookery.jpg",
-    "link": "https://rookery.network",
-    "inProgress": true,
-    "product": true
+    "hours": 33,
+    "hackathon": true
   },
   {
     "id": 4,
@@ -46,119 +46,6 @@
   },
   {
     "id": 5,
-    "title": "Swap Studio",
-    "description": "A workbench for AI pose transfer and character swap APIs / workflows. Using the direct APis instead of being scammed.",
-    "date": "02-2026",
-    "category": "programming",
-    "hours": 6.0,
-    "image": "images/resized_1_portfolio/swap_studio.jpg",
-    "link": "https://github.com/RomanSlack/Swap_Studio",
-    "product": true
-  },
-  {
-    "id": 6,
-    "title": "Her",
-    "description": "A SOTA real-time, low-latency voice AI system that enables natural, hands-free conversations with ~500ms end-to-end latency.",
-    "date": "01-2026",
-    "category": "programming",
-    "hours": 8,
-    "image": "images/resized_1_portfolio/her.jpg",
-    "link": "https://www.youtube.com/watch?v=P0CbuUs-zS8",
-    "inProgress": true,
-    "product": true
-  },
-  {
-    "id": 7,
-    "title": "NewLine",
-    "description": "A simple, GNOME-style task manager with cloud sync. Built in Rust with GTK4.",
-    "date": "01-2026",
-    "category": "programming",
-    "hours": 7,
-    "image": "images/resized_1_portfolio/new_line.jpg",
-    "link": "https://newlineapp.netlify.app/",
-    "inProgress": true,
-    "product": true
-  },
-  {
-    "id": 8,
-    "title": "Meetd",
-    "description": "Let your AI assistant schedule meetings for you, by contacting other peoples AIs, to find a compatible time.",
-    "date": "02-2026",
-    "category": "programming",
-    "hours": 6,
-    "image": "images/resized_1_portfolio/meetd.jpg",
-    "link": "https://github.com/RomanSlack/meetd",
-    "inProgress": true,
-    "product": true
-  },
-  {
-    "id": 9,
-    "title": "Romans Cool Diagram Software",
-    "description": "Free, open-source alternative to Draw.io (diagrams.net), Lucidchart, and Figma for technical diagrams \u2014 Create beautiful architecture diagrams, flowcharts, system designs, and network diagrams with a modern, publication-ready aesthetic.",
-    "date": "01-2026",
-    "image": "images/resized_1_portfolio/rcds_image.jpg",
-    "link": "https://romans-cool-diagram-software.vercel.app/",
-    "category": "programming",
-    "hours": 10.0,
-    "product": true
-  },
-  {
-    "id": 10,
-    "title": "DailyStack",
-    "description": "A gamified habit tracker app for daily health protocols with XP, streaks, and biological age tracking.",
-    "date": "01-2026",
-    "category": "programming",
-    "hours": 2,
-    "image": "images/resized_1_portfolio/dailystack.jpg",
-    "link": "https://www.youtube.com/watch?v=f7bj7DBUqcg",
-    "product": true
-  },
-  {
-    "id": 11,
-    "title": "Free eSign Website",
-    "description": "Free, open-source e-signature website for signing simple documents online. This is a hosted, single-page web app that lets you upload a PDF, add a signature, and download the signed file instantly, with no login, no accounts, and no restrictions.",
-    "date": "01-2026",
-    "category": "programming",
-    "hours": 2,
-    "image": "images/resized_1_portfolio/free_esign_Image.jpg",
-    "link": "https://github.com/RomanSlack/free_esign_website",
-    "product": true
-  },
-  {
-    "id": 12,
-    "title": "Emotional Design in Messaging Applications",
-    "description": "How do messaging platforms engineer emotional responses? This case study examines the symbolic manipulation of Snapchat versus the infrastructural dependence of WeChat.",
-    "date": "12-2025",
-    "image": "images/resized_1_portfolio/emotion_case_study.jpg",
-    "link": "https://messaging-app-emotion-study.netlify.app/",
-    "category": "other",
-    "hours": 4,
-    "research": true
-  },
-  {
-    "id": 13,
-    "title": "Xscape",
-    "description": "I hate MacOS, Xscape lets you develop iOS apps on Linux by orchestrating a macOS VM (or remote Mac) that handles the actual Xcode builds and simulator runs. You get a clean terminal UI on Linux, and the iOS Simulator streams to your browser via VNC.",
-    "date": "12-2025",
-    "image": "images/resized_1_portfolio/xscape.jpg",
-    "link": "https://github.com/RomanSlack/Xscape",
-    "category": "programming",
-    "hours": 4.0,
-    "product": true
-  },
-  {
-    "id": 14,
-    "title": "Objectionary.AI",
-    "description": "Real-time AI sales objection handler that listens to live calls, detects objections, and delivers script suggestions through an elegant teleprompter interface with PiP support.",
-    "date": "12-2025",
-    "image": "images/resized_1_portfolio/objex_3.jpg",
-    "link": "https://www.objectionary.ai",
-    "category": "programming",
-    "hours": 40.0,
-    "product": true
-  },
-  {
-    "id": 15,
     "title": "AUS-Lab",
     "description": "(Autonomous UAV Swarm Laboratory) An experimental framework for LLM-driven cognitive control of UAV swarms. It links agentic reasoning with swarm simulation to enable autonomous coordination, adaptive behavior, and hardware-in-the-loop testing.",
     "date": "10-2025",
@@ -170,18 +57,154 @@
     "research": true
   },
   {
-    "id": 16,
-    "title": "Vibe OS",
-    "description": "Vibe OS - A multi-agent orchestration system where specialized AI agents collaborate through event-driven communication and a great looking UI designed by me.",
-    "date": "01-2026",
-    "image": "images/resized_1_portfolio/vibe_os_new.jpg",
-    "link": "https://github.com/RomanSlack/VOS_frontend",
+    "id": 6,
+    "title": "FengShui.fy",
+    "description": "(Winner of Best Use of AI @ Columbia) An AI-powered interior design analyzer merging traditional feng shui with modern computer vision. Using YOLOv11 object detection, Gemini 2.5 AI reasoning, and Blender-based 3D reconstruction, it evaluates spatial balance, energy flow, and design harmony directly from room photos. Built with Next.js, FastAPI, and a zen-inspired interface for intuitive, meditative interaction.",
+    "date": "10-2025",
+    "image": "images/resized_1_portfolio/feng_shui.jpg",
+    "link": "https://github.com/RomanSlack/fengshui.ai",
     "category": "programming",
-    "hours": 75,
+    "hours": 24,
+    "hackathon": true
+  },
+  {
+    "id": 7,
+    "title": "Her",
+    "description": "A SOTA real-time, low-latency voice AI system that enables natural, hands-free conversations with ~500ms end-to-end latency.",
+    "date": "01-2026",
+    "category": "programming",
+    "hours": 8,
+    "image": "images/resized_1_portfolio/her.jpg",
+    "link": "https://www.youtube.com/watch?v=P0CbuUs-zS8",
+    "inProgress": true,
+    "product": true
+  },
+  {
+    "id": 8,
+    "title": "Why Isn't AI Good Yet?",
+    "description": "A long-form editorial arguing that businesses are implementing AI incorrectly by layering excessive guardrails and approvals, when instead they should grant autonomous systems full operational control within defined boundaries. Written in collaboration with Opus 4.6.",
+    "date": "02-2026",
+    "category": "other",
+    "hours": 7,
+    "image": "images/resized_1_portfolio/ai_blog.jpg",
+    "link": "https://www.whyisntaigoodyet.com/",
+    "blog": true
+  },
+  {
+    "id": 9,
+    "title": "Rookery",
+    "description": "A feed for discovering research papers you'd otherwise miss. X is great at surfacing content—Rookery does the same for academic research. No ads. No slop. Just papers, code, and ideas.",
+    "date": "01-2026",
+    "category": "programming",
+    "hours": 15,
+    "image": "images/resized_1_portfolio/rookery.jpg",
+    "link": "https://rookery.network",
+    "inProgress": true,
+    "product": true
+  },
+  {
+    "id": 10,
+    "title": "Swap Studio",
+    "description": "A workbench for AI pose transfer and character swap APIs / workflows. Using the direct APis instead of being scammed.",
+    "date": "02-2026",
+    "category": "programming",
+    "hours": 6.0,
+    "image": "images/resized_1_portfolio/swap_studio.jpg",
+    "link": "https://github.com/RomanSlack/Swap_Studio",
+    "product": true
+  },
+  {
+    "id": 11,
+    "title": "NewLine",
+    "description": "A simple, GNOME-style task manager with cloud sync. Built in Rust with GTK4.",
+    "date": "01-2026",
+    "category": "programming",
+    "hours": 7,
+    "image": "images/resized_1_portfolio/new_line.jpg",
+    "link": "https://newlineapp.netlify.app/",
+    "inProgress": true,
+    "product": true
+  },
+  {
+    "id": 12,
+    "title": "Meetd",
+    "description": "Let your AI assistant schedule meetings for you, by contacting other peoples AIs, to find a compatible time.",
+    "date": "02-2026",
+    "category": "programming",
+    "hours": 6,
+    "image": "images/resized_1_portfolio/meetd.jpg",
+    "link": "https://github.com/RomanSlack/meetd",
+    "inProgress": true,
+    "product": true
+  },
+  {
+    "id": 13,
+    "title": "Romans Cool Diagram Software",
+    "description": "Free, open-source alternative to Draw.io (diagrams.net), Lucidchart, and Figma for technical diagrams — Create beautiful architecture diagrams, flowcharts, system designs, and network diagrams with a modern, publication-ready aesthetic.",
+    "date": "01-2026",
+    "image": "images/resized_1_portfolio/rcds_image.jpg",
+    "link": "https://romans-cool-diagram-software.vercel.app/",
+    "category": "programming",
+    "hours": 10.0,
+    "product": true
+  },
+  {
+    "id": 14,
+    "title": "DailyStack",
+    "description": "A gamified habit tracker app for daily health protocols with XP, streaks, and biological age tracking.",
+    "date": "01-2026",
+    "category": "programming",
+    "hours": 2,
+    "image": "images/resized_1_portfolio/dailystack.jpg",
+    "link": "https://www.youtube.com/watch?v=f7bj7DBUqcg",
+    "product": true
+  },
+  {
+    "id": 15,
+    "title": "Free eSign Website",
+    "description": "Free, open-source e-signature website for signing simple documents online. This is a hosted, single-page web app that lets you upload a PDF, add a signature, and download the signed file instantly, with no login, no accounts, and no restrictions.",
+    "date": "01-2026",
+    "category": "programming",
+    "hours": 2,
+    "image": "images/resized_1_portfolio/free_esign_Image.jpg",
+    "link": "https://github.com/RomanSlack/free_esign_website",
+    "product": true
+  },
+  {
+    "id": 16,
+    "title": "Emotional Design in Messaging Applications",
+    "description": "How do messaging platforms engineer emotional responses? This case study examines the symbolic manipulation of Snapchat versus the infrastructural dependence of WeChat.",
+    "date": "12-2025",
+    "image": "images/resized_1_portfolio/emotion_case_study.jpg",
+    "link": "https://messaging-app-emotion-study.netlify.app/",
+    "category": "other",
+    "hours": 4,
     "research": true
   },
   {
     "id": 17,
+    "title": "Xscape",
+    "description": "I hate MacOS, Xscape lets you develop iOS apps on Linux by orchestrating a macOS VM (or remote Mac) that handles the actual Xcode builds and simulator runs. You get a clean terminal UI on Linux, and the iOS Simulator streams to your browser via VNC.",
+    "date": "12-2025",
+    "image": "images/resized_1_portfolio/xscape.jpg",
+    "link": "https://github.com/RomanSlack/Xscape",
+    "category": "programming",
+    "hours": 4.0,
+    "product": true
+  },
+  {
+    "id": 18,
+    "title": "Objectionary.AI",
+    "description": "Real-time AI sales objection handler that listens to live calls, detects objections, and delivers script suggestions through an elegant teleprompter interface with PiP support.",
+    "date": "12-2025",
+    "image": "images/resized_1_portfolio/objex_3.jpg",
+    "link": "https://www.objectionary.ai",
+    "category": "programming",
+    "hours": 40.0,
+    "product": true
+  },
+  {
+    "id": 19,
     "title": "VoiceDeck",
     "description": "A desktop voice recorder with speech-to-text transcription for Ubuntu. Record from any microphone, click stop, and get your transcript. Uses OpenAI's Speech-to-Text API with support for recordings up to 60 minutes.",
     "date": "12-2025",
@@ -192,7 +215,7 @@
     "product": true
   },
   {
-    "id": 18,
+    "id": 20,
     "title": "NextGen",
     "description": "A youth-focused coding initiative designed to teach foundational programming through hands-on lessons in Python, web design, and AI basics. Built to inspire technological curiosity, NextGen empowers students to explore CS careers and creative problem-solving in an immersive, project-based environment.",
     "date": "01-2024",
@@ -202,18 +225,7 @@
     "hours": 70
   },
   {
-    "id": 19,
-    "title": "SimuVerse",
-    "description": "A revolutionary multi-agent simulation environment where AI agents powered by LLMs live and interact on Mars, paving the way for advanced research in artificial intelligence.",
-    "date": "02-2024",
-    "image": "images/resized_1_portfolio/simuverse.jpeg",
-    "link": "https://simuverse.world/",
-    "category": "programming",
-    "hours": 70,
-    "research": true
-  },
-  {
-    "id": 20,
+    "id": 21,
     "title": "Poly-DB",
     "description": "A Polymarket scraper that vectorizes markets using semantic embeddings, enabling lightning-fast derivative detection, arbitrage discovery, and natural language search through a simple CLI and API interface.",
     "date": "12-2025",
@@ -223,7 +235,7 @@
     "hours": 3.0
   },
   {
-    "id": 21,
+    "id": 22,
     "title": "Family House",
     "description": "A concept home designed, created, and shot by me. Using Blender, UE5, & Davinci",
     "date": "03-2024",
@@ -239,7 +251,7 @@
     "inProgress": false
   },
   {
-    "id": 22,
+    "id": 23,
     "title": "Tujia",
     "description": "A concept building design inspired by Tujia architecture, designed, created, and shot by me",
     "date": "02-2024",
@@ -254,7 +266,7 @@
     "inProgress": false
   },
   {
-    "id": 23,
+    "id": 24,
     "title": "RIT Formula SAE Live Telemetry",
     "description": "Main repo is owned by org. This was our prototype repository in which we were trying to build from scratch a live telemetry module using LORA. Custom PCB stuff.",
     "date": "08-2025",
@@ -264,7 +276,7 @@
     "hours": 30
   },
   {
-    "id": 24,
+    "id": 25,
     "title": "AI Bootcamp",
     "description": "AI Bootcamp was created to provide a free, accessible resource for learning AI tools and techniques in today's rapidly evolving landscape. This project represents a commitment to democratizing AI education and spreading knowledge to everyone who wants to learn.",
     "date": "12-2025",
@@ -274,7 +286,7 @@
     "hours": 15
   },
   {
-    "id": 25,
+    "id": 26,
     "title": "GapRunner",
     "description": "(80% Gain on 2025 Data) GapRunner is a backtesting and live-trading engine that simulates a top-gainers momentum strategy using real minute-level equity data. Custom Universe collection system.",
     "date": "08-2025",
@@ -282,16 +294,6 @@
     "link": "https://github.com/RomanSlack/GapRunner",
     "category": "programming",
     "hours": 4
-  },
-  {
-    "id": 26,
-    "title": "FengShui.fy",
-    "description": "(Winner of Best Use of AI @ Columbia) An AI-powered interior design analyzer merging traditional feng shui with modern computer vision. Using YOLOv11 object detection, Gemini 2.5 AI reasoning, and Blender-based 3D reconstruction, it evaluates spatial balance, energy flow, and design harmony directly from room photos. Built with Next.js, FastAPI, and a zen-inspired interface for intuitive, meditative interaction.",
-    "date": "10-2025",
-    "image": "images/resized_1_portfolio/feng_shui.jpg",
-    "link": "https://github.com/RomanSlack/fengshui.ai",
-    "category": "programming",
-    "hours": 24
   },
   {
     "id": 27,
@@ -396,7 +398,7 @@
   {
     "id": 37,
     "title": "LLM Collate Code",
-    "description": "A simple Python script that collects code from specified file paths on your OS. It copies each file's content, labels it by programming language, and saves everything into a single JSON file \u2013 perfect for feeding into a Large Language Model (LLM).",
+    "description": "A simple Python script that collects code from specified file paths on your OS. It copies each file's content, labels it by programming language, and saves everything into a single JSON file – perfect for feeding into a Large Language Model (LLM).",
     "date": "03-2025",
     "image": "images/resized_1_portfolio/collatecode.jpg",
     "link": "https://github.com/RomanSlack/LLM_Collate-Code",
@@ -421,17 +423,19 @@
     "image": "images/resized_1_portfolio/aktalife.jpg",
     "link": "https://github.com/RomanSlack/HackCOMS24gogogo",
     "category": "programming",
-    "hours": 15
+    "hours": 15,
+    "hackathon": true
   },
   {
     "id": 40,
     "title": "UrbanSpark",
-    "description": "(Winning Hack RPI 24 Submission) An AI-driven platform that personalizes urban opportunity discovery for young adults. It uses FastAPI, React, OpenAI, and SerpAPI to recommend jobs, workshops, and community resources tailored to user profiles\u2014empowering local engagement and accessibility.",
+    "description": "(Winning Hack RPI 24 Submission) An AI-driven platform that personalizes urban opportunity discovery for young adults. It uses FastAPI, React, OpenAI, and SerpAPI to recommend jobs, workshops, and community resources tailored to user profiles—empowering local engagement and accessibility.",
     "date": "11-2024",
     "image": "images/resized_1_portfolio/urban_spark_2.jpg",
     "link": "https://github.com/RomanSlack/UrbanSpark_HackRPI24",
     "category": "programming",
-    "hours": 24
+    "hours": 24,
+    "hackathon": true
   },
   {
     "id": 41,
