@@ -417,7 +417,7 @@ Link: https://www.kotatv.com/2021/01/10/with-a-love-for-mountain-biking-rapid-ci
 
 ## Hobbies & Interests
 
-Roman maintains an unusually broad set of pursuits beyond engineering: programming, 3D modeling, architecture, mountaineering, hiking, trail running, camping, road tripping, traveling, cooking, building, weightlifting, calisthenics, photography, reading, languages, and human connection. He biked thousands of miles across 2020 ("Bike across America") to raise money for local trails, and holds a self-styled speed record for becoming a published children's-book author using AI.
+Roman maintains an unusually broad set of pursuits beyond engineering: programming, 3D modeling, architecture, building hardware, woodworking, mountaineering, hiking, trail running, camping, road tripping, traveling, music production (EDM, hardstyle, rawstyle), digital art, character design, cooking, building, weightlifting, calisthenics, photography, reading, languages, and human connection. He biked thousands of miles across 2020 ("Bike across America") to raise money for local trails, and holds a self-styled speed record for becoming a published children's-book author using AI. Right after leaving high school, he spent a month teaching Spanish in Colombia, then traveled solo to western China to climb mountains in Tibet, reaching a maximum peak of 16,200 feet. One of his ongoing personal projects is Silence (https://github.com/RomanSlack/Silence), an open-source silent speech recognition device that uses EMG (electromyography) to read the electrical signals of the muscles involved in speech, letting a user type by silently mouthing words with no audible sound — aiming to be the best open-source silent speech interface.
 
 ## Frequently Asked Questions
 
