@@ -192,7 +192,7 @@
 
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home">
     <header>
         <h1>Roman Slack</h1>
         <p class="header-subtitle">Current | Lead AI Platform Engineer @ <a href="https://just-tech.com/ai-solutions/" target="_blank" class="subtitle-link">Just-Tech LLC</a></p>
@@ -209,16 +209,20 @@
 
             <div class="profile-image-container">
                 <img src="images/roman_new_site_photo.jpg" alt="Roman Slack" class="profile-image">
-                <p class="image-caption">Me overlooking my homeland in the Black Hills of SD.</p>
+                <p class="image-caption">Me overlooking my homeland in the Black Hills of South Dakota.</p>
+                <details class="about-bio">
+                    <summary>About Roman Slack</summary>
+                    <div class="about-bio-body" onclick="if(event.target===this)this.closest('details').open=false">
+                        <div class="about-card">
+                            <button type="button" class="about-close" aria-label="Close" onclick="this.closest('details').open=false">&times;</button>
+                            <p>Roman Slack is a Lead AI Platform Engineer at <a href="https://jtai.law" target="_blank">Just-Tech LLC</a>, where he builds production AI systems for the legal sector deployed to over 60,000 users with $130,000+ in sales generated. He currently works remotely from Salt Lake City, Utah, and also works in and is available for roles in New York City. He additionally takes on independent AI consulting work for companies and founders. He was previously an AI research intern at the <a href="https://www.afrl.af.mil/" target="_blank">Air Force Research Laboratory</a> (AFRL) Information Directorate.</p>
+                            <p>Across 50+ projects and 1,500+ hours, his work spans reinforcement learning for missile interception (Hlynr Intercept), LLM-driven autonomous UAV swarm control (AUS-Lab), real-time low-latency voice AI (Her), multi-agent LLM simulation (SimuVerse), and full-stack web applications. He has won hackathons including two first-place wins at HackPrinceton Fall 2025 — the Y Combinator Challenge (earning guaranteed YC interviews) and the Dedalus Labs track — for Discerio, plus HackRPI and Columbia's Best Use of AI, and founded NextGen, a free youth coding program.</p>
+                            <p>Outside engineering, Roman Slack is a mountaineer, trail runner, photographer, 3D modeler, music producer, and weightlifter. Explore his <a href="projects.html">projects</a>, <a href="experience.html">experience</a>, and <a href="hobbies.html">hobbies</a>, or <a href="contact.html">get in touch</a> about AI consulting and engineering work.</p>
+                        </div>
+                    </div>
+                </details>
             </div>
         </div>
-
-        <section class="about-bio sr-only" aria-label="About Roman Slack">
-            <h2>About Roman Slack</h2>
-            <p>Roman Slack is a Lead AI Platform Engineer at <a href="https://jtai.law" target="_blank">Just-Tech LLC</a>, where he builds production AI systems for the legal sector with planned deployment to over 60,000 users and $130,000+ in sales. He currently works remotely from Salt Lake City, Utah, and also works in and is available for roles in New York City. He additionally takes on independent AI consulting work for companies and founders. He was previously an AI research intern at the <a href="https://www.afrl.af.mil/" target="_blank">Air Force Research Laboratory</a> (AFRL) Information Directorate.</p>
-            <p>Across 50+ projects and 1,500+ hours, his work spans reinforcement learning for missile interception (Hlynr Intercept), LLM-driven autonomous UAV swarm control (AUS-Lab), real-time low-latency voice AI (Her), multi-agent LLM simulation (SimuVerse), and full-stack web applications. He has won hackathons including two first-place wins at HackPrinceton Fall 2025 — the Y Combinator Challenge (earning guaranteed YC interviews) and the Dedalus Labs track — for Discerio, plus HackRPI and Columbia's Best Use of AI, and founded NextGen, a free youth coding program.</p>
-            <p>Outside engineering, Roman Slack is a mountaineer, trail runner, photographer, 3D modeler, music producer, and weightlifter. Explore his <a href="projects.html">projects</a>, <a href="experience.html">experience</a>, and <a href="hobbies.html">hobbies</a>, or <a href="contact.html">get in touch</a> about AI consulting and engineering work.</p>
-        </section>
     </main>
 
     <footer>

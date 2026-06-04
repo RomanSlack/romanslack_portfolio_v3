@@ -1296,3 +1296,93 @@ body.scroll-page main {
     flex-wrap: wrap;
     gap: 0.6rem;
 }
+
+/* ---- Homepage "About Roman Slack" disclosure (native <details>, indexable by Google) ---- */
+.about-bio {
+    margin-top: 12px;
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+}
+.about-bio > summary {
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+    color: #cfcfcf;
+    font-size: 14px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    font-weight: 600;
+}
+.about-bio > summary:hover { opacity: 1; }
+.about-bio > summary::-webkit-details-marker { display: none; }
+.about-bio > summary::after { content: " \25BE"; }
+.about-bio[open] > summary::after { content: " \25B4"; }
+.about-card p { margin-bottom: 10px; }
+.about-card a { color: #a8a8a8; text-decoration: underline; }
+
+/* Homepage hero stays fixed & full-screen (no page scrollbar, ever). */
+.home .profile-image {
+    max-height: calc(100% - 78px);   /* leave room for the caption + About toggle */
+}
+
+/* When OPEN, the bio becomes a full-screen flex overlay that centers a scrollable
+   card. Robust on mobile (no transform/dvh-centering quirks); takes zero layout
+   space, so the hero never moves. Tapping the dim area or the X closes it. */
+.about-bio[open] .about-bio-body {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    margin: 0;
+    background: transparent;   /* keep the hero visible behind, as on desktop */
+    z-index: 1000;             /* above the mobile sticky header (101) and footer (100) */
+}
+.about-card {
+    position: relative;
+    width: min(94vw, 680px);
+    max-height: 85vh;
+    max-height: 85dvh;            /* dvh accounts for mobile browser chrome */
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    background: #161616;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 16px 30px 26px;
+    color: #9a9a9a;
+    font-size: 14px;
+    line-height: 1.55;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+.about-close {
+    position: sticky;            /* pinned at the top while the card scrolls */
+    top: 0;
+    float: right;
+    margin: 0 -10px 4px 14px;
+    width: 32px;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    background: #161616;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #cfcfcf;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+.about-close:hover {
+    background: #262626;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .home .profile-image { max-height: none; }   /* page scrolls on mobile; no toggle-room cap needed */
+    /* On mobile the sticky header/footer would peek through a transparent overlay,
+       so use a near-solid backdrop that covers them for a clean modal. */
+    .about-bio[open] .about-bio-body { background: rgba(14, 14, 14, 0.94); }
+    .about-card { width: 100%; padding: 14px 18px 20px; }
+}

@@ -1602,14 +1602,14 @@
   "0": {
     "longDescription": [
       "Just-Tech AI (JTAI) is an AI-powered legal document intelligence platform that Roman Slack solo-built from the ground up. As Lead AI Platform Engineer at Just-Tech LLC, he took the product from zero to a working, client-facing system serving the legal sector, owning every layer of the stack himself — the frontend, the backend, the cloud infrastructure, and the deployment.",
-      "Branded \"JT AI — AI-Powered Legal Document Intelligence,\" the platform applies machine learning and large language models to process, understand, and analyze legal documents. It was built in close, direct collaboration with real clients — including the New York State Bar Association and numerous state legal service leaders — with planned deployment to over 60,000 users and more than $130,000 in sales generated.",
+      "Branded \"JT AI — AI-Powered Legal Document Intelligence,\" the platform applies machine learning and large language models to process, understand, and analyze legal documents. It was built in close, direct collaboration with real clients — including the New York State Bar Association and numerous state legal service leaders — deployed to over 60,000 users with more than $130,000 in sales generated.",
       "Roman Slack architected and operated the entire system single-handedly, integrating Google Cloud and Azure for a scalable, performant, production-grade backend. JTAI stands as an end-to-end legal-AI product owned solo from concept through infrastructure, engineering, and client delivery — a complete platform shipped by one engineer."
     ],
     "features": [
       "AI-powered legal document intelligence and analysis",
       "Solo-built end to end — frontend, backend, and cloud infrastructure",
       "Built in direct collaboration with legal-sector clients",
-      "Planned deployment to 60,000+ users",
+      "Deployed to 60,000+ users",
       "$130,000+ in sales generated",
       "Scalable cloud backend integrating Google Cloud and Azure"
     ],

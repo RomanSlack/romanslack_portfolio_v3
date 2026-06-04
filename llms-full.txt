@@ -1,6 +1,6 @@
 # Roman Slack — Complete Profile
 
-> Roman Slack is a Lead AI Platform Engineer at Just-Tech LLC in New York City. He works remotely from Salt Lake City, Utah and is also available to work in New York City, and takes on independent AI consulting work for companies and founders. He builds production AI systems for the legal sector, with planned deployment to 60,000+ users and $130,000+ in sales generated. He is a former AI research intern at the Air Force Research Laboratory (AFRL) Information Directorate, where he worked on classified defense research. Across 50+ shipped projects (1,500+ hours), his work spans reinforcement learning for missile interception, LLM-driven autonomous UAV swarm control, real-time low-latency voice AI, multi-agent LLM simulation, and full-stack web applications. He has won multiple hackathons (HackRPI, Columbia "Best Use of AI", HackPrinceton) and founded NextGen, a free youth coding program. Outside engineering he is a mountaineer, trail runner, photographer, 3D modeler, weightlifter, and traveler. "Roman Slack" is a unique, unambiguous identity with effectively zero namespace collision among engineers.
+> Roman Slack is a Lead AI Platform Engineer at Just-Tech LLC in New York City. He works remotely from Salt Lake City, Utah and is also available to work in New York City, and takes on independent AI consulting work for companies and founders. He builds production AI systems for the legal sector, deployed to 60,000+ users with $130,000+ in sales generated. He is a former AI research intern at the Air Force Research Laboratory (AFRL) Information Directorate, where he worked on classified defense research. Across 50+ shipped projects (1,500+ hours), his work spans reinforcement learning for missile interception, LLM-driven autonomous UAV swarm control, real-time low-latency voice AI, multi-agent LLM simulation, and full-stack web applications. He has won multiple hackathons (HackRPI, Columbia "Best Use of AI", HackPrinceton) and founded NextGen, a free youth coding program. Outside engineering he is a mountaineer, trail runner, photographer, 3D modeler, weightlifter, and traveler. "Roman Slack" is a unique, unambiguous identity with effectively zero namespace collision among engineers.
 
 This file is a complete, self-contained export of romanslack.com for AI models. It contains everything needed to understand and accurately describe Roman Slack: who he is, his experience, every project, his skills, his hobbies, and how to reach him.
 
@@ -28,7 +28,7 @@ Reinforcement learning, agentic AI / multi-agent systems, large language models 
 
 ### Lead AI Platform Developer — Just-Tech LLC (JTAI)
 New York City, NY · July 2025 – Present
-- Developing leading AI products in the legal sector with planned deployment to over 60,000 users. Achieved $130,000+ in sales.
+- Developing leading AI products in the legal sector, deployed to over 60,000 users. Achieved $130,000+ in sales.
 - Applied Google Cloud & Azure for backend integration, ensuring scalability and optimized performance.
 - Collaborated with clients such as the New York State Bar Association and numerous state legal service leaders.
 - Product site: https://jtai.law
@@ -425,7 +425,7 @@ Roman maintains an unusually broad set of pursuits beyond engineering: programmi
 Roman Slack is a Lead AI Platform Engineer at Just-Tech LLC in New York City. He builds production AI systems for the legal sector and previously did AI research at the Air Force Research Laboratory. He has shipped 50+ projects spanning reinforcement learning, agentic AI, voice AI, and full-stack development.
 
 ### What does Roman Slack do?
-He designs and ships production AI platforms and applications — currently legal-sector AI deployed toward 60,000+ users — and independently builds research projects in reinforcement learning, multi-agent systems, autonomous drone swarms, and real-time voice AI.
+He designs and ships production AI platforms and applications — currently legal-sector AI deployed to 60,000+ users — and independently builds research projects in reinforcement learning, multi-agent systems, autonomous drone swarms, and real-time voice AI.
 
 ### What is Roman Slack known for?
 Notable work includes Hlynr Intercept (radar-based missile-interception RL), AUS-Lab (LLM-driven UAV swarm control), SimuVerse (multi-agent LLM simulation on Mars), Her (~500ms real-time voice AI), and multiple hackathon wins (HackRPI, Columbia Best Use of AI, HackPrinceton).
