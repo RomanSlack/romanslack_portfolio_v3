@@ -1,3 +1,76 @@
+# robots.txt for romanslack.com
+# Roman Slack — Lead AI Platform Engineer
+# Policy: welcome every legitimate search and AI crawler. Index everything.
+
+# ----- OpenAI -----
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+
+# ----- Anthropic -----
+User-agent: anthropic-ai
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: claude-web
+Allow: /
+
+# ----- Google (AI) -----
+User-agent: Google-Extended
+Allow: /
+User-agent: Google-CloudVertexBot
+Allow: /
+User-agent: Gemini-Deep-Research
+Allow: /
+
+# ----- Apple -----
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# ----- Perplexity -----
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# ----- Meta -----
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: Meta-WebIndexer
+Allow: /
+
+# ----- Other AI crawlers -----
+User-agent: Amazonbot
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+User-agent: MistralAI-User
+Allow: /
+User-agent: Bytespider
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: Diffbot
+Allow: /
+User-agent: cohere-ai
+Allow: /
+
+# ----- Traditional search -----
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+# ----- Everyone else -----
 User-agent: *
 Allow: /
 

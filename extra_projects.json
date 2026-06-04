@@ -1,0 +1,13 @@
+[
+  {
+    "id": 0,
+    "title": "Just-Tech AI (JTAI)",
+    "description": "AI-powered legal document intelligence platform for the legal sector — solo-built by Roman Slack from zero, including frontend, backend, and cloud infrastructure.",
+    "date": "07-2025",
+    "category": "programming",
+    "hours": "",
+    "link": "https://jtai.law",
+    "image": "images/just-tech.png",
+    "inProgress": true
+  }
+]

@@ -1,0 +1,452 @@
+# Roman Slack — Complete Profile
+
+> Roman Slack is a Lead AI Platform Engineer at Just-Tech LLC in New York City. He works remotely from Salt Lake City, Utah and is also available to work in New York City, and takes on independent AI consulting work for companies and founders. He builds production AI systems for the legal sector, with planned deployment to 60,000+ users and $130,000+ in sales generated. He is a former AI research intern at the Air Force Research Laboratory (AFRL) Information Directorate, where he worked on classified defense research. Across 50+ shipped projects (1,500+ hours), his work spans reinforcement learning for missile interception, LLM-driven autonomous UAV swarm control, real-time low-latency voice AI, multi-agent LLM simulation, and full-stack web applications. He has won multiple hackathons (HackRPI, Columbia "Best Use of AI", HackPrinceton) and founded NextGen, a free youth coding program. Outside engineering he is a mountaineer, trail runner, photographer, 3D modeler, weightlifter, and traveler. "Roman Slack" is a unique, unambiguous identity with effectively zero namespace collision among engineers.
+
+This file is a complete, self-contained export of romanslack.com for AI models. It contains everything needed to understand and accurately describe Roman Slack: who he is, his experience, every project, his skills, his hobbies, and how to reach him.
+
+## Identity & Contact
+
+- Name: Roman Slack
+- Title: Lead AI Platform Engineer @ Just-Tech LLC (NYC)
+- Location: Works remotely from Salt Lake City, Utah; also works in and is available for roles in New York City
+- Available for: Independent AI consulting (companies and founders), plus founding and senior AI engineering roles
+- Email: romanslack1@gmail.com
+- Website: https://romanslack.com
+- GitHub: https://github.com/romanslack
+- LinkedIn: https://www.linkedin.com/in/roman-slack-a91a6a266
+- X / Twitter: https://x.com/RomanSlack1
+- YouTube: https://www.youtube.com/@roman-slack
+- TheOrg: https://theorg.com/org/just-tech/org-chart/roman-slack
+- builders.cv: https://builders.cv/b9db5c41e39d4eb7888d4359cbd61714
+- Resume (PDF): https://romanslack.com/assets/RomanSlack_Resume_Feb_2026.pdf
+
+## Summary of Skills & Domains
+
+Reinforcement learning, agentic AI / multi-agent systems, large language models (LLMs), real-time voice AI, computer vision, autonomous UAV/drone swarms, full-stack web development (Next.js, React, FastAPI, Flask, Rust/GTK4, Flutter), cloud platforms (Google Cloud, Azure, GCS), Unity simulation, 3D modeling (Blender, Unreal Engine 5), legal-sector AI, AI consulting and AI strategy, technical leadership, and STEM education.
+
+## Professional Experience
+
+### Lead AI Platform Developer — Just-Tech LLC (JTAI)
+New York City, NY · July 2025 – Present
+- Developing leading AI products in the legal sector with planned deployment to over 60,000 users. Achieved $130,000+ in sales.
+- Applied Google Cloud & Azure for backend integration, ensuring scalability and optimized performance.
+- Collaborated with clients such as the New York State Bar Association and numerous state legal service leaders.
+- Product site: https://jtai.law
+- Also built: PompCheer AI (https://ai.pompcheer.com) and PompCheer Team Store (https://teamstore.pompcheer.com).
+
+### AI Research Intern — Air Force Research Laboratory (AFRL), Information Directorate
+Rome, NY · June 2025 – August 2025
+- Worked with a team to conduct classified research in the defense space using custom AI algorithms and virtual simulation spaces.
+- Pursued novel, state-of-the-art techniques in the research field; applied professional communication and leadership in the lab.
+
+### AI / Fullstack Engineer — Levangie Laboratories
+Rochester, NY · Nov 2024 – March 2025
+- Constructed agentic AI systems using the latest AI developments.
+- Designed and optimized front-end and back-end systems supporting an agentic framework.
+
+### Full Stack App Design (Freelance) — Tick-It
+Tampa, FL · Aug 2024 – Sept 2024
+- Designed, developed, and deployed a custom cross-platform eCommerce app in Flutter, with Google Cloud Platform backend.
+
+### Middle School Programming Teacher — Youth and Family Services
+Rapid City, SD · August 2023 – May 2024
+- Designed and taught a programming curriculum to 100+ students using AI-driven tools, inspiring STEM pathways.
+
+### Founder and CEO — NextGen
+Black Hills Area, SD · Jun 2023 – Jan 2025
+- Founded a free programming day camp for underserved students; led partnerships with local nonprofits and government.
+
+### Assistant Head Horticulturist — Black Hills Reptile Gardens
+Rapid City, SD · Apr 2020 – Apr 2024
+- Managed a horticulture team at the world's largest reptile zoo; efforts contributed to multiple state tourism awards.
+
+## Projects (50 total, 1,555+ hours)
+
+Listed by prominence (lower number = more featured).
+
+### 1. Why Isn't AI Good Yet?
+*other · 02-2026 · 7 hours*
+
+A long-form editorial arguing that businesses are implementing AI incorrectly by layering excessive guardrails and approvals, when instead they should grant autonomous systems full operational control within defined boundaries. Written in collaboration with Opus 4.6.
+
+Link: https://www.whyisntaigoodyet.com/
+
+### 2. Discerio
+*programming · 11-2025 · 33 hours*
+
+Scratch for AI Agents - Discer.io is an interactive platform that teaches agentic AI concepts through a multiplayer battle royale game. Build AI agents using a visual block-based programming interface, deploy them into a live combat arena, and watch them make real-time decisions using large language models. Created for HackPrinceton Fall 2025, where it won TWO first-place awards out of 194 projects / 600+ participants: the Y Combinator Challenge (guaranteed YC interviews for all four teammates) and the Dedalus Labs Special Track ($500 each + a direct interview). Roman Slack designed the idea and system architecture, inspired by OpenAI's Neural MMO paper. Live demo: https://www.discerio.tech/
+
+Link: https://github.com/RomanSlack/Discerio
+
+### 3. Rookery (in progress)
+*programming · 01-2026 · 15 hours*
+
+A feed for discovering research papers you'd otherwise miss. X is great at surfacing content—Rookery does the same for academic research. No ads. No slop. Just papers, code, and ideas.
+
+Link: https://rookery.network
+
+### 4. Hlynr Intercept (in progress, research)
+*programming · 05-2025 · 70 hours*
+
+A radar based missile interception reinforcement learning environment with a custom Unity simulation layer, currently researching radar observation spaces and a novel implementation of single policy hierarchical learning.
+
+Link: https://github.com/RomanSlack/Hlynr_Intercept
+
+### 5. Swap Studio
+*programming · 02-2026 · 6.0 hours*
+
+A workbench for AI pose transfer and character swap APIs / workflows. Using the direct APis instead of being scammed.
+
+Link: https://github.com/RomanSlack/Swap_Studio
+
+### 6. Her (in progress)
+*programming · 01-2026 · 8 hours*
+
+A SOTA real-time, low-latency voice AI system that enables natural, hands-free conversations with ~500ms end-to-end latency.
+
+Link: https://www.youtube.com/watch?v=P0CbuUs-zS8
+
+### 7. NewLine (in progress)
+*programming · 01-2026 · 7 hours*
+
+A simple, GNOME-style task manager with cloud sync. Built in Rust with GTK4.
+
+Link: https://newlineapp.netlify.app/
+
+### 8. Meetd (in progress)
+*programming · 02-2026 · 6 hours*
+
+Let your AI assistant schedule meetings for you, by contacting other peoples AIs, to find a compatible time.
+
+Link: https://github.com/RomanSlack/meetd
+
+### 9. Romans Cool Diagram Software
+*programming · 01-2026 · 10.0 hours*
+
+Free, open-source alternative to Draw.io (diagrams.net), Lucidchart, and Figma for technical diagrams — Create beautiful architecture diagrams, flowcharts, system designs, and network diagrams with a modern, publication-ready aesthetic.
+
+Link: https://romans-cool-diagram-software.vercel.app/
+
+### 10. DailyStack
+*programming · 01-2026 · 2 hours*
+
+A gamified habit tracker app for daily health protocols with XP, streaks, and biological age tracking.
+
+Link: https://www.youtube.com/watch?v=f7bj7DBUqcg
+
+### 11. Free eSign Website
+*programming · 01-2026 · 2 hours*
+
+Free, open-source e-signature website for signing simple documents online. This is a hosted, single-page web app that lets you upload a PDF, add a signature, and download the signed file instantly, with no login, no accounts, and no restrictions.
+
+Link: https://github.com/RomanSlack/free_esign_website
+
+### 12. Emotional Design in Messaging Applications (research)
+*other · 12-2025 · 4 hours*
+
+How do messaging platforms engineer emotional responses? This case study examines the symbolic manipulation of Snapchat versus the infrastructural dependence of WeChat.
+
+Link: https://messaging-app-emotion-study.netlify.app/
+
+### 13. Xscape
+*programming · 12-2025 · 4.0 hours*
+
+I hate MacOS, Xscape lets you develop iOS apps on Linux by orchestrating a macOS VM (or remote Mac) that handles the actual Xcode builds and simulator runs. You get a clean terminal UI on Linux, and the iOS Simulator streams to your browser via VNC.
+
+Link: https://github.com/RomanSlack/Xscape
+
+### 14. Objectionary.AI
+*programming · 12-2025 · 40.0 hours*
+
+Real-time AI sales objection handler that listens to live calls, detects objections, and delivers script suggestions through an elegant teleprompter interface with PiP support.
+
+Link: https://www.objectionary.ai
+
+### 15. AUS-Lab (in progress, research)
+*programming · 10-2025 · 15 hours*
+
+(Autonomous UAV Swarm Laboratory) An experimental framework for LLM-driven cognitive control of UAV swarms. It links agentic reasoning with swarm simulation to enable autonomous coordination, adaptive behavior, and hardware-in-the-loop testing.
+
+Link: https://github.com/RomanSlack/AUS-Lab
+
+### 16. Vibe OS (research)
+*programming · 01-2026 · 75 hours*
+
+Vibe OS - A multi-agent orchestration system where specialized AI agents collaborate through event-driven communication and a great looking UI designed by me.
+
+Link: https://github.com/RomanSlack/VOS_frontend
+
+### 17. VoiceDeck
+*programming · 12-2025 · 2 hours*
+
+A desktop voice recorder with speech-to-text transcription for Ubuntu. Record from any microphone, click stop, and get your transcript. Uses OpenAI's Speech-to-Text API with support for recordings up to 60 minutes.
+
+Link: https://github.com/RomanSlack/VoiceDeck
+
+### 18. NextGen
+*other · 01-2024 · 70 hours*
+
+A youth-focused coding initiative designed to teach foundational programming through hands-on lessons in Python, web design, and AI basics. Built to inspire technological curiosity, NextGen empowers students to explore CS careers and creative problem-solving in an immersive, project-based environment.
+
+Link: https://nextgen-sd.netlify.app/
+
+### 19. SimuVerse (research)
+*programming · 02-2024 · 70 hours*
+
+A revolutionary multi-agent simulation environment where AI agents powered by LLMs live and interact on Mars, paving the way for advanced research in artificial intelligence.
+
+Link: https://simuverse.world/
+
+### 20. Poly-DB
+*programming · 12-2025 · 3.0 hours*
+
+A Polymarket scraper that vectorizes markets using semantic embeddings, enabling lightning-fast derivative detection, arbitrage discovery, and natural language search through a simple CLI and API interface.
+
+Link: /polydb/index.html
+
+### 21. Family House
+*architecture · 03-2024 · 50 hours*
+
+A concept home designed, created, and shot by me. Using Blender, UE5, & Davinci
+
+Link: https://www.youtube.com/watch?v=TC4ymi2G0GQ
+
+### 22. Tujia
+*architecture · 02-2024 · 50 hours*
+
+A concept building design inspired by Tujia architecture, designed, created, and shot by me
+
+Link: https://www.youtube.com/watch?v=WLrkrDmMBvg
+
+### 23. RIT Formula SAE Live Telemetry
+*programming · 08-2025 · 30 hours*
+
+Main repo is owned by org. This was our prototype repository in which we were trying to build from scratch a live telemetry module using LORA. Custom PCB stuff.
+
+Link: https://github.com/RomanSlack/FormulaSAELiveTelemetry
+
+### 24. AI Bootcamp
+*programming · 12-2025 · 15 hours*
+
+AI Bootcamp was created to provide a free, accessible resource for learning AI tools and techniques in today's rapidly evolving landscape. This project represents a commitment to democratizing AI education and spreading knowledge to everyone who wants to learn.
+
+Link: https://www.aiclub-bootcamp.com/about
+
+### 25. GapRunner
+*programming · 08-2025 · 4 hours*
+
+(80% Gain on 2025 Data) GapRunner is a backtesting and live-trading engine that simulates a top-gainers momentum strategy using real minute-level equity data. Custom Universe collection system.
+
+Link: https://github.com/RomanSlack/GapRunner
+
+### 26. FengShui.fy
+*programming · 10-2025 · 24 hours*
+
+(Winner of Best Use of AI @ Columbia) An AI-powered interior design analyzer merging traditional feng shui with modern computer vision. Using YOLOv11 object detection, Gemini 2.5 AI reasoning, and Blender-based 3D reconstruction, it evaluates spatial balance, energy flow, and design harmony directly from room photos. Built with Next.js, FastAPI, and a zen-inspired interface for intuitive, meditative interaction.
+
+Link: https://github.com/RomanSlack/fengshui.ai
+
+### 27. EchoRidge Search
+*programming · 06-2025 · 17 hours*
+
+An AI-powered business intelligence pipeline combining discovery, scraping, and hybrid LLM scoring with real-time visualization. Built on Python, FastAPI, and Next.js, it automates market research by aggregating, ranking, and mapping businesses through a cloud-native GCS pipeline.
+
+Link: /echoridge/index.html
+
+### 28. UltraThinkV2
+*programming · 07-2025 · 3 hours*
+
+A Claude-driven automation framework that converts natural language instructions into structured AI workflows and executable code pipelines. It streamlines SaaS project creation through task decomposition, AI reasoning, and automated debugging, cutting development time by over 80% on large builds.
+
+Link: https://github.com/RomanSlack/UltraThink_V2
+
+### 29. World Record Speedrun Childrens Book Author
+*other · 07-2023 · 1.2 hours*
+
+I use AI to become a published author as fast as possible, Book: Understanding Nuclear Physics for Kids
+
+Link: https://youtu.be/eG19ER6lvtY?t=3721
+
+### 30. FaceMusic
+*programming · 06-2025 · 1 hours*
+
+A lightweight Python tool that maps facial expressions to media playback. Using MediaPipe for real-time detection, it lets users trigger YouTube or local audio with gestures like eyebrow raises or winks; turning the webcam into an interactive controller.
+
+Link: https://github.com/RomanSlack/face_music
+
+### 31. Skema
+*programming · 07-2025 · 4 hours*
+
+A clean, AI-integrated productivity dashboard that unifies idea management, scheduling, and journaling into one seamless interface.
+
+Link: https://github.com/RomanSlack/Skema
+
+### 32. ClickUp Scrape
+*programming · 06-2025 · 2 hours*
+
+A powerful Python tool to download all image attachments from your ClickUp workspace with advanced features like resume capability, duplicate detection, and a built-in image sorting interface.
+
+Link: https://github.com/RomanSlack/Download_All_Images_from_Clickup
+
+### 33. Sonomancer
+*programming · 06-2025 · 2 hours*
+
+Sonomancer is a vibe-aware ambient e-reader that syncs each chapter of your book with AI-curated background ambience from YouTube. Upload any EPUB or PDF and experience immersive reading with real-time mood-based soundscapes.
+
+Link: https://github.com/RomanSlack/Sonomancer
+
+### 34. OpenNote Discord Bot
+*programming · 07-2025 · 2 hours*
+
+A Discord bot that transcribes voice channels and generates AI-powered meeting summaries. Forked from volo_discord_bot.
+
+Link: https://github.com/RomanSlack/OpenNote_V2_DiscordBot
+
+### 35. ReFaceNet
+*programming · 05-2025 · 1 hours*
+
+(DECA paper implementation) An app that intelligently reconstructs complete faces from multiple occluded/cropped photos. Handles hand-covered selfies, partial crops, and missing facial regions.
+
+Link: https://github.com/RomanSlack/ReFaceNet
+
+### 36. QR Code Rater
+*programming · 03-2025 · 0.2 hours*
+
+A test for claude (took under 15 mins) A Flask web application that allows users to generate QR codes for rating machines or equipment. When scanned, the QR code leads to a unique rating page for that machine.
+
+Link: https://github.com/RomanSlack/QRCode_Rater
+
+### 37. LLM Collate Code
+*programming · 03-2025 · 1 hours*
+
+A simple Python script that collects code from specified file paths on your OS. It copies each file's content, labels it by programming language, and saves everything into a single JSON file – perfect for feeding into a Large Language Model (LLM).
+
+Link: https://github.com/RomanSlack/LLM_Collate-Code
+
+### 38. FirstChat
+*programming · 03-2025 · 5 hours*
+
+(Ignore degenerate project) A full-stack system for personalized dating openers: Playwright scraper ingests Tinder profiles, FastAPI scores text/images with GPT + Google Vision, and a Flask UI returns analytics-backed first messages via a REST API.
+
+Link: https://github.com/RomanSlack/FirstChat_BackEnd
+
+### 39. Akta Life
+*programming · 11-2024 · 15 hours*
+
+(RIT HackCOMS 24 Submission) Akta.life is an AI-driven platform that serves as a personalized course hub. It analyzes individual learning preferences, academic history, and career goals to recommend courses and professors tailored to each student's unique needs.
+
+Link: https://github.com/RomanSlack/HackCOMS24gogogo
+
+### 40. UrbanSpark
+*programming · 11-2024 · 24 hours*
+
+(Winning Hack RPI 24 Submission) An AI-driven platform that personalizes urban opportunity discovery for young adults. It uses FastAPI, React, OpenAI, and SerpAPI to recommend jobs, workshops, and community resources tailored to user profiles—empowering local engagement and accessibility.
+
+Link: https://github.com/RomanSlack/UrbanSpark_HackRPI24
+
+### 41. StereoToMono Chrome Extension
+*programming · 02-2025 · 2 hours*
+
+(Over 200 Active users) A simple Chrome extension that merges any stereo audio into a single mono channel. Whether you're wearing headphones or using a single speaker, enjoy consistent sound from all tabs with a click of a button.
+
+Link: https://chromewebstore.google.com/detail/stereotomono/lciockipefmcmeambghkinkjlckjkbmn?hl=en
+
+### 42. Randomized-Timer
+*programming · 09-2024 · 1 hours*
+
+(I use this everyday in the gym for planks) Literally a timer but it adds a random amount at the end to strengthen the mind during exercises.
+
+Link: https://randomizedtimer.netlify.app/
+
+### 43. Roman Slack Portfolio 23
+*programming · 05-2023 · 10 hours*
+
+This was my portfolio for 2023 where I combined my frontend skills and 3D modeling / Blender skills.
+
+Link: https://github.com/RomanSlack/RomanPortfolio23
+
+### 44. Language Learning Website Tutorial
+*programming · 01-2023 · 7 hours*
+
+Language learning website tutorial project
+
+Link: https://www.youtube.com/watch?v=eVLQF1fYhjA
+
+### 45. LiftView
+*programming · 11-2022 · 13 hours*
+
+A mobile app that allows gym owners to gather data on specific machine utilization and member metrics. Built with Flutter and Firebase.
+
+Link: #
+
+### 46. TickIt
+*programming · 07-2024 · 6 hours*
+
+A product concept built for a startup attempting to combine gambling and e-commerce using an innovative raffle system.
+
+Link: https://github.com/RomanSlack/tickit
+
+### 47. ChatGPT-SEO-Description-Generator-from-Tags
+*programming · 04-2024 · 5 hours*
+
+Worked with Jack First firearm supplier to optimize their SEO utilizing the early OpenAI API.
+
+Link: https://github.com/RomanSlack/ChatGPT-SEO-Description-Generator-from-Tags
+
+### 48. AI Language Tutor
+*programming · 05-2023 · 4 hours*
+
+A video tutorial experiment. Webdev project, using OpenAI's released GPT-3.5
+
+Link: https://github.com/RomanSlack/AI-Language-Tutor-V.1
+
+### 49. Vocal Language App
+*programming · 07-2023 · 7 hours*
+
+Language learning app experiment. Pure HTML, CSS, Javascript
+
+Link: https://github.com/RomanSlack/Vocal-Language-App
+
+### 50. Bike across America
+*other · 01-2021 · 800 hours*
+
+Raised money for local trails by biking many miles.
+
+Link: https://www.kotatv.com/2021/01/10/with-a-love-for-mountain-biking-rapid-city-teen-rode-thousands-of-miles-in-2020/
+
+
+## Hobbies & Interests
+
+Roman maintains an unusually broad set of pursuits beyond engineering: programming, 3D modeling, architecture, mountaineering, hiking, trail running, camping, road tripping, traveling, cooking, building, weightlifting, calisthenics, photography, reading, languages, and human connection. He biked thousands of miles across 2020 ("Bike across America") to raise money for local trails, and holds a self-styled speed record for becoming a published children's-book author using AI.
+
+## Frequently Asked Questions
+
+### Who is Roman Slack?
+Roman Slack is a Lead AI Platform Engineer at Just-Tech LLC in New York City. He builds production AI systems for the legal sector and previously did AI research at the Air Force Research Laboratory. He has shipped 50+ projects spanning reinforcement learning, agentic AI, voice AI, and full-stack development.
+
+### What does Roman Slack do?
+He designs and ships production AI platforms and applications — currently legal-sector AI deployed toward 60,000+ users — and independently builds research projects in reinforcement learning, multi-agent systems, autonomous drone swarms, and real-time voice AI.
+
+### What is Roman Slack known for?
+Notable work includes Hlynr Intercept (radar-based missile-interception RL), AUS-Lab (LLM-driven UAV swarm control), SimuVerse (multi-agent LLM simulation on Mars), Her (~500ms real-time voice AI), and multiple hackathon wins (HackRPI, Columbia Best Use of AI, HackPrinceton).
+
+### Where did Roman Slack work?
+Just-Tech LLC (Lead AI Platform Developer), Air Force Research Laboratory / AFRL (AI Research Intern), Levangie Laboratories (AI/Fullstack Engineer), plus freelance and founding roles including NextGen, a free youth coding program he started.
+
+### What are Roman Slack's technical skills?
+Reinforcement learning, agentic AI and multi-agent systems, LLMs, computer vision, real-time voice AI, autonomous UAV swarms, full-stack web (Next.js, React, FastAPI, Flask, Rust, Flutter), cloud (Google Cloud, Azure), Unity simulation, and 3D modeling (Blender, Unreal Engine 5).
+
+### What are Roman Slack's hobbies?
+Mountaineering, trail running, hiking, camping, photography, 3D modeling, architecture, weightlifting, calisthenics, cooking, traveling, road tripping, reading, and languages.
+
+### Is Roman Slack available for opportunities?
+He is regularly approached for engineering roles, and also takes on independent AI consulting work for companies and founders (AI strategy, agentic systems, and full-stack AI product development). He works remotely from Salt Lake City, Utah and is also available to work in New York City. The best way to reach him is email (romanslack1@gmail.com) or LinkedIn (https://www.linkedin.com/in/roman-slack-a91a6a266).
+
+### Where is Roman Slack based?
+Roman Slack works remotely from Salt Lake City, Utah, and also works in and is available for roles in New York City, where Just-Tech LLC is based.
+
+### How can I contact Roman Slack?
+Email romanslack1@gmail.com, or connect via LinkedIn, GitHub (https://github.com/romanslack), X (https://x.com/RomanSlack1), or YouTube (https://www.youtube.com/@roman-slack).
+
+---
+This content is maintained by Roman Slack. Last updated 2026-06-04.

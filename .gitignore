@@ -9,3 +9,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.log
+
+# Generated artifact (derived from projects.json by generate_project_pages.py)
+.project_slugs.json
