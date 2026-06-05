@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Build with AI Agents | Roman Slack, Agent Fleet Engineer</title>
+    <meta name="description" content="How Roman Slack, an Agent Fleet Engineer, builds software with AI coding agents. The three methods he uses (starting from zero, a small feature in a large codebase, and a massive feature or full rework), plus copyable prompts to set up the same workflow yourself.">
+    <meta name="keywords" content="Roman Slack, Agent Fleet Engineer, AI agent workflow, Claude Code, coding agents, agentic development, AI pair programming, context management, plan mode, amnesia command, AI software development, prompt engineering">
+    <meta name="author" content="Roman Slack">
+    <meta name="creator" content="Roman Slack">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://romanslack.com/projects/ai-agent-workflow.html">
+    <link rel="alternate" type="text/markdown" title="llms.txt" href="/llms.txt">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Roman Slack">
+    <meta property="og:url" content="https://romanslack.com/projects/ai-agent-workflow.html">
+    <meta property="og:title" content="How I Build with AI Agents — Roman Slack, Agent Fleet Engineer">
+    <meta property="og:description" content="The three methods I use with AI coding agents: from zero, a small feature in a big codebase, and a massive rework. Plus copyable prompts to set up the same workflow. Context is king.">
+    <meta property="og:image" content="https://romanslack.com/images/ai_workflow_og.png">
+    <meta property="og:image:secure_url" content="https://romanslack.com/images/ai_workflow_og.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="How I Build with AI Agents — by Roman Slack, Agent Fleet Engineer">
+    <meta property="article:author" content="Roman Slack">
+    <meta property="article:published_time" content="2026-06-05">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="How I Build with AI Agents — Roman Slack, Agent Fleet Engineer">
+    <meta property="twitter:description" content="The three methods I use with AI coding agents, plus copyable prompts to steal my setup. The one rule underneath all of them: context is king.">
+    <meta property="twitter:image" content="https://romanslack.com/images/ai_workflow_og.png">
+    <meta property="twitter:image:alt" content="How I Build with AI Agents — by Roman Slack, Agent Fleet Engineer">
+    <meta property="twitter:creator" content="@RomanSlack1">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "headline": "How I Build with AI Agents",
+          "name": "How I Build with AI Agents",
+          "url": "https://romanslack.com/projects/ai-agent-workflow.html",
+          "description": "How Roman Slack, an Agent Fleet Engineer, builds software with AI coding agents. The three methods he uses (from zero, a small feature in a large codebase, and a massive feature or full rework) plus the principles underneath them and copyable prompts to set up the same workflow.",
+          "image": "https://romanslack.com/images/ai_workflow_og.png",
+          "author": {
+            "@type": "Person",
+            "@id": "https://romanslack.com/#person",
+            "name": "Roman Slack",
+            "url": "https://romanslack.com/",
+            "jobTitle": "Agent Fleet Engineer",
+            "sameAs": [
+              "https://github.com/romanslack",
+              "https://www.linkedin.com/in/roman-slack-a91a6a266",
+              "https://x.com/RomanSlack1",
+              "https://www.youtube.com/@roman-slack",
+              "https://theorg.com/org/just-tech/org-chart/roman-slack",
+              "https://builders.cv/b9db5c41e39d4eb7888d4359cbd61714"
+            ]
+          },
+          "creator": { "@id": "https://romanslack.com/#person" },
+          "copyrightHolder": { "@id": "https://romanslack.com/#person" },
+          "datePublished": "2026-06-05",
+          "keywords": "Roman Slack, Agent Fleet Engineer, AI agent workflow, Claude Code, agentic development, context management",
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "name": "Projects - Roman Slack",
+            "url": "https://romanslack.com/projects.html"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://romanslack.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://romanslack.com/projects.html" },
+            { "@type": "ListItem", "position": 3, "name": "How I Build with AI Agents", "item": "https://romanslack.com/projects/ai-agent-workflow.html" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        /* ---- Scoped styles for the AI agent workflow guide ---- */
+        .wf-main {
+            display: block;            /* override the site's flex <main> (built for the centered hero) */
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 1.5rem 1.5rem 4rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            color: #d7d7d7;
+        }
+
+        .wf-lede {
+            font-size: 1.18rem;
+            line-height: 1.6;
+            color: #cfcfcf;
+            margin: 0.5rem 0 0.4rem;
+        }
+        .wf-lede strong { color: #f5f5f5; }
+        .wf-byline {
+            color: #8a8a8a;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+            margin-bottom: 2.2rem;
+        }
+
+        .wf-main p { line-height: 1.72; margin: 0 0 1.05rem; font-size: 1.02rem; }
+        .wf-main p .accent { color: #5DADE2; }
+        .wf-main strong { color: #f2f2f2; }
+
+        /* the blue accent stripe used throughout */
+        .wf-kicker {
+            display: inline-block;
+            color: #5DADE2;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .wf-section { margin-top: 3.4rem; }
+        .wf-section h2 {
+            font-family: 'Eloquia', Arial, sans-serif;
+            font-weight: 800;
+            font-size: 2rem;
+            color: #f5f5f5;
+            line-height: 1.1;
+            margin: 0 0 0.4rem;
+        }
+        .wf-section .wf-sub {
+            color: #9a9a9a;
+            font-size: 0.98rem;
+            margin: 0 0 1.6rem;
+        }
+
+        /* thin divider between major sections */
+        .wf-rule {
+            border: none;
+            border-top: 1px solid #1d1d1d;
+            margin: 3.4rem 0 0;
+        }
+
+        /* ---- the setup strip ---- */
+        .wf-setup {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.55rem;
+            margin: 1.6rem 0 0.5rem;
+        }
+        .wf-pill {
+            border: 1px solid #262626;
+            background: #141414;
+            border-radius: 999px;
+            padding: 0.4rem 0.9rem;
+            font-size: 0.82rem;
+            color: #cdcdcd;
+        }
+        .wf-pill b { color: #5DADE2; font-weight: 600; }
+
+        /* ---- clean flow diagram ---- */
+        .wf-flow {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            gap: 0;
+            margin: 1.8rem 0 0.6rem;
+        }
+        .wf-node {
+            flex: 1 1 0;
+            min-width: 150px;
+            position: relative;
+            background: #141414;
+            border: 1px solid #242424;
+            border-radius: 12px;
+            padding: 0.85rem 0.95rem 0.95rem;
+            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+        .wf-node:hover {
+            border-color: #5DADE2;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(93, 173, 226, 0.12);
+        }
+        .wf-node .n-step {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #5DADE2;
+        }
+        .wf-node .n-title {
+            display: block;
+            color: #f3f3f3;
+            font-weight: 600;
+            font-size: 0.96rem;
+            margin: 0.2rem 0 0.25rem;
+        }
+        .wf-node .n-note {
+            color: #939393;
+            font-size: 0.82rem;
+            line-height: 1.45;
+        }
+        .wf-node code {
+            color: #cfe9fb;
+            background: #0d1b25;
+            border: 1px solid #1d3343;
+            border-radius: 5px;
+            padding: 0.05rem 0.32rem;
+            font-size: 0.76rem;
+            white-space: nowrap;
+        }
+        /* the connector chevron between nodes */
+        .wf-arrow {
+            flex: 0 0 auto;
+            align-self: center;
+            color: #3a3a3a;
+            font-size: 1.4rem;
+            line-height: 1;
+            padding: 0 0.45rem;
+            user-select: none;
+        }
+
+        /* a branch row (two outcomes) inside method 3 */
+        .wf-branch {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 0.8rem 0 0.2rem;
+        }
+        .wf-branch .wf-node { flex: 1 1 250px; }
+        .wf-branch .b-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #8a8a8a;
+            margin-bottom: 0.45rem;
+        }
+
+        /* callout note under a diagram */
+        .wf-aside {
+            border-left: 2px solid #2c4a5e;
+            padding: 0.1rem 0 0.1rem 0.9rem;
+            margin: 1.1rem 0 0;
+            color: #9fb6c4;
+            font-size: 0.9rem;
+            line-height: 1.55;
+        }
+
+        /* ---- principles list ---- */
+        .wf-principles { margin: 1.8rem 0 0; }
+        .wf-principle {
+            display: flex;
+            gap: 1rem;
+            padding: 1.15rem 0;
+            border-top: 1px solid #1d1d1d;
+        }
+        .wf-principle:last-child { border-bottom: 1px solid #1d1d1d; }
+        .wf-principle .p-num {
+            flex: 0 0 auto;
+            font-family: 'Eloquia', Arial, sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #2f6f93;
+            line-height: 1;
+            width: 2.2rem;
+        }
+        .wf-principle .p-body h3 {
+            color: #f3f3f3;
+            font-size: 1.04rem;
+            margin: 0 0 0.3rem;
+        }
+        .wf-principle .p-body p {
+            margin: 0;
+            color: #a5a5a5;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .wf-closing {
+            margin-top: 3rem;
+            color: #cfcfcf;
+            font-size: 1.06rem;
+            line-height: 1.7;
+        }
+        .wf-attribution {
+            margin-top: 2.4rem;
+            color: #8a8a8a;
+            font-size: 0.86rem;
+            line-height: 1.6;
+        }
+        .wf-attribution a { color: #b9b9b9; text-decoration: underline; text-underline-offset: 2px; }
+
+        @media (max-width: 700px) {
+            .wf-section h2 { font-size: 1.6rem; }
+            /* stack the flow vertically; turn chevrons downward */
+            .wf-flow { flex-direction: column; }
+            .wf-node { flex: 1 1 auto; width: 100%; }
+            .wf-arrow {
+                transform: rotate(90deg);
+                padding: 0.35rem 0;
+                align-self: center;
+            }
+        }
+
+        /* ---- flows rendered as a clean vertical stepper (was cramped horizontal cards) ---- */
+        .wf-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin: 1.8rem 0 0.8rem;
+        }
+        .wf-flow .wf-arrow { display: none; }
+        .wf-flow .wf-node {
+            position: relative;
+            display: grid;
+            grid-template-columns: 28px 1fr;
+            column-gap: 1rem;
+            align-items: start;
+            background: none;
+            border: none;
+            border-radius: 0;
+            padding: 0 0 1.5rem;
+            min-width: 0;
+            transition: none;
+        }
+        .wf-flow .wf-node:hover { transform: none; box-shadow: none; border: none; }
+        .wf-flow .wf-node::before {
+            content: "";
+            position: absolute;
+            left: 13px;
+            top: 28px;
+            bottom: -2px;
+            width: 2px;
+            background: #232323;
+        }
+        .wf-flow .wf-node:last-child::before { display: none; }
+        .wf-flow .n-step {
+            grid-column: 1;
+            grid-row: 1 / span 2;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 1px solid #2f6f93;
+            background: #0d1b25;
+            color: #5DADE2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.68rem;
+            letter-spacing: 0;
+            z-index: 1;
+        }
+        .wf-flow .n-title { grid-column: 2; grid-row: 1; margin: 0.3rem 0 0.25rem; }
+        .wf-flow .n-note { grid-column: 2; grid-row: 2; }
+
+        /* ---- copyable prompt cards: "steal my setup" ---- */
+        .wf-prompts {
+            display: grid;
+            gap: 0.9rem;
+            margin: 1.8rem 0 0.5rem;
+        }
+        @media (min-width: 620px) {
+            .wf-prompts { grid-template-columns: 1fr 1fr; }
+            .wf-prompts .wf-lead-card { grid-column: 1 / -1; }
+        }
+        .wf-pc {
+            position: relative;
+            background: #15140d;
+            border: 1px solid #34301c;
+            border-radius: 10px;
+            padding: 0.95rem 1rem 1rem;
+        }
+        .wf-pc h3 {
+            font-size: 0.98rem;
+            color: #f0e7c8;
+            margin: 0 0 0.2rem;
+            padding-right: 4rem;
+        }
+        .wf-pc .pc-desc {
+            color: #b9b29a;
+            font-size: 0.84rem;
+            margin: 0 0 0.7rem;
+            line-height: 1.45;
+        }
+        .wf-pc .pc-desc a { color: #e8c977; text-decoration: underline; text-underline-offset: 2px; }
+        .wf-pc pre {
+            margin: 0;
+            background: #0d0d0a;
+            border: 1px solid #2a2718;
+            border-radius: 7px;
+            padding: 0.7rem 0.8rem;
+            color: #d7d2c2;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .wf-pc .pc-copy {
+            position: absolute;
+            top: 0.85rem;
+            right: 0.85rem;
+            background: #2a2718;
+            border: 1px solid #4a431f;
+            color: #e8c977;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            padding: 0.25rem 0.6rem;
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+        }
+        .wf-pc .pc-copy:hover { background: #3a331a; color: #fff; }
+
+        /* ---- "Agent Fleet Engineer" title with a hover/tap tooltip ---- */
+        .wf-role {
+            position: relative;
+            font: inherit;
+            background: none;
+            border: none;
+            border-bottom: 1px dotted currentColor;
+            padding: 0;
+            margin: 0;
+            color: #5DADE2;
+            cursor: help;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .wf-role .wf-tip {
+            position: absolute;
+            top: calc(100% + 11px);
+            left: 0;
+            width: min(330px, 80vw);
+            max-width: calc(100vw - 40px);
+            background: #2b2b2b;
+            border: 1px solid #4d4d4d;
+            border-radius: 10px;
+            padding: 0.75rem 0.9rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            font-size: 0.82rem;
+            font-weight: 400;
+            line-height: 1.55;
+            letter-spacing: normal;
+            color: #ececec;
+            text-align: left;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4px);
+            transition: opacity 0.15s, transform 0.15s, visibility 0.15s;
+            z-index: 200;
+        }
+        .wf-role .wf-tip::before {
+            content: "";
+            position: absolute;
+            top: -6px;
+            left: 16px;
+            width: 11px;
+            height: 11px;
+            background: #2b2b2b;
+            border-left: 1px solid #4d4d4d;
+            border-top: 1px solid #4d4d4d;
+            transform: rotate(45deg);
+        }
+        .wf-role:hover .wf-tip,
+        .wf-role:focus .wf-tip,
+        .wf-role:focus-visible .wf-tip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .wf-role:focus { outline: none; }
+
+        /* ---- left-gutter scroll-spy legend (desktop only) ---- */
+        html { scroll-behavior: smooth; }
+        .wf-toc { display: none; }
+        @media (min-width: 1180px) {
+            .wf-toc {
+                display: block;
+                position: fixed;
+                top: 50%;
+                transform: translateY(-50%);
+                left: max(20px, calc((100vw - 760px) / 2 - 196px));
+                width: 168px;
+                z-index: 40;
+            }
+            .wf-toc ol {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                position: relative;
+            }
+            .wf-toc ol::before {
+                content: "";
+                position: absolute;
+                left: 3px;
+                top: 14px;
+                bottom: 14px;
+                width: 1px;
+                background: #1f1f1f;
+            }
+            .wf-toc a {
+                display: flex;
+                align-items: center;
+                gap: 0.65rem;
+                padding: 0.4rem 0;
+                color: #6a6a6a;
+                text-decoration: none;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+                font-size: 0.8rem;
+                line-height: 1.3;
+                transition: color 0.2s ease;
+            }
+            .wf-toc a .dot {
+                flex: 0 0 auto;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: #3a3a3a;
+                transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            }
+            .wf-toc a:hover { color: #b9b9b9; }
+            .wf-toc a.active { color: #f3f3f3; }
+            .wf-toc a.active .dot {
+                background: #5DADE2;
+                transform: scale(1.3);
+                box-shadow: 0 0 0 4px rgba(93, 173, 226, 0.15);
+            }
+        }
+
+        /* On phones, pin the role tooltip to the viewport so it can't crop off the right edge */
+        @media (max-width: 700px) {
+            .wf-role .wf-tip {
+                position: fixed;
+                top: auto;
+                left: 16px;
+                right: 16px;
+                width: auto;
+                max-width: none;
+            }
+            .wf-role .wf-tip::before { display: none; }
+        }
+
+        /* This page's title is long: on mobile, lift the back arrow to the corner and
+           drop the title below it so they don't overlap. */
+        /* Mobile: let the tall header scroll away like normal content (no sticky resize, so
+           nothing reflows). A separate FIXED mini-bar fades in once you've scrolled past it.
+           It animates only transform/opacity on a fixed element, so the page never re-lays-out
+           and there's no jitter. */
+        .wf-minibar { display: none; }
+        @media (max-width: 768px) {
+            header { padding-top: 72px; position: static; }
+            .back-arrow { top: 22px; left: 16px; line-height: 1; }
+
+            .wf-minibar {
+                display: flex;
+                align-items: center;
+                gap: 11px;
+                position: fixed;
+                top: 0; left: 0; right: 0;
+                z-index: 300;
+                padding: 9px 16px;
+                background: rgba(14, 14, 14, 0.96);
+                -webkit-backdrop-filter: blur(8px);
+                backdrop-filter: blur(8px);
+                border-bottom: 1px solid #1f1f1f;
+                transform: translateY(-101%);
+                opacity: 0;
+                pointer-events: none;
+                transition: transform 0.22s ease, opacity 0.22s ease;
+            }
+            body.wf-condensed .wf-minibar {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto;
+            }
+            .wf-minibar .mb-back {
+                flex: 0 0 auto;
+                color: #F5F5F5;
+                text-decoration: none;
+                font-size: 26px;
+                line-height: 1;
+            }
+            .wf-minibar .mb-text { min-width: 0; }
+            .wf-minibar .mb-title {
+                color: #F5F5F5;
+                font-weight: 800;
+                font-size: 15px;
+                line-height: 1.15;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .wf-minibar .mb-by {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+                color: #9a9a9a;
+                font-size: 10.5px;
+                line-height: 1.25;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .wf-minibar .mb-by b { color: #cfcfcf; font-weight: 700; }
+        }
+    </style>
+</head>
+<body class="scroll-page">
+    <header>
+        <a href="../projects.html" class="back-arrow">&larr;</a>
+        <h1>How I Build with AI Agents</h1>
+        <p class="header-subtitle">A guide by <a href="../index.html" class="subtitle-link">Roman Slack</a>, <button type="button" class="wf-role" aria-label="Agent Fleet Engineer: what this means">Agent Fleet Engineer<span class="wf-tip">An Agent Fleet Engineer runs tens of AI agents at once: managing each one's context and aiming them at complex research, software, and knowledge work. The goal is to get the output of hundreds of people out of one person.</span></button></p>
+    </header>
+
+    <div class="wf-minibar" aria-hidden="true">
+        <a href="../projects.html" class="mb-back" aria-label="Back to projects">&larr;</a>
+        <div class="mb-text">
+            <div class="mb-title">How I Build with AI Agents</div>
+            <div class="mb-by">A guide by <b>Roman Slack</b> &middot; Agent Fleet Engineer</div>
+        </div>
+    </div>
+
+    <nav class="wf-toc" aria-label="Section navigation">
+        <ol>
+            <li><a href="#s-intro"><span class="dot"></span><span>Overview</span></a></li>
+            <li><a href="#s-setup"><span class="dot"></span><span>Steal my setup</span></a></li>
+            <li><a href="#s-m1"><span class="dot"></span><span>From zero</span></a></li>
+            <li><a href="#s-m2"><span class="dot"></span><span>Small feature</span></a></li>
+            <li><a href="#s-m3"><span class="dot"></span><span>Massive rework</span></a></li>
+            <li><a href="#s-principles"><span class="dot"></span><span>What matters</span></a></li>
+        </ol>
+    </nav>
+
+    <main class="wf-main">
+        <span class="wf-kicker" id="s-intro">My workflow</span>
+        <p class="wf-lede">Honestly my whole workflow is just an <strong>algorithm</strong> I run over and over. The same few moves on every project. And the thing that actually matters underneath all of it is <strong>context</strong>: what the agent knows, when it knows it, and how cleanly you hand it off.</p>
+        <p class="wf-byline">Roman Slack &middot; June 2026</p>
+
+        <p>I run raw Claude Code. No tools, no scaffolding, nothing fancy. Just a really good <code style="color:#cfe9fb;background:#0d1b25;border:1px solid #1d3343;border-radius:5px;padding:.05rem .32rem;font-size:.85em;">CLAUDE.md</code> (I use <a href="https://en.wikipedia.org/wiki/Andrej_Karpathy" target="_blank" rel="noopener" style="color:#9fc7e0;text-decoration:underline;text-underline-offset:2px;">Andrej Karpathy's</a>, it's the best one I've ever seen), permissions skipped so it can actually move, and git set up so the agent has it as a tool. That's it. Everything below is just how I feed it context.</p>
+
+        <p>None of this is locked to one tool either. The same workflow runs on basically any agent, whether that's Claude Code, Codex, or a cheaper model like DeepSeek in another coder. I pay for the $200 Claude Code plan and keep the $20 OpenAI Codex one around as a backup for when Claude Code is down, but the model really only changes how fast you get there and how many iterations a feature takes. If you know what you're doing, you can brute force the same result with just about any frontier model from the last four or five months.</p>
+
+        <div class="wf-setup">
+            <span class="wf-pill"><b>Raw</b> Claude Code</span>
+            <span class="wf-pill">Hotkey &rarr; <b>--dangerously-skip-permissions</b></span>
+            <span class="wf-pill">Karpathy's <b>CLAUDE.md</b></span>
+            <span class="wf-pill">PyCharm + Jedi terminal</span>
+            <span class="wf-pill"><b>git</b> as a tool</span>
+        </div>
+
+        <p style="margin-top:1.4rem;">There are three methods I use, and I'll go in the order that makes sense. From starting at a blank repo to adding something into a huge codebase.</p>
+
+        <!-- ============ STEAL MY SETUP ============ -->
+        <hr class="wf-rule">
+        <section class="wf-section" id="s-setup">
+            <span class="wf-kicker">The only tools I use</span>
+            <h2>Steal my setup</h2>
+            <p class="wf-sub">There are really only a few custom pieces. Each card is a prompt you can paste straight into your own agent and it'll set the thing up for you.</p>
+
+            <div class="wf-prompts">
+                <div class="wf-pc wf-lead-card">
+                    <button class="pc-copy" onclick="copyPrompt(this)">Copy</button>
+                    <h3>Set it all up at once</h3>
+                    <p class="pc-desc">Hand your agent the whole workflow in one go.</p>
+                    <pre>I want to copy a coding workflow. Help me set up four things and walk me through each one: (1) a one-keystroke way to launch Claude Code with permissions skipped, (2) a `gpush` git shortcut that adds, commits, and pushes in a single command, (3) Andrej Karpathy's CLAUDE.md as my global Claude config, and (4) an `/amnesia` command in my repo that gets a fresh agent up to speed fast. I'm on [your OS + shell].</pre>
+                </div>
+
+                <div class="wf-pc">
+                    <button class="pc-copy" onclick="copyPrompt(this)">Copy</button>
+                    <h3>One-key launch</h3>
+                    <p class="pc-desc">The only real "tool" I use. A hotkey that starts the agent with permissions skipped so it can actually move.</p>
+                    <pre>Add a short shell alias so I can launch Claude Code with permissions skipped in one command (it should run `claude --dangerously-skip-permissions`). I'm on [your OS + shell]. Reload my shell and tell me the command to type.</pre>
+                </div>
+
+                <div class="wf-pc">
+                    <button class="pc-copy" onclick="copyPrompt(this)">Copy</button>
+                    <h3>gpush</h3>
+                    <p class="pc-desc">Add, commit, and push in one move.</p>
+                    <pre>Add a shell function called `gpush` that takes a commit message as the first argument and an optional branch as the second. It should run `git add .`, commit with my message, then push to the current branch (or the branch I pass). Print a short usage line if I don't give a message. Reload my shell when done.</pre>
+                </div>
+
+                <div class="wf-pc">
+                    <button class="pc-copy" onclick="copyPrompt(this)">Copy</button>
+                    <h3>Karpathy's CLAUDE.md</h3>
+                    <p class="pc-desc">The best <a href="https://en.wikipedia.org/wiki/Andrej_Karpathy" target="_blank" rel="noopener">Andrej Karpathy</a> CLAUDE.md I've seen. <a href="https://github.com/multica-ai/andrej-karpathy-skills/blob/main/CLAUDE.md" target="_blank" rel="noopener">Grab it here</a>. It makes every agent noticeably better.</p>
+                    <pre>Download Andrej Karpathy's CLAUDE.md from https://raw.githubusercontent.com/multica-ai/andrej-karpathy-skills/main/CLAUDE.md and install it as my global CLAUDE.md (~/.claude/CLAUDE.md) so Claude Code reads it on every project. Show me where you put it and a quick summary of what's inside.</pre>
+                </div>
+
+                <div class="wf-pc">
+                    <button class="pc-copy" onclick="copyPrompt(this)">Copy</button>
+                    <h3>The /amnesia command</h3>
+                    <p class="pc-desc">Honestly one of the most important pieces. Drop it in every repo so any fresh agent gets full context in seconds.</p>
+                    <pre>Create a Claude Code command file at `.claude/commands/amnesia.md` in this repo. When I run `/amnesia`, make it tell you to look around the whole project at a high level: read the root README, skim the frontend and backend, note any deploy / infra commands, and read the recent git commits, then report back concisely on what the project is and how it works. Keep the command file itself short.</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ METHOD 1 ============ -->
+        <hr class="wf-rule">
+        <section class="wf-section" id="s-m1">
+            <span class="wf-kicker">Method 01</span>
+            <h2>Starting from zero</h2>
+            <p class="wf-sub">A cool idea I want to try, a little experiment, or a new tool. Like building my own voice recorder that's open source, cheap, and just good.</p>
+
+            <p>The first step for me is just thinking about it on my own. I try to picture what I actually want it to look like and where it's going before I ever talk to the agent, because the context dump later is only as good as how clearly I can see it. Then I set up the repo, public or private, clone it, open PyCharm, and a hotkey fires up the agent. Now I just talk.</p>
+
+            <div class="wf-flow">
+                <div class="wf-node">
+                    <span class="n-step">01</span>
+                    <span class="n-title">Ponder</span>
+                    <span class="n-note">Think it through on my own first. Picture the end goal before the agent is even open.</span>
+                </div>
+                <span class="wf-arrow">&rsaquo;</span>
+                <div class="wf-node">
+                    <span class="n-step">02</span>
+                    <span class="n-title">Repo &amp; launch</span>
+                    <span class="n-note">Make the repo, clone it, open PyCharm, hit the hotkey and the agent is ready.</span>
+                </div>
+                <span class="wf-arrow">&rsaquo;</span>
+                <div class="wf-node">
+                    <span class="n-step">03</span>
+                    <span class="n-title">Context dump</span>
+                    <span class="n-note">I speak my whole mind in one go. High level goal, then the tech calls I care about (like use the OpenAI API), then the stack, then a visual reference like &ldquo;make it look like PyCharm.&rdquo;</span>
+                </div>
+                <span class="wf-arrow">&rsaquo;</span>
+                <div class="wf-node">
+                    <span class="n-step">04</span>
+                    <span class="n-title">Review &amp; plan</span>
+                    <span class="n-note">I end by telling it to review all that and start to plan. Not build yet.</span>
+                </div>
+                <span class="wf-arrow">&rsaquo;</span>
+                <div class="wf-node">
+                    <span class="n-step">05</span>
+                    <span class="n-title">Plan mode</span>
+                    <span class="n-note">It jumps into plan mode on its own and clears up anything I missed.</span>
+                </div>
+                <span class="wf-arrow">&rsaquo;</span>
+                <div class="wf-node">
+                    <span class="n-step">06</span>
+                    <span class="n-title">One shot, then QA</span>
+                    <span class="n-note">It pretty much one shots the project. Then I make small tweaks against hot reload so I'm seeing them in real time.</span>
+                </div>
+                <span class="wf-arrow">&rsaquo;</span>
+                <div class="wf-node">
+                    <span class="n-step">07</span>
+                    <span class="n-title">Write the amnesia doc</span>
+                    <span class="n-note">Have it drop an <code>/amnesia</code> command in the repo. Now any future tweak starts from full context instead of cold, so iterating later is way faster.</span>
+                </div>
+            </div>
+
+            <p style="margin-top:1.4rem;">The dump follows a little algorithm in my head. Describe what I want at a high level, then the technical decisions, then I leave the rest up to the agent and it usually goes right where I expect. Five to ten minutes of talking becomes the first prompt. Since it already has all the context, the tweaks don't take long. Honestly for something this size the model barely matters, any top ten agent will do it pretty much perfectly. I just pay for the best, so I'm running Opus 4.8 on medium thinking anyway.</p>
+        </section>
+
+        <!-- ============ METHOD 2 ============ -->
+        <hr class="wf-rule">
+        <section class="wf-section" id="s-m2">
+            <span class="wf-kicker">Method 02</span>
+            <h2>A small feature in a big codebase</h2>
+            <p class="wf-sub">A real one I did: let users favorite only eight people, with a little popup telling them to remove one to add a new one.</p>
+
+            <p>The codebase has a backend and two frontends, Flutter and Swift, so right away you have to lead the agent down the right route. I'm usually already working on something else when one of these comes up, so I just spawn another agent in a new terminal. I spawn them left and right.</p>
+
+            <div class="wf-flow">
+                <div class="wf-node">
+                    <span class="n-step">01</span>
+                    <span class="n-title">Orient</span>
+                    <span class="n-note">Run <code>/amnesia</code>, my custom command. It explains the whole project in a super token efficient way and skims past commits. Reads it in a millisecond.</span>
+                </div>
+                <span class="wf-arrow">&rsaquo;</span>
+                <div class="wf-node">
+                    <span class="n-step">02</span>
+                    <span class="n-title">Point it</span>
+                    <span class="n-note">I point it without giving the task: go look at how favorites work on the Flutter frontend and the backend, then report back.</span>
+                </div>
+                <span class="wf-arrow">&rsaquo;</span>
+                <div class="wf-node">
+                    <span class="n-step">03</span>
+                    <span class="n-title">Give the task</span>
+                    <span class="n-note">Now the actual task: cap favorites at eight with the popup. You can add a backend gate but it's not really needed since the frontend stops it.</span>
+                </div>
+                <span class="wf-arrow">&rsaquo;</span>
+                <div class="wf-node">
+                    <span class="n-step">04</span>
+                    <span class="n-title">QA on device</span>
+                    <span class="n-note">Test it on my test Android phone. It just works.</span>
+                </div>
+                <span class="wf-arrow">&rsaquo;</span>
+                <div class="wf-node">
+                    <span class="n-step">05</span>
+                    <span class="n-title">Ship</span>
+                    <span class="n-note"><code>gpush</code>, my command that does git add all, commit, and push to the branch.</span>
+                </div>
+            </div>
+
+            <p class="wf-aside">The key move is step two. Make it <strong>understand before it acts</strong>. Pointing it at the existing code without giving it the task loads the right context, so the actual change usually lands on the first try.</p>
+        </section>
+
+        <!-- ============ METHOD 3 ============ -->
+        <hr class="wf-rule">
+        <section class="wf-section" id="s-m3">
+            <span class="wf-kicker">Method 03</span>
+            <h2>A massive feature, or a full rework</h2>
+            <p class="wf-sub">Like swapping the entire auth system from SMS to passkeys. How do you even start to plan that? You have the agent do it for you.</p>
+
+            <p>This is the same as method two except you extend the search. You use language that makes it look deeper and really understand things before it writes a line. It uses way more tokens and takes longer, but it has way more to work with. It might not touch any code for upwards of an hour, just researching and collecting info, including Google searches with the <span class="accent">2026</span> tag so it has the most up to date and secure approach. That pays off later in QA.</p>
+
+            <div class="wf-flow">
+                <div class="wf-node">
+                    <span class="n-step">01</span>
+                    <span class="n-title">Orient</span>
+                    <span class="n-note"><code>/amnesia</code>, same as before.</span>
+                </div>
+                <span class="wf-arrow">&rsaquo;</span>
+                <div class="wf-node">
+                    <span class="n-step">02</span>
+                    <span class="n-title">Deep research</span>
+                    <span class="n-note">Up to an hour with no code, just collecting info. Google with the <span class="accent">2026</span> tag so it's current and secure.</span>
+                </div>
+                <span class="wf-arrow">&rsaquo;</span>
+                <div class="wf-node">
+                    <span class="n-step">03</span>
+                    <span class="n-title">Write the plan</span>
+                    <span class="n-note">Some back and forth, then a big <code>plan.md</code> it can reference.</span>
+                </div>
+                <span class="wf-arrow">&rsaquo;</span>
+                <div class="wf-node">
+                    <span class="n-step">04</span>
+                    <span class="n-title">Context check</span>
+                    <span class="n-note">A gut call on whether this agent still has enough room. That decides what's next.</span>
+                </div>
+            </div>
+
+            <div class="wf-branch">
+                <div class="wf-node">
+                    <span class="b-label">Context still clean</span>
+                    <span class="n-title">Keep the same agent</span>
+                    <span class="n-note">Tell it to start building in phases. It defaults to stages you can QA between. Backend first, deploy it, make sure it works, then the Flutter client.</span>
+                </div>
+                <div class="wf-node">
+                    <span class="b-label">Context too full</span>
+                    <span class="n-title">Kill and start fresh</span>
+                    <span class="n-note">Kill it and start a new agent. Run <code>/amnesia</code>, give it the path to <code>plan.md</code>, tell it to read it and get ready to work. Then go.</span>
+                </div>
+            </div>
+
+            <p class="wf-aside">Always have it make a <strong>deploy guide</strong> for your infra and keep it easy to use. Then deploying is just &ldquo;read the deploy guide first, then do it,&rdquo; and the guide does all the prompting for me.</p>
+
+            <p style="margin-top:1.4rem;">The QA between phases is the exact same as method two. None of this is complicated really. It's the same algorithm, just with more context up front and being careful about how you hand it off.</p>
+        </section>
+
+        <!-- ============ PRINCIPLES ============ -->
+        <hr class="wf-rule">
+        <section class="wf-section" id="s-principles">
+            <span class="wf-kicker">What actually matters</span>
+            <h2>The stuff that actually matters</h2>
+            <p class="wf-sub">The methods are just mechanics. This is the part that actually makes it work.</p>
+
+            <div class="wf-principles">
+                <div class="wf-principle">
+                    <span class="p-num">01</span>
+                    <div class="p-body">
+                        <h3>Context is king</h3>
+                        <p>It's all context management. You're not really prompting, you're managing what the agent has for whatever you're trying to do.</p>
+                    </div>
+                </div>
+                <div class="wf-principle">
+                    <span class="p-num">02</span>
+                    <div class="p-body">
+                        <h3>Never be afraid to kill an agent</h3>
+                        <p>A fresh agent with the right context beats a full one every time. When the context gets too full, kill it, run amnesia, and point it back at the plan.</p>
+                    </div>
+                </div>
+                <div class="wf-principle">
+                    <span class="p-num">03</span>
+                    <div class="p-body">
+                        <h3>One task per agent</h3>
+                        <p>Letting tasks or features bleed into each other on one agent is the worst mistake of all time. Keep them separate. I'll only combine really small things.</p>
+                    </div>
+                </div>
+                <div class="wf-principle">
+                    <span class="p-num">04</span>
+                    <div class="p-body">
+                        <h3>Keep a deploy guide</h3>
+                        <p>Write your infra down once in a guide and make it easy for the agent to use. Then every deploy is just one line.</p>
+                    </div>
+                </div>
+                <div class="wf-principle">
+                    <span class="p-num">05</span>
+                    <div class="p-body">
+                        <h3>Understand your own codebase</h3>
+                        <p>You have to actually understand the project and the tech stack deeply, otherwise you can't use your intuition to steer. And more importantly it's how you learn. If the AI makes every decision and you're never deciding alongside it, you never see your own failures and you never get better. You just blame it all on the AI.</p>
+                    </div>
+                </div>
+                <div class="wf-principle">
+                    <span class="p-num">06</span>
+                    <div class="p-body">
+                        <h3>Just keep going</h3>
+                        <p>The really hard problems take thousands of prompts. Restart agents, clear context, keep spamming it. I've gone through thousands of prompts on one problem and always solved it. I've never really failed. It's just persistence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <p class="wf-closing">That's really the whole thing. Pick the method, manage the context, hand it off clean, and do it over and over. I'm usually running ten agents at a time across the fifteen or so projects I'm working on, checking on them and killing the ones that are done. It's simple. You just have to actually understand what you're working in.</p>
+
+        <p class="wf-attribution">Written by <strong>Roman Slack</strong>, Agent Fleet Engineer. See more of my work on the <a href="../projects.html">projects page</a>, or <a href="../contact.html">get in touch</a> about AI consulting and engineering.</p>
+    </main>
+
+    <footer>
+        <div class="footer-copyright">
+            Copyright &copy; <span id="year"></span> Roman Slack
+        </div>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/roman-slack-a91a6a266" target="_blank" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="/assets/RomanSlack_Resume_Feb_2026.pdf" target="_blank" aria-label="Resume">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            </a>
+            <a href="https://github.com/romanslack" target="_blank" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://x.com/RomanSlack1" target="_blank" aria-label="X (Twitter)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@roman-slack" target="_blank" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            </a>
+            <a href="mailto:romanslack1@gmail.com" aria-label="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+        </div>
+    </footer>
+    <script>
+        // left-gutter legend: highlight the section currently in view
+        (function () {
+            var toc = document.querySelector('.wf-toc');
+            if (!toc) return;
+            var links = Array.prototype.slice.call(toc.querySelectorAll('a'));
+            var sections = links.map(function (a) {
+                return { a: a, el: document.getElementById(a.getAttribute('href').slice(1)) };
+            }).filter(function (s) { return s.el; });
+            if (!sections.length) return;
+            var ticking = false;
+            function update() {
+                ticking = false;
+                var line = window.innerHeight * 0.3;   // activation line, ~30% down the viewport
+                var current = sections[0];
+                for (var i = 0; i < sections.length; i++) {
+                    if (sections[i].el.getBoundingClientRect().top - line <= 0) current = sections[i];
+                }
+                if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) {
+                    current = sections[sections.length - 1];   // pin last near the bottom
+                }
+                links.forEach(function (a) { a.classList.toggle('active', a === current.a); });
+            }
+            function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll, { passive: true });
+            update();
+        })();
+
+        // Mobile: fade in the fixed mini-bar once the tall header has scrolled out of view.
+        // Only transform/opacity on a fixed element changes, so the page never reflows = no
+        // jitter. Hysteresis keeps it from flickering right at the edge.
+        (function () {
+            var header = document.querySelector('header');
+            var bar = document.querySelector('.wf-minibar');
+            if (!bar) return;
+            var shown = false, ticking = false;
+            function apply() {
+                ticking = false;
+                var h = header ? header.offsetHeight : 160;
+                var y = window.scrollY || window.pageYOffset || 0;
+                if (!shown && y > h - 6) {
+                    shown = true;
+                    document.body.classList.add('wf-condensed');
+                } else if (shown && y < h - 56) {
+                    shown = false;
+                    document.body.classList.remove('wf-condensed');
+                }
+            }
+            function onScroll() {
+                if (!ticking) { ticking = true; requestAnimationFrame(apply); }
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll, { passive: true });
+            apply();
+        })();
+
+        function copyPrompt(btn) {
+            var pre = btn.parentElement.querySelector('pre');
+            if (!pre) return;
+            navigator.clipboard.writeText(pre.innerText.trim()).then(function () {
+                var prev = btn.textContent;
+                btn.textContent = 'Copied!';
+                setTimeout(function () { btn.textContent = prev; }, 1500);
+            });
+        }
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

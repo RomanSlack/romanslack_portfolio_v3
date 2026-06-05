@@ -19,6 +19,7 @@
 - [Contact](https://romanslack.com/contact.html): Email and social links.
 
 ## Selected work
+- [How I Build with AI Agents](https://romanslack.com/projects/ai-agent-workflow.html): A visual guide to Roman Slack's AI coding-agent workflow as an Agent Fleet Engineer — the three methods he uses (from zero, a small feature in a large codebase, and a massive rework) plus copyable prompts to set up the same workflow.
 - [Just-Tech AI (JTAI)](https://jtai.law): Production legal-AI platform deployed to 60,000+ users.
 - [Hlynr Intercept](https://github.com/RomanSlack/Hlynr_Intercept): Radar-based missile-interception reinforcement learning environment with a custom Unity simulation layer.
 - [AUS-Lab](https://github.com/RomanSlack/AUS-Lab): Autonomous UAV Swarm Laboratory — LLM-driven cognitive control of drone swarms.

@@ -10,6 +10,24 @@ import re
 from pathlib import Path
 
 PROJECTS_FILE = Path(__file__).parent / "projects.json"
+PROJECT_DETAILS_FILE = Path(__file__).parent / "project_details.json"
+
+
+def _cascade_details(target_id):
+    """project_details.json is keyed by project id. When an insert shifts every
+    id >= target_id up by one in projects.json, the detail keys must move in
+    lockstep or each project inherits the next project's rich content."""
+    if not PROJECT_DETAILS_FILE.exists():
+        return
+    with open(PROJECT_DETAILS_FILE) as f:
+        details = json.load(f)
+    shifted = {}
+    for k, v in details.items():
+        ik = int(k)
+        shifted[str(ik + 1 if ik >= target_id else ik)] = v
+    shifted = {str(k): shifted[str(k)] for k in sorted(int(x) for x in shifted)}
+    with open(PROJECT_DETAILS_FILE, "w") as f:
+        json.dump(shifted, f, indent=2)
 
 
 def validate_date(date_str):
@@ -39,7 +57,9 @@ def inject_project(
     link: str = None,
     inProgress: bool = False,
     research: bool = False,
-    product: bool = False
+    product: bool = False,
+    blog: bool = False,
+    customPage: str = None
 ):
     """
     Add a project to projects.json.
@@ -100,6 +120,10 @@ def inject_project(
         project["research"] = True
     if product:
         project["product"] = True
+    if blog:
+        project["blog"] = True
+    if customPage:
+        project["customPage"] = customPage
 
     # Check for ID conflict and shift if needed
     existing_ids = {p["id"] for p in projects}
@@ -108,6 +132,8 @@ def inject_project(
         for p in projects:
             if p["id"] >= id:
                 p["id"] += 1
+        # Keep project_details.json (keyed by id) in sync with the cascade
+        _cascade_details(id)
 
     # Add new project and sort by ID
     projects.append(project)

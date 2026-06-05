@@ -91,6 +91,11 @@ def abs_url(link):
     return link
 
 
+def resolved_path(p, slug):
+    """Site-relative path to a project's page: its customPage, or the generated slug page."""
+    return p.get("customPage") or f"/projects/{slug}.html"
+
+
 def esc(s):
     return html.escape(s or "", quote=True)
 
@@ -320,9 +325,12 @@ def main():
     written = []
     for p in projects:
         slug = slug_for[p["id"]]
-        page = build_page(p, details, slug)
-        with open(os.path.join(ROOT, "projects", f"{slug}.html"), "w") as f:
-            f.write(page)
+        # Entries with a hand-built "customPage" own their own HTML — don't clobber it.
+        # They still appear in the hub + sitemap (see resolved_url) pointing at that page.
+        if not p.get("customPage"):
+            page = build_page(p, details, slug)
+            with open(os.path.join(ROOT, "projects", f"{slug}.html"), "w") as f:
+                f.write(page)
         written.append((p, slug))
 
     write_index(written, details)
@@ -351,10 +359,11 @@ def write_index(written, details):
         if len(blurb) > 160:
             blurb = blurb[:157].rsplit(" ", 1)[0] + "..."
         thumb = f'<img src="../{esc(img)}" alt="{title}" loading="lazy">' if img else ""
+        url = resolved_path(p, slug)
         rows.append(f"""            <li class="pi-item">
-                <a class="pi-thumb" href="/projects/{slug}.html">{thumb}</a>
+                <a class="pi-thumb" href="{url}">{thumb}</a>
                 <div class="pi-body">
-                    <a class="pi-title" href="/projects/{slug}.html">{title}</a>
+                    <a class="pi-title" href="{url}">{title}</a>
                     <p class="pi-meta">{meta}</p>
                     <p class="pi-blurb">{esc(blurb)}</p>
                 </div>
@@ -420,7 +429,7 @@ def update_sitemap(written):
                   f"    <changefreq>{cf}</changefreq>",
                   f"    <priority>{pr}</priority>", "  </url>"]
     for p, slug in written:
-        lines += ["  <url>", f"    <loc>{SITE}/projects/{slug}.html</loc>",
+        lines += ["  <url>", f"    <loc>{SITE}{resolved_path(p, slug)}</loc>",
                   f"    <lastmod>{LASTMOD}</lastmod>",
                   "    <changefreq>monthly</changefreq>",
                   "    <priority>0.7</priority>", "  </url>"]
