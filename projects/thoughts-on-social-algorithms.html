@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughts on Social Algorithms | Roman Slack</title>
+    <meta name="description" content="Roman Slack on what social media became — slop, vanity, and attention-farming — and what it should be: algorithms used for good, proactively connecting people to mentors, collaborators, and friends. A spoken-word essay and the thinking behind belo.">
+    <meta name="keywords" content="Roman Slack, social algorithms, social media, recommendation algorithms, attention economy, belo, connecting people, Gen Z, Facebook, Instagram reels, LinkedIn, algorithms for good">
+    <meta name="author" content="Roman Slack">
+    <meta name="creator" content="Roman Slack">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://romanslack.com/projects/thoughts-on-social-algorithms.html">
+    <link rel="alternate" type="text/markdown" title="llms.txt" href="/llms.txt">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Roman Slack">
+    <meta property="og:url" content="https://romanslack.com/projects/thoughts-on-social-algorithms.html">
+    <meta property="og:title" content="Thoughts on Social Algorithms — Roman Slack">
+    <meta property="og:description" content="What social media became, and what it should be: algorithms used for good, proactively connecting people to mentors, collaborators, and friends. The thinking behind belo.">
+    <meta property="og:image" content="https://romanslack.com/images/thoughts-on-social-algorithms.jpg">
+    <meta property="og:image:secure_url" content="https://romanslack.com/images/thoughts-on-social-algorithms.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:image:alt" content="Roman Slack speaking about social algorithms">
+    <meta property="og:video" content="https://www.youtube.com/watch?v=l8CevoqPpnc">
+    <meta property="article:author" content="Roman Slack">
+    <meta property="article:published_time" content="2026-06-06">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Thoughts on Social Algorithms — Roman Slack">
+    <meta property="twitter:description" content="What social media became, and what it should be: algorithms used for good, connecting people instead of farming attention. The thinking behind belo.">
+    <meta property="twitter:image" content="https://romanslack.com/images/thoughts-on-social-algorithms.jpg">
+    <meta property="twitter:image:alt" content="Roman Slack speaking about social algorithms">
+    <meta property="twitter:creator" content="@RomanSlack1">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "VideoObject",
+          "name": "Thoughts on Social Algorithms",
+          "description": "Roman Slack on what social media became and what it should be: algorithms used for good, proactively connecting people to mentors, collaborators, and friends. The thinking behind belo.",
+          "thumbnailUrl": "https://romanslack.com/images/thoughts-on-social-algorithms.jpg",
+          "uploadDate": "2026-06-06",
+          "contentUrl": "https://www.youtube.com/watch?v=l8CevoqPpnc",
+          "embedUrl": "https://www.youtube.com/embed/l8CevoqPpnc",
+          "author": { "@id": "https://romanslack.com/#person" },
+          "creator": { "@id": "https://romanslack.com/#person" },
+          "publisher": { "@id": "https://romanslack.com/#person" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Thoughts on Social Algorithms",
+          "name": "Thoughts on Social Algorithms",
+          "url": "https://romanslack.com/projects/thoughts-on-social-algorithms.html",
+          "description": "What social media became, and what it should be: algorithms used for good, proactively connecting people to mentors, collaborators, and friends. The thinking behind belo.",
+          "image": "https://romanslack.com/images/thoughts-on-social-algorithms.jpg",
+          "author": {
+            "@type": "Person",
+            "@id": "https://romanslack.com/#person",
+            "name": "Roman Slack",
+            "url": "https://romanslack.com/",
+            "sameAs": [
+              "https://github.com/romanslack",
+              "https://www.linkedin.com/in/roman-slack-a91a6a266",
+              "https://x.com/RomanSlack1",
+              "https://www.youtube.com/@roman-slack",
+              "https://theorg.com/org/just-tech/org-chart/roman-slack",
+              "https://builders.cv/b9db5c41e39d4eb7888d4359cbd61714"
+            ]
+          },
+          "creator": { "@id": "https://romanslack.com/#person" },
+          "copyrightHolder": { "@id": "https://romanslack.com/#person" },
+          "datePublished": "2026-06-06",
+          "keywords": "social algorithms, social media, attention economy, belo, connecting people, algorithms for good",
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "name": "Projects - Roman Slack",
+            "url": "https://romanslack.com/projects.html"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://romanslack.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://romanslack.com/projects.html" },
+            { "@type": "ListItem", "position": 3, "name": "Thoughts on Social Algorithms", "item": "https://romanslack.com/projects/thoughts-on-social-algorithms.html" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        /* ---- Scoped styles for the social-algorithms essay ---- */
+        .wf-main {
+            display: block;            /* override the site's flex <main> (built for the centered hero) */
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 1.5rem 1.5rem 4rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            color: #d7d7d7;
+        }
+
+        .wf-kicker {
+            display: inline-block;
+            color: #5DADE2;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .wf-lede {
+            font-size: 1.18rem;
+            line-height: 1.6;
+            color: #cfcfcf;
+            margin: 0.5rem 0 0.4rem;
+        }
+        .wf-lede strong { color: #f5f5f5; }
+        .wf-byline {
+            color: #8a8a8a;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+            margin-bottom: 2rem;
+        }
+
+        .wf-main p { line-height: 1.72; margin: 0 0 1.05rem; font-size: 1.02rem; }
+        .wf-main strong { color: #f2f2f2; }
+        .wf-main a { color: #9fc7e0; text-decoration: underline; text-underline-offset: 2px; }
+
+        /* ---- responsive YouTube embed ---- */
+        .wf-video {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            margin: 1.6rem 0 0.6rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #242424;
+            background: #0d0d0d;
+        }
+        .wf-video iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .wf-video-cap {
+            color: #8a8a8a;
+            font-size: 0.82rem;
+            margin: 0 0 0.5rem;
+        }
+
+        .wf-section { margin-top: 3rem; }
+        .wf-section h2 {
+            font-family: 'Eloquia', Arial, sans-serif;
+            font-weight: 800;
+            font-size: 2rem;
+            color: #f5f5f5;
+            line-height: 1.1;
+            margin: 0 0 1rem;
+        }
+
+        .wf-rule {
+            border: none;
+            border-top: 1px solid #1d1d1d;
+            margin: 3rem 0 0;
+        }
+
+        /* ---- the "nobody fills the gap" list ---- */
+        .wf-gaps { margin: 1.4rem 0 0; }
+        .wf-gap {
+            display: flex;
+            gap: 1rem;
+            padding: 1.05rem 0;
+            border-top: 1px solid #1d1d1d;
+        }
+        .wf-gap:last-child { border-bottom: 1px solid #1d1d1d; }
+        .wf-gap .g-name {
+            flex: 0 0 auto;
+            width: 6.5rem;
+            color: #5DADE2;
+            font-weight: 700;
+            font-size: 0.98rem;
+        }
+        .wf-gap .g-body { color: #a5a5a5; font-size: 0.96rem; line-height: 1.6; }
+        .wf-gap .g-body strong { color: #e8e8e8; }
+
+        /* callout */
+        .wf-aside {
+            border-left: 2px solid #2c4a5e;
+            padding: 0.1rem 0 0.1rem 0.9rem;
+            margin: 1.4rem 0 0;
+            color: #9fb6c4;
+            font-size: 0.96rem;
+            line-height: 1.6;
+        }
+
+        .wf-closing {
+            margin-top: 3rem;
+            color: #cfcfcf;
+            font-size: 1.06rem;
+            line-height: 1.7;
+        }
+        .wf-attribution {
+            margin-top: 2.4rem;
+            color: #8a8a8a;
+            font-size: 0.86rem;
+            line-height: 1.6;
+        }
+        .wf-attribution a { color: #b9b9b9; }
+
+        @media (max-width: 700px) {
+            .wf-section h2 { font-size: 1.6rem; }
+            .wf-gap { flex-direction: column; gap: 0.2rem; }
+            .wf-gap .g-name { width: auto; }
+        }
+
+        /* mobile: tall header scrolls away, fixed mini-bar fades in (matches site blog page) */
+        .wf-minibar { display: none; }
+        @media (max-width: 768px) {
+            header { padding-top: 72px; position: static; }
+            .back-arrow { top: 22px; left: 16px; line-height: 1; }
+
+            .wf-minibar {
+                display: flex;
+                align-items: center;
+                gap: 11px;
+                position: fixed;
+                top: 0; left: 0; right: 0;
+                z-index: 300;
+                padding: 9px 16px;
+                background: rgba(14, 14, 14, 0.96);
+                -webkit-backdrop-filter: blur(8px);
+                backdrop-filter: blur(8px);
+                border-bottom: 1px solid #1f1f1f;
+                transform: translateY(-101%);
+                opacity: 0;
+                pointer-events: none;
+                transition: transform 0.22s ease, opacity 0.22s ease;
+            }
+            body.wf-condensed .wf-minibar {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto;
+            }
+            .wf-minibar .mb-back {
+                flex: 0 0 auto;
+                color: #F5F5F5;
+                text-decoration: none;
+                font-size: 26px;
+                line-height: 1;
+            }
+            .wf-minibar .mb-text { min-width: 0; }
+            .wf-minibar .mb-title {
+                color: #F5F5F5;
+                font-weight: 800;
+                font-size: 15px;
+                line-height: 1.15;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .wf-minibar .mb-by {
+                color: #9a9a9a;
+                font-size: 10.5px;
+                line-height: 1.25;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .wf-minibar .mb-by b { color: #cfcfcf; font-weight: 700; }
+        }
+    </style>
+</head>
+<body class="scroll-page">
+    <header>
+        <a href="../projects.html" class="back-arrow">&larr;</a>
+        <h1>Thoughts on Social Algorithms</h1>
+        <p class="header-subtitle">A monologue by <a href="../index.html" class="subtitle-link">Roman Slack</a></p>
+    </header>
+
+    <div class="wf-minibar" aria-hidden="true">
+        <a href="../projects.html" class="mb-back" aria-label="Back to projects">&larr;</a>
+        <div class="mb-text">
+            <div class="mb-title">Thoughts on Social Algorithms</div>
+            <div class="mb-by">A monologue by <b>Roman Slack</b></div>
+        </div>
+    </div>
+
+    <main class="wf-main">
+        <span class="wf-kicker">Essay &middot; June 2026</span>
+
+        <p class="wf-video-cap">Watch the full monologue:</p>
+        <div class="wf-video">
+            <iframe src="https://www.youtube.com/embed/l8CevoqPpnc"
+                    title="Thoughts on Social Algorithms — Roman Slack"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+        </div>
+
+        <p class="wf-lede">I'm 20, lower Gen Z, right in the middle. I've seen social media go from before it existed, to when it was actually nice, to now, where it's a tragedy of getting people addicted and peddling them ads. Here's what I actually think.</p>
+        <p class="wf-byline">Roman Slack &middot; June 2026</p>
+
+        <section class="wf-section">
+            <h2>What Facebook could have been</h2>
+            <p>Early-2000s Facebook, for college kids, was genuinely revolutionary. It let you explore and meet people you'd never have met otherwise. Compare that to college students now: they have none of it. You log into Instagram and see slop. I have friends who sit on reels all day. Maybe an image here and there. It's all fake, performative, vain. It's not connecting you to anyone. It's a bunch of high school friends you don't care about anymore.</p>
+            <p><strong>There's a real need for a social algorithm used for good.</strong></p>
+        </section>
+
+        <hr class="wf-rule">
+        <section class="wf-section">
+            <h2>Nobody else fills the gap</h2>
+            <div class="wf-gaps">
+                <div class="wf-gap">
+                    <span class="g-name">Snapchat</span>
+                    <span class="g-body">Really just a private messaging app. No social network.</span>
+                </div>
+                <div class="wf-gap">
+                    <span class="g-name">Meetup</span>
+                    <span class="g-body">Barely an algorithm. Most cities have a few active groups and a ton of dead ones.</span>
+                </div>
+                <div class="wf-gap">
+                    <span class="g-name">LinkedIn</span>
+                    <span class="g-body">Closest to what Facebook should have been, but purely professional. You're not meeting friends. These days it's mostly a signal to employers that you can connect and build a profile. I've heard that straight from recruiters. And now AI agents crawl it to find you because you've got good SEO.</span>
+                </div>
+                <div class="wf-gap">
+                    <span class="g-name">X</span>
+                    <span class="g-body">Closer to YouTube than old Facebook. Made for engaging with content, not connecting people. Tech Twitter is always first to everything, but they're faceless accounts. Nobody cares who's behind them.</span>
+                </div>
+                <div class="wf-gap">
+                    <span class="g-name">Discord</span>
+                    <span class="g-body">Big searchable communities, sure. But still predominantly gaming, and there's no algorithm working for the betterment of people. It's just search-and-join.</span>
+                </div>
+            </div>
+            <p style="margin-top:1.4rem;">The point is: this doesn't exist anymore.</p>
+        </section>
+
+        <hr class="wf-rule">
+        <section class="wf-section">
+            <h2>What they're actually doing</h2>
+            <p>I think Facebook is genuinely evil now, same with Google. X is an exception because they stay in their lane. These companies have years of data on millions or billions of people. They could use it for anything. Instead they use it to get you more addicted and feed you reels.</p>
+            <p>Here's the dynamic: say you're into space content, you like a few posts, but you keep engaging with posts of women, so it just feeds you women. It knows human psychology. It wastes that real signal to make more money off you. That's the whole game.</p>
+        </section>
+
+        <hr class="wf-rule">
+        <section class="wf-section">
+            <h2>What it should be</h2>
+            <p>They could take that same web of people and profiles and actually connect you with anyone. Find the person who could be your best friend, your soulmate, a mentor, a collaborator, proactively. We literally have the technology. The algorithm is just switched to <strong>farm your brain for clicks</strong> instead of <strong>make your life better</strong>.</p>
+            <p>Say 5% of people stuck on reels have a hidden talent. Imagine if, instead of watching reels all day, they got connected to a mentor or a group working on the same thing. Think how much more culture and art we'd produce. More people working on cool problems instead of rotting on reels. That's a clear win.</p>
+            <p class="wf-aside">If we did this right, all the numbers go up. Fertility, happiness, employment, everything, because we're more connected based on the data we already have on ourselves.</p>
+        </section>
+
+        <hr class="wf-rule">
+        <section class="wf-section">
+            <h2>Why this is personal</h2>
+            <p>I went to RIT as a freshman. I love simulations, programming, AI. I wanted to meet people into the same stuff. I didn't find the AI club for one or two months because there was no good way to find it. And when I did, there were people in there who never knew I existed. Those connections just got missed.</p>
+            <p>A real social algorithm, a closed ecosystem where you connect online <em>and</em> meet in real life, a few meters away, fixes exactly that. That's the end goal with <strong>belo</strong>.</p>
+        </section>
+
+        <hr class="wf-rule">
+        <section class="wf-section">
+            <h2>Where I land</h2>
+            <p>I don't know everything and I'm not certain on my thesis. This is just what I've noticed. But I really think algorithms used the right way could fundamentally change society for the better, instead of being used for the worst thing possible. I'm optimistic people wake up and decide maybe they don't want to watch reels for six hours a day. We'll see. I'm happy to keep trying for it.</p>
+        </section>
+
+        <p class="wf-attribution">By <strong>Roman Slack</strong>. See more of my work on the <a href="../projects.html">projects page</a>, or <a href="../contact.html">get in touch</a>.</p>
+    </main>
+
+    <footer>
+        <div class="footer-copyright">
+            Copyright &copy; <span id="year"></span> Roman Slack
+        </div>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/roman-slack-a91a6a266" target="_blank" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="/assets/RomanSlack_Resume_Feb_2026.pdf" target="_blank" aria-label="Resume">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            </a>
+            <a href="https://github.com/romanslack" target="_blank" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://x.com/RomanSlack1" target="_blank" aria-label="X (Twitter)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@roman-slack" target="_blank" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            </a>
+            <a href="mailto:romanslack1@gmail.com" aria-label="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+        </div>
+    </footer>
+    <script>
+        // Mobile: fade in the fixed mini-bar once the tall header has scrolled out of view.
+        (function () {
+            var header = document.querySelector('header');
+            var bar = document.querySelector('.wf-minibar');
+            if (!bar) return;
+            var shown = false, ticking = false;
+            function apply() {
+                ticking = false;
+                var h = header ? header.offsetHeight : 160;
+                var y = window.scrollY || window.pageYOffset || 0;
+                if (!shown && y > h - 6) {
+                    shown = true;
+                    document.body.classList.add('wf-condensed');
+                } else if (shown && y < h - 56) {
+                    shown = false;
+                    document.body.classList.remove('wf-condensed');
+                }
+            }
+            function onScroll() {
+                if (!ticking) { ticking = true; requestAnimationFrame(apply); }
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll, { passive: true });
+            apply();
+        })();
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
