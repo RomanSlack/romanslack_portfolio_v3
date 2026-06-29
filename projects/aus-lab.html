@@ -128,6 +128,10 @@
             <img src="../images/resized_1_portfolio/aus_lab.jpg" alt="AUS-Lab — a project by Roman Slack" class="project-detail-image">
             <p class="project-meta-line">Programming &middot; October 2025 - Present &middot; 15 hours &middot; built by Roman Slack</p>
 
+            <p class="project-cta">
+                <a href="https://github.com/RomanSlack/AUS-Lab" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
+            </p>
+
             <p>AUS-Lab (Autonomous UAV Swarm Laboratory) is an experimental research platform created by Roman Slack for investigating LLM-driven cognitive control of UAV swarms. It links agentic reasoning with swarm simulation to explore the connection between swarm structures, hardware-in-the-loop (HIL) testing, agentic systems, and large language models, enabling autonomous coordination and adaptive behavior.</p>
             <p>The platform provides a complete ecosystem for UAV swarm simulation, built around a high-performance Rust physics engine, a React and Three.js web visualization frontend, and an agentic controller that translates natural language commands into structured drone operations. A FastAPI server exposes REST endpoints and a WebSocket stream for real-time state updates, while the Rust engine (with PyO3 bindings) handles physics for swarms of drones. A floating chat interface in the web frontend connects to a separate agentic API that uses the Google Gemini API to interpret operator commands.</p>
             <p>Operators can control the swarm in plain English through either the web UI or a CLI, issuing commands such as taking off to a set altitude, forming circles, lines, grids, or v-formations, sending individual drones to coordinates, or enabling a hivemind mode that moves the entire swarm as a single entity. The agentic controller supports a structured set of action types including takeoff, land, hover, goto, velocity, formation, and hivemind toggling, and offers a dry-run planning mode. As a notable research effort by Roman Slack, AUS-Lab bridges natural language agentic reasoning with real-time multi-drone physics simulation.</p>
@@ -158,10 +162,6 @@
                 <span class="tech-chip">Node.js</span>
                 <span class="tech-chip">uvicorn</span>
             </div>
-
-            <p class="project-cta">
-                <a href="https://github.com/RomanSlack/AUS-Lab" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
-            </p>
             <p class="project-attribution">Designed and built by <strong>Roman Slack</strong>, Lead AI Platform Engineer. See more of Roman Slack's work on the <a href="../projects.html">projects page</a> or get in touch via the <a href="../contact.html">contact page</a>.</p>
         </article>
     </main>

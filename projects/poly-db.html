@@ -113,6 +113,10 @@
             <img src="../images/resized_1_portfolio/poly-db.jpg" alt="Poly-DB — a project by Roman Slack" class="project-detail-image">
             <p class="project-meta-line">Programming &middot; December 2025 &middot; 3.0 hours &middot; built by Roman Slack</p>
 
+            <p class="project-cta">
+                <a href="https://romanslack.com/polydb/index.html" target="_blank" rel="noopener" class="project-link-btn">Visit Project &rarr;</a>
+            </p>
+
             <p>Poly-DB, also called the Polymarket Vector Derivatives system, is a tool by Roman Slack that scrapes prediction markets from Polymarket and vectorizes them using semantic embeddings. By converting each market&#x27;s question and text into a vector, Poly-DB makes it possible to reason about relationships between markets mathematically rather than by keyword matching, enabling fast similarity search across hundreds of markets.</p>
             <p>The system supports natural-language search, derivative detection, market clustering, and arbitrage discovery. Users can query in plain English to find relevant markets, identify near-duplicate or closely related markets through semantic similarity scores, and surface pricing inefficiencies between markets that describe substantially the same outcome. Similarity scores are interpreted on a graded scale, from near-duplicates at the top range down to unrelated markets, to classify how strongly two markets are connected.</p>
             <p>Roman Slack built Poly-DB in Python with a production-oriented architecture: market data is pulled from the Polymarket Gamma API, text is embedded using Sentence Transformers (all-MiniLM-L6-v2, 384 dimensions), and vectors are persisted locally in ChromaDB with no external dependencies. A FastAPI backend exposes REST endpoints for stats, search, derivatives, and arbitrage, a minimal Flask web UI allows interactive exploration, and a CLI tool handles batch scraping and analysis. The entire stack is containerized with Docker Compose for straightforward deployment.</p>
@@ -139,10 +143,6 @@
                 <span class="tech-chip">Docker</span>
                 <span class="tech-chip">Docker Compose</span>
             </div>
-
-            <p class="project-cta">
-                <a href="https://romanslack.com/polydb/index.html" target="_blank" rel="noopener" class="project-link-btn">Visit Project &rarr;</a>
-            </p>
             <p class="project-attribution">Designed and built by <strong>Roman Slack</strong>, Lead AI Platform Engineer. See more of Roman Slack's work on the <a href="../projects.html">projects page</a> or get in touch via the <a href="../contact.html">contact page</a>.</p>
         </article>
     </main>

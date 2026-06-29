@@ -123,6 +123,10 @@
             <img src="../images/resized_1_portfolio/qr_rater.png" alt="QR Code Rater — a project by Roman Slack" class="project-detail-image">
             <p class="project-meta-line">Programming &middot; March 2025 &middot; 0.2 hours &middot; built by Roman Slack</p>
 
+            <p class="project-cta">
+                <a href="https://github.com/RomanSlack/QRCode_Rater" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
+            </p>
+
             <p>QR Code Rater is a Flask web application by Roman Slack that lets users generate QR codes for rating machines or equipment. Each machine gets its own automatically generated QR code that, when scanned with a mobile device, leads to a unique rating page for that specific machine, enabling quick on-the-spot feedback collection in physical spaces.</p>
             <p>The application supports creating and managing machines, generating downloadable QR codes for printing and placement, and collecting ratings on a 1-to-5 scale. It also surfaces analytics by displaying average ratings and full rating history for each machine. Data is persisted in a SQLite database that is created automatically on first run, using two tables: machines, which stores each machine&#x27;s ID, name, and location, and ratings, which stores every submitted rating. Built quickly as a test project, it remains a clean, practical example of a Flask plus SQLite QR feedback system that can be extended with custom styling and deployed behind a production WSGI server such as Gunicorn.</p>
 
@@ -146,10 +150,6 @@
                 <span class="tech-chip">CSS</span>
                 <span class="tech-chip">Gunicorn</span>
             </div>
-
-            <p class="project-cta">
-                <a href="https://github.com/RomanSlack/QRCode_Rater" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
-            </p>
             <p class="project-attribution">Designed and built by <strong>Roman Slack</strong>, Lead AI Platform Engineer. See more of Roman Slack's work on the <a href="../projects.html">projects page</a> or get in touch via the <a href="../contact.html">contact page</a>.</p>
         </article>
     </main>

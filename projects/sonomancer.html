@@ -128,6 +128,10 @@
             <img src="../images/resized_1_portfolio/sonomancer.png" alt="Sonomancer — a project by Roman Slack" class="project-detail-image">
             <p class="project-meta-line">Programming &middot; June 2025 &middot; 2 hours &middot; built by Roman Slack</p>
 
+            <p class="project-cta">
+                <a href="https://github.com/RomanSlack/Sonomancer" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
+            </p>
+
             <p>Sonomancer is a vibe-aware ambient e-reader, created by Roman Slack, that syncs each chapter of a book with AI-curated background ambience sourced from YouTube. Users upload any EPUB or PDF and read through a clean, dark-mode, chapter-by-chapter interface while an autonomous AI agent generates ambient soundscapes that match the mood of the current chapter, producing an immersive, mood-aware reading experience.</p>
             <p>The system is built as a full-stack application with a Next.js 15 and React 19 frontend styled with Tailwind CSS, and a Python 3.11 FastAPI backend. Books are parsed using ebooklib for EPUB and PyMuPDF for PDF, and a small set of API endpoints handle uploading a book, listing chapters, fetching chapter content, and returning AI analysis that maps a chapter to a mood and a matching YouTube video ID. Ambient videos auto-play with cross-fading between chapters and can be toggled on or off via an on-page speaker control without leaving the reader.</p>
             <p>At the heart of Sonomancer is an autonomous agentic AI system. It extracts contextual excerpts from chapter text using smart sampling, deploys OpenAI GPT for creative mood classification and ambience recommendations, and generates targeted search queries for content discovery. A YouTube Search tool queries the YouTube Data API v3 with filtering, while a content scoring engine evaluates results using weighted keyword analysis to prefer calm, long-duration ambient content over music tracks, handling API failures gracefully with fallback strategies.</p>
@@ -159,10 +163,6 @@
                 <span class="tech-chip">Docker</span>
                 <span class="tech-chip">Docker Compose</span>
             </div>
-
-            <p class="project-cta">
-                <a href="https://github.com/RomanSlack/Sonomancer" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
-            </p>
             <p class="project-attribution">Designed and built by <strong>Roman Slack</strong>, Lead AI Platform Engineer. See more of Roman Slack's work on the <a href="../projects.html">projects page</a> or get in touch via the <a href="../contact.html">contact page</a>.</p>
         </article>
     </main>

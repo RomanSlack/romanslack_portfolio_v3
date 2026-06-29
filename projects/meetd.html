@@ -123,6 +123,10 @@
             <img src="../images/resized_1_portfolio/meetd.jpg" alt="Meetd — a project by Roman Slack" class="project-detail-image">
             <p class="project-meta-line">Programming &middot; February 2026 - Present &middot; 6 hours &middot; built by Roman Slack</p>
 
+            <p class="project-cta">
+                <a href="https://github.com/RomanSlack/meetd" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
+            </p>
+
             <p>Meetd is a command-line tool and API that lets AI assistants schedule meetings on your behalf by communicating directly with other people&#x27;s AI agents. Instead of trading emails back and forth, your Claude can negotiate a compatible time with someone else&#x27;s Claude, find mutual availability, and book the meeting automatically. Created by Roman Slack, it reframes calendar coordination as an agent-to-agent conversation backed by cryptographic trust.</p>
             <p>Trust is enforced through Ed25519 digital signatures: every meeting proposal is signed so the receiving agent can verify its authenticity. The typical flow has one user issue a propose command, the server create a signed proposal and notify the recipient&#x27;s agent via webhook, the recipient&#x27;s agent review the proposal against their calendar and accept or decline, and calendar events get created automatically on both sides once agreed. Privacy is configurable, letting users share only free/busy status, a masked &#x27;Busy&#x27; label, or full event titles.</p>
             <p>Meetd is built in Rust using the axum web framework and SQLite for storage, with Google Calendar integration for availability and event creation. It is designed for cheap hosting and can be installed from crates.io, downloaded as a pre-built binary, or built from source. Beyond the CLI, it exposes a REST API so agents can check availability, create proposals, and manage an inbox without installing anything, and supports webhooks for proposal received, accepted, declined, and expired events. The project is self-hostable via a binary or Docker and released under the Apache 2.0 license.</p>
@@ -148,10 +152,6 @@
                 <span class="tech-chip">Google OAuth</span>
                 <span class="tech-chip">Docker</span>
             </div>
-
-            <p class="project-cta">
-                <a href="https://github.com/RomanSlack/meetd" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
-            </p>
             <p class="project-attribution">Designed and built by <strong>Roman Slack</strong>, Lead AI Platform Engineer. See more of Roman Slack's work on the <a href="../projects.html">projects page</a> or get in touch via the <a href="../contact.html">contact page</a>.</p>
         </article>
     </main>

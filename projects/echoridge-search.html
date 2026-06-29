@@ -113,6 +113,10 @@
             <img src="../images/resized_1_portfolio/echo_ridge.jpg" alt="EchoRidge Search — a project by Roman Slack" class="project-detail-image">
             <p class="project-meta-line">Programming &middot; June 2025 &middot; 17 hours &middot; built by Roman Slack</p>
 
+            <p class="project-cta">
+                <a href="https://romanslack.com/echoridge/index.html" target="_blank" rel="noopener" class="project-link-btn">Visit Project &rarr;</a>
+            </p>
+
             <p>EchoRidge Search is an AI-powered business intelligence platform created by Roman Slack that automates market research by combining business discovery, web scraping, and hybrid LLM scoring with real-time visualization. It is organized into three integrated systems: a batch-processing pipeline backend, an orchestration API, and a real-time frontend, all wired together through a cloud-native Google Cloud Storage pipeline.</p>
             <p>The pipeline backend, written in Python 3.11+ with asyncio, takes a natural-language query (for example, &#x27;Private schools in Tampa&#x27;), resolves a geographic boundary, discovers businesses through the Google Places API, scrapes their web content with Firecrawl, and scores them using a hybrid approach that blends OpenAI GPT-4 analysis with a deterministic echo-ridge scoring component. Results are written as structured JSONL files (places, scrapes, scores, and hybrid results) to the local filesystem and uploaded to GCS in a date-organized hierarchy with run manifests and metadata.</p>
             <p>A FastAPI orchestration service exposes endpoints to trigger pipeline runs, poll execution status, list historical runs, and serve map-ready visualization data. The Next.js 15, React 19, and TypeScript frontend, styled with Tailwind CSS, provides a pipeline-trigger interface, live status polling, run history pulled from GCS, and faceted search across tens of thousands of companies, using client-side SQLite WASM caching for fast results.</p>
@@ -145,10 +149,6 @@
                 <span class="tech-chip">Firecrawl</span>
                 <span class="tech-chip">Pydantic</span>
             </div>
-
-            <p class="project-cta">
-                <a href="https://romanslack.com/echoridge/index.html" target="_blank" rel="noopener" class="project-link-btn">Visit Project &rarr;</a>
-            </p>
             <p class="project-attribution">Designed and built by <strong>Roman Slack</strong>, Lead AI Platform Engineer. See more of Roman Slack's work on the <a href="../projects.html">projects page</a> or get in touch via the <a href="../contact.html">contact page</a>.</p>
         </article>
     </main>

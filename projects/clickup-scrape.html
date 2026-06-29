@@ -119,6 +119,10 @@
             <img src="../images/resized_1_portfolio/clickup.jpg" alt="ClickUp Scrape — a project by Roman Slack" class="project-detail-image">
             <p class="project-meta-line">Programming &middot; June 2025 &middot; 2 hours &middot; built by Roman Slack</p>
 
+            <p class="project-cta">
+                <a href="https://github.com/RomanSlack/Download_All_Images_from_Clickup" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
+            </p>
+
             <p>ClickUp Scrape is a Python tool created by Roman Slack for downloading every image attachment from a ClickUp workspace. It uses the official ClickUp API to scan an entire workspace and pull down all image attachments, automatically organizing them into folders that mirror the workspace&#x27;s Space and List structure, making it well-suited for backups, migrations, and bulk image exports.</p>
             <p>The tool is built for reliability at scale. It includes resume capability that saves progress to metadata files (.download_metadata.json, .processed_tasks.json, and .failed_downloads.json) so interrupted downloads can continue from where they left off, along with smart duplicate detection and file-integrity checks that skip already downloaded images. Robust error handling gracefully manages 403 Forbidden responses, 30-second timeouts, and duplicate filenames, while real-time progress bars and download statistics keep the user informed. It respects ClickUp&#x27;s API rate limits of roughly 85 requests per minute for stable operation.</p>
             <p>Beyond downloading, ClickUp Scrape ships with a built-in binary image sorter that provides a fast, keyboard-driven interface for categorizing images using shortcuts like 1, 2, S, and Q, plus a companion script to copy sorted images into organized category folders. It supports all common image formats including JPG/JPEG, PNG, GIF, BMP, WEBP, and JFIF, and is configured simply through an API token and Team ID stored in a .env file. The project is open source under the MIT License.</p>
@@ -140,10 +144,6 @@
                 <span class="tech-chip">ClickUp API</span>
                 <span class="tech-chip">MIT License</span>
             </div>
-
-            <p class="project-cta">
-                <a href="https://github.com/RomanSlack/Download_All_Images_from_Clickup" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
-            </p>
             <p class="project-attribution">Designed and built by <strong>Roman Slack</strong>, Lead AI Platform Engineer. See more of Roman Slack's work on the <a href="../projects.html">projects page</a> or get in touch via the <a href="../contact.html">contact page</a>.</p>
         </article>
     </main>

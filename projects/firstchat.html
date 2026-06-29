@@ -124,6 +124,10 @@
             <img src="../images/resized_1_portfolio/firstchat.jpg" alt="FirstChat — a project by Roman Slack" class="project-detail-image">
             <p class="project-meta-line">Programming &middot; March 2025 &middot; 5 hours &middot; built by Roman Slack</p>
 
+            <p class="project-cta">
+                <a href="https://github.com/RomanSlack/FirstChat_BackEnd" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
+            </p>
+
             <p>FirstChat is a full-stack system created by Roman Slack for generating personalized first messages for dating apps. It is organized into three main components that work together: a profile scraper, an API server, and a user-facing web interface, forming an end-to-end pipeline from raw profile data to an analytics-backed opening message.</p>
             <p>The profile scraper layer uses Playwright and Chrome to reliably extract profile data and images from dating apps (currently Tinder), saving the details and images into structured folders. The API server is built with FastAPI and processes that profile data and imagery, generating personalized first messages using OpenAI GPT models and Google Cloud Vision for image analysis, all exposed through a RESTful API. A Flask web application provides an intuitive user interface where users can upload images, enter profile information, and view generated messages alongside detailed analytics.</p>
             <p>The system requires Python 3.9+, OpenAI API and Google Cloud Vision credentials, and Chromium for the scraper. Rather than relying on a persistent database, it currently stores extracted profiles directly on the filesystem, with each component configured independently through its own environment variables and config files. The project is released as proprietary software with all rights reserved.</p>
@@ -149,10 +153,6 @@
                 <span class="tech-chip">Chromium</span>
                 <span class="tech-chip">REST API</span>
             </div>
-
-            <p class="project-cta">
-                <a href="https://github.com/RomanSlack/FirstChat_BackEnd" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
-            </p>
             <p class="project-attribution">Designed and built by <strong>Roman Slack</strong>, Lead AI Platform Engineer. See more of Roman Slack's work on the <a href="../projects.html">projects page</a> or get in touch via the <a href="../contact.html">contact page</a>.</p>
         </article>
     </main>

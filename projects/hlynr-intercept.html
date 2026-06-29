@@ -124,6 +124,10 @@
             <img src="../images/resized_1_portfolio/hlynr_2.jpg" alt="Hlynr Intercept — a project by Roman Slack" class="project-detail-image">
             <p class="project-meta-line">Programming &middot; May 2025 - Present &middot; 70 hours &middot; built by Roman Slack</p>
 
+            <p class="project-cta">
+                <a href="https://github.com/RomanSlack/Hlynr_Intercept" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
+            </p>
+
             <p>Hlynr Intercept is a production-ready reinforcement learning environment for training interceptor missiles using realistic radar-only observations. Based on PAC-3/THAAD interceptor specifications, the system trains AI agents that have no direct knowledge of incoming threats and must rely entirely on simulated radar sensors, mirroring how real-world missile defense systems operate. It was created by Roman Slack (RIT Rochester) in collaboration with Quinn Hasse (UW Madison).</p>
             <p>The simulator challenges agents to search and acquire targets using a realistic radar system with a 5000m range and 60-degree beam width, track through range-dependent measurement noise, intercept under constraints such as fuel limits and thrust vectoring within a 6-DOF physics model, and handle detection failures when radar loses lock or targets move outside sensor range. A 17-dimensional radar observation space provides only sensor-realistic information combined with perfect self-state knowledge, making trained policies more directly transferable to real hardware by reducing the sim-to-real gap of omniscient training environments.</p>
             <p>The production system, contained in the rl_system directory, models authentic radar physics, PAC-3 interceptor dynamics (500kg mass, 50 m/s2 acceleration, realistic fuel consumption), and an Advanced Physics v2.0 layer featuring ISA atmospheric models, Mach drag effects, sensor delays, thrust dynamics, and a domain randomization framework. Training uses PPO with a curriculum learning approach progressing through Easy, Medium, and Hard scenarios, with reported interception success rates climbing from 30-40% at 1M steps to 75-85% at 5M steps. The project also includes Unity integration components and supports deployment through a FastAPI inference server alongside offline batch evaluation.</p>
@@ -151,10 +155,6 @@
                 <span class="tech-chip">TensorBoard</span>
                 <span class="tech-chip">YAML</span>
             </div>
-
-            <p class="project-cta">
-                <a href="https://github.com/RomanSlack/Hlynr_Intercept" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
-            </p>
             <p class="project-attribution">Designed and built by <strong>Roman Slack</strong>, Lead AI Platform Engineer. See more of Roman Slack's work on the <a href="../projects.html">projects page</a> or get in touch via the <a href="../contact.html">contact page</a>.</p>
         </article>
     </main>

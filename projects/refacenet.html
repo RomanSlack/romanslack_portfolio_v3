@@ -121,6 +121,10 @@
             <img src="../images/resized_1_portfolio/reface.png" alt="ReFaceNet — a project by Roman Slack" class="project-detail-image">
             <p class="project-meta-line">Programming &middot; May 2025 &middot; 1 hours &middot; built by Roman Slack</p>
 
+            <p class="project-cta">
+                <a href="https://github.com/RomanSlack/ReFaceNet" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
+            </p>
+
             <p>ReFaceNet is a face reconstruction project by Roman Slack that intelligently rebuilds a complete 2D face from multiple occluded or cropped images of the same person. It combines visible face parts drawn from different images into a unified facial reconstruction, handling partial occlusions, hand-covered selfies, and cropped photos. The project is described as a DECA paper implementation.</p>
             <p>The pipeline works by detecting faces even when partially occluded, aligning all faces to a common template for consistent geometry, and using multi-scale blending to combine visible regions at different detail levels for natural results. It performs coverage analysis to track which facial regions are reconstructed versus missing, and applies quality weighting to prioritize clearer, higher-quality facial regions.</p>
             <p>ReFaceNet outputs reconstructed face images alongside real-time coverage heatmaps that visualize reconstruction quality region by region, from high-coverage areas where multiple inputs contributed down to low-coverage areas with little visible data. It supports generation tracking for iterative improvement, feature-specific face masking of eyes, nose, mouth, cheeks, and forehead, and multi-method landmark detection with robust fallbacks.</p>
@@ -144,10 +148,6 @@
                 <span class="tech-chip">conda</span>
                 <span class="tech-chip">DECA</span>
             </div>
-
-            <p class="project-cta">
-                <a href="https://github.com/RomanSlack/ReFaceNet" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
-            </p>
             <p class="project-attribution">Designed and built by <strong>Roman Slack</strong>, Lead AI Platform Engineer. See more of Roman Slack's work on the <a href="../projects.html">projects page</a> or get in touch via the <a href="../contact.html">contact page</a>.</p>
         </article>
     </main>

@@ -132,6 +132,11 @@
             <img src="../images/resized_1_portfolio/dual_cameras.jpg" alt="Dual Cameras — a project by Roman Slack" class="project-detail-image">
             <p class="project-meta-line">Programming &middot; June 2026 - Present &middot; 6 hours &middot; built by Roman Slack</p>
 
+            <p class="project-cta">
+                <a href="https://github.com/RomanSlack/dual_cameras" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
+                <a href="https://dualcameras.com" target="_blank" rel="noopener" class="project-link-btn">Visit dualcameras.com &rarr;</a>
+            </p>
+
             <p>Dual Cameras is a native dual-camera recorder for Flutter that records the front and back cameras at the same time and composites them live on the GPU into a single portrait .mp4 and photo. It supports picture-in-picture (rounded rectangle or circle inset) and split layouts, with a real-time preview that matches the recorded file exactly. It is the BeReal and Snapchat style dual capture, built by Roman Slack as a proper open-source federated plugin for both Android and iOS, MIT licensed from day one.</p>
             <p>The reason it exists: as of mid-2026 no Flutter plugin actually records a composited dual-cam video. The operating system APIs can do it (iOS AVCaptureMultiCamSession, Android CameraX concurrent camera), but every existing Flutter option stops at preview or photos or single-camera recording. The hard, novel part is the recorded composite, not the live preview overlay. This plugin owns the native compositor on both platforms and emits one clean .mp4.</p>
             <p>The core of the engine is one unified manual GPU compositor (GLES on Android, Metal on iOS) that runs preview, video, and photo through the same path, so the three can never drift. Each frame is captured to an external texture, composited once on the GPU, then fanned out to the live preview, the encoder, and the still. Each camera is rotated upright from its sensor orientation and aspect-cover cropped into a 9:16 canvas (never stretched), with live swap of the full-frame camera and a mirrored front feed.</p>
@@ -169,11 +174,6 @@
                 <span class="tech-chip">Android</span>
                 <span class="tech-chip">iOS</span>
             </div>
-
-            <p class="project-cta">
-                <a href="https://github.com/RomanSlack/dual_cameras" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
-                <a href="https://dualcameras.com" target="_blank" rel="noopener" class="project-link-btn">Visit dualcameras.com &rarr;</a>
-            </p>
             <p class="project-attribution">Designed and built by <strong>Roman Slack</strong>, Lead AI Platform Engineer. See more of Roman Slack's work on the <a href="../projects.html">projects page</a> or get in touch via the <a href="../contact.html">contact page</a>.</p>
         </article>
     </main>

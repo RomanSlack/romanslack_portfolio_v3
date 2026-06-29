@@ -123,6 +123,10 @@
             <img src="../images/resized_1_portfolio/jack_first.jpg" alt="ChatGPT-SEO-Description-Generator-from-Tags — a project by Roman Slack" class="project-detail-image">
             <p class="project-meta-line">Programming &middot; April 2024 &middot; 5 hours &middot; built by Roman Slack</p>
 
+            <p class="project-cta">
+                <a href="https://github.com/RomanSlack/ChatGPT-SEO-Description-Generator-from-Tags" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
+            </p>
+
             <p>ChatGPT-SEO-Description-Generator-from-Tags is a Python automation tool by Roman Slack, created while working with firearm parts supplier Jack First to optimize their product SEO using the early OpenAI API era of ChatGPT. The project addresses the practical problem of writing search-optimized product descriptions at scale for a large catalog of parts, using lists of tags as the input signal for each product.</p>
             <p>The tool works by reading product tags from a text file in fixed-size batches and driving the ChatGPT interface through desktop UI automation. For each batch it focuses the chat input, submits the tags, waits for a generated description, copies the result, and pastes it into the correct row of a Google Sheets spreadsheet, advancing cell by cell through the catalog. It includes an emergency-stop hotkey and a helper script for capturing on-screen mouse coordinates to calibrate the automation.</p>
             <p>Built by Roman Slack in Python, the project relies on pyautogui for mouse and keyboard automation, the keyboard library for the escape-key kill switch, and threading to monitor for the stop signal while the main loop runs. It represents an early, pragmatic approach to large-scale AI-assisted SEO content generation, automating the human-in-the-loop ChatGPT workflow before robust programmatic API pipelines were commonplace.</p>
@@ -146,10 +150,6 @@
                 <span class="tech-chip">OpenAI API</span>
                 <span class="tech-chip">Google Sheets</span>
             </div>
-
-            <p class="project-cta">
-                <a href="https://github.com/RomanSlack/ChatGPT-SEO-Description-Generator-from-Tags" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
-            </p>
             <p class="project-attribution">Designed and built by <strong>Roman Slack</strong>, Lead AI Platform Engineer. See more of Roman Slack's work on the <a href="../projects.html">projects page</a> or get in touch via the <a href="../contact.html">contact page</a>.</p>
         </article>
     </main>

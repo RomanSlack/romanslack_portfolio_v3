@@ -126,6 +126,10 @@
             <img src="../images/resized_1_portfolio/swap_studio.jpg" alt="Swap Studio — a project by Roman Slack" class="project-detail-image">
             <p class="project-meta-line">Programming &middot; February 2026 &middot; 6.0 hours &middot; built by Roman Slack</p>
 
+            <p class="project-cta">
+                <a href="https://github.com/RomanSlack/Swap_Studio" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
+            </p>
+
             <p>Swap Studio is an AI-powered character transformation workbench that uses motion capture and video synthesis to replace a person in a video with any character of their choosing. Users record themselves directly from the browser or upload an existing clip, provide a character image, and the system generates a new video in which the character takes their place while preserving exact movements, gestures, and timing. Built by Roman Slack, the tool is positioned as a way to access powerful video-synthesis models through their direct APIs rather than paying marked-up middleman services.</p>
             <p>The application offers three distinct transformation modes. Character Swap replaces the person in a video with a supplied character image while keeping movement and scene context intact. Motion Control animates a static character image using motion extracted from a reference video, with an optional text prompt to guide the result. Lip Sync synchronizes a video&#x27;s mouth movements to match a provided audio track. Quality can be tuned between Standard and Pro modes to balance fidelity against cost.</p>
             <p>Under the hood, Swap Studio pairs a Next.js 15, React 19, and TypeScript frontend with a Python FastAPI backend served by Uvicorn. It integrates multiple AI providers, including fal.ai for Character Swap and Lip Sync, Replicate for Motion Control, and the Kling Direct API for longer-duration generations. FFmpeg handles automatic video compression to optimize uploads, and the backend exposes a job-based REST API with real-time progress updates, status polling, and cancellation. Transparent per-provider pricing and documented duration limits make the cost and quality tradeoffs clear to users.</p>
@@ -154,10 +158,6 @@
                 <span class="tech-chip">Replicate</span>
                 <span class="tech-chip">Kling Direct API</span>
             </div>
-
-            <p class="project-cta">
-                <a href="https://github.com/RomanSlack/Swap_Studio" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
-            </p>
             <p class="project-attribution">Designed and built by <strong>Roman Slack</strong>, Lead AI Platform Engineer. See more of Roman Slack's work on the <a href="../projects.html">projects page</a> or get in touch via the <a href="../contact.html">contact page</a>.</p>
         </article>
     </main>

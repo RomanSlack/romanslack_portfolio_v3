@@ -281,11 +281,11 @@ def build_page(p, details, slug):
     <main class="project-detail-main">
         <article class="project-detail">
 {img_html}            <p class="project-meta-line">{meta_line}</p>
+{link_html}
 {awards_html}
 {paras}
 {feat_html}
 {tech_html}
-{link_html}
             <p class="project-attribution">Designed and built by <strong>Roman Slack</strong>, Lead AI Platform Engineer. See more of Roman Slack's work on the <a href="../projects.html">projects page</a> or get in touch via the <a href="../contact.html">contact page</a>.</p>
         </article>
     </main>

@@ -126,6 +126,10 @@
             <img src="../images/resized_1_portfolio/xscape.jpg" alt="Xscape — a project by Roman Slack" class="project-detail-image">
             <p class="project-meta-line">Programming &middot; December 2025 &middot; 4.0 hours &middot; built by Roman Slack</p>
 
+            <p class="project-cta">
+                <a href="https://github.com/RomanSlack/Xscape" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
+            </p>
+
             <p>Xscape lets developers build and run iOS apps entirely from Linux, removing the need for a Mac on the desk. It works by orchestrating a macOS virtual machine, or a remote physical Mac, that handles the actual Xcode builds and iOS Simulator runs, while the developer interacts through a clean terminal UI on Linux. The name is a play on &#x27;escape&#x27; and &#x27;Xcode,&#x27; reflecting Roman Slack&#x27;s goal of freeing iOS development from requiring expensive Apple hardware on hand.</p>
             <p>The architecture splits responsibilities across machines. On the Linux host, the xscape CLI communicates over HTTP and WebSocket with an xscape-agent HTTP server running inside a QEMU/KVM macOS VM, which drives the iOS Simulator via simctl and xcodebuild. The running simulator is streamed back to the developer&#x27;s browser through noVNC, so builds, simulator interaction, and real-time build logs are all accessible from Linux. Xscape supports two modes: a locally managed macOS VM, or connecting to a remote Mac over the network.</p>
             <p>Xscape ships an interactive TUI that guides users through project, scheme, and device selection with breadcrumb navigation, back options, an iOS version picker, and progress indicators, alongside a setup wizard that verifies configuration, tests agent connectivity, checks the Xcode installation, and lists available simulators. Built in Rust as a workspace of crates (the Linux CLI, the macOS agent, and shared types), it is configured through a single TOML file. The project notes that running macOS in a VM is only permitted on Apple-branded hardware per Apple&#x27;s EULA, while the remote Mac mode is fully compliant. It is released under the MIT license.</p>
@@ -154,10 +158,6 @@
                 <span class="tech-chip">TOML</span>
                 <span class="tech-chip">WebSocket</span>
             </div>
-
-            <p class="project-cta">
-                <a href="https://github.com/RomanSlack/Xscape" target="_blank" rel="noopener" class="project-link-btn">View on GitHub &rarr;</a>
-            </p>
             <p class="project-attribution">Designed and built by <strong>Roman Slack</strong>, Lead AI Platform Engineer. See more of Roman Slack's work on the <a href="../projects.html">projects page</a> or get in touch via the <a href="../contact.html">contact page</a>.</p>
         </article>
     </main>
