@@ -34,7 +34,67 @@
       "production ai platform"
     ]
   },
-  "3": {
+  "1": {
+    "longDescription": [
+      "Dual Cameras is a native dual-camera recorder for Flutter that records the front and back cameras at the same time and composites them live on the GPU into a single portrait .mp4 and photo. It supports picture-in-picture (rounded rectangle or circle inset) and split layouts, with a real-time preview that matches the recorded file exactly. It is the BeReal and Snapchat style dual capture, built by Roman Slack as a proper open-source federated plugin for both Android and iOS, MIT licensed from day one.",
+      "The reason it exists: as of mid-2026 no Flutter plugin actually records a composited dual-cam video. The operating system APIs can do it (iOS AVCaptureMultiCamSession, Android CameraX concurrent camera), but every existing Flutter option stops at preview or photos or single-camera recording. The hard, novel part is the recorded composite, not the live preview overlay. This plugin owns the native compositor on both platforms and emits one clean .mp4.",
+      "The core of the engine is one unified manual GPU compositor (GLES on Android, Metal on iOS) that runs preview, video, and photo through the same path, so the three can never drift. Each frame is captured to an external texture, composited once on the GPU, then fanned out to the live preview, the encoder, and the still. Each camera is rotated upright from its sensor orientation and aspect-cover cropped into a 9:16 canvas (never stretched), with live swap of the full-frame camera and a mirrored front feed.",
+      "On Android it is a working alpha verified end to end on a Pixel 8: simultaneous front and back via CameraX concurrent camera, H.264 (MediaCodec) plus AAC (AudioRecord) muxed by MediaMuxer on a single monotonic clock for A/V sync, a composited JPEG photo via FBO read-back, capability detection with graceful single-camera fallback, thermal monitoring, and a perf HUD. On iOS it now builds and runs on a real iPhone (iOS 26): a Metal compositor brings up a live composited dual preview on AVCaptureMultiCamSession with hardwareCost gating, with recording and photo running through the same compositor and full on-device A/V-sync verification in progress.",
+      "It is laid out as a federated plugin: an app-facing Dart API, a Pigeon platform-interface contract, and separate Android (Kotlin) and iOS (Swift) implementations. It was built first for belo's short-form capture surfaces and open-sourced because the gap is real, with the official Flutter camera issues sitting on hundreds of thumbs-up."
+    ],
+    "features": [
+      "Records the front and back cameras simultaneously into one composited portrait .mp4",
+      "One unified GPU compositor (GLES on Android, Metal on iOS) drives preview, video, and photo so they can never drift",
+      "Picture-in-picture (rounded rectangle or circle inset) and split layouts, with live swap of the full-frame camera",
+      "Live preview that matches the recorded file exactly, letterboxed to 9:16 and never stretched",
+      "In-sync audio: H.264 plus AAC muxed on a single monotonic clock (Android), AVAssetWriter with synced PTS (iOS)",
+      "Composited still photo at the same WYSIWYG geometry as the video",
+      "Capability detection with graceful single-camera fallback, thermal monitoring, and a perf HUD",
+      "iOS hardwareCost gating that picks a binned format per camera so the multicam session actually starts"
+    ],
+    "techStack": [
+      "Flutter",
+      "Dart",
+      "Pigeon",
+      "Kotlin",
+      "CameraX",
+      "OpenGL ES",
+      "MediaCodec",
+      "MediaMuxer",
+      "AudioRecord",
+      "Swift",
+      "AVFoundation",
+      "AVCaptureMultiCamSession",
+      "Metal",
+      "AVAssetWriter",
+      "Android",
+      "iOS"
+    ],
+    "tags": [
+      "flutter dual camera",
+      "record front and back camera simultaneously",
+      "both cameras at once",
+      "picture-in-picture video",
+      "composite video to mp4",
+      "camerax concurrent camera",
+      "avcapturemulticamsession",
+      "bereal-style capture",
+      "multi-camera recording plugin",
+      "gpu compositor",
+      "metal",
+      "opengl es",
+      "federated flutter plugin",
+      "open source",
+      "belo"
+    ],
+    "links": [
+      {
+        "label": "Visit dualcameras.com",
+        "url": "https://dualcameras.com"
+      }
+    ]
+  },
+  "4": {
     "longDescription": [
       "\"Why Isn't AI Good Yet?\" is a long-form editorial by Roman Slack, written in collaboration with the Opus 4.6 model, that challenges how most businesses are deploying artificial intelligence. Its central argument is that organizations cripple their own AI systems by wrapping them in excessive guardrails, approval workflows, and human checkpoints, then conclude that the technology underdelivers, when the real failure is the constraint architecture they built around it.",
       "The piece advances what Roman Slack frames as a trust paradox: the most successful AI users, such as software engineers, operate with high autonomy and minimal oversight, while enterprises hobble their systems and wonder why results disappoint. It contends that accountability is already a solved problem under the software development model, where practitioners own the output of what they ship, and that the same framework can govern autonomous business AI without layering on bureaucratic approvals.",
@@ -55,7 +115,7 @@
       "ai business strategy"
     ]
   },
-  "4": {
+  "5": {
     "longDescription": [
       "Discerio (styled Discere, Latin for \"to learn\") won two first-place awards at HackPrinceton Fall 2025 \u2014 one of the largest Ivy League hackathons ever, with over 600 participants and 194 projects. The team took first in both the Y Combinator Challenge, earning guaranteed YC interviews for all four members, and the Dedalus Labs Special Track, which awarded $500 per teammate and a direct interview with the Dedalus team. Roman Slack conceived the idea and system architecture, drawing inspiration from OpenAI's Neural MMO paper and reimagining what the next evolution of Scratch could look like for AI. The team also included Alan Nguyen, Koushik Sarkar, and Lucas Kim.",
       "Discer.io (Discerio) is an interactive educational platform that teaches agentic AI concepts through a multiplayer battle royale game. Created by Roman Slack for HackPrinceton Fall 2025, it lets users build AI agents using a visual, Scratch-like block-based programming interface, deploy them into a live combat arena, and watch them make real-time decisions powered by large language models. The project pairs a guided learning curriculum with a creativity-first multiplayer game so users learn agentic workflows by doing rather than by writing code.",
@@ -123,7 +183,7 @@
       }
     ]
   },
-  "5": {
+  "6": {
     "longDescription": [
       "Rookery is a discovery platform built by Roman Slack that brings a social-media-style feed to academic research. Its premise is simple: just as platforms like X are good at surfacing interesting content, Rookery does the same for scholarly papers, so genuinely valuable research stops slipping through the cracks. The product is framed around following research discoveries and receiving notifications about important breakthroughs that a reader would otherwise miss.",
       "Rather than another general-purpose feed cluttered with ads and low-quality content, Rookery is positioned as a focused stream of papers, code, and ideas. Roman Slack designed it to cut out the noise and keep the experience centered on substantive academic work.",
@@ -151,7 +211,7 @@
       "ad-free research"
     ]
   },
-  "6": {
+  "7": {
     "longDescription": [
       "Hlynr Intercept is a production-ready reinforcement learning environment for training interceptor missiles using realistic radar-only observations. Based on PAC-3/THAAD interceptor specifications, the system trains AI agents that have no direct knowledge of incoming threats and must rely entirely on simulated radar sensors, mirroring how real-world missile defense systems operate. It was created by Roman Slack (RIT Rochester) in collaboration with Quinn Hasse (UW Madison).",
       "The simulator challenges agents to search and acquire targets using a realistic radar system with a 5000m range and 60-degree beam width, track through range-dependent measurement noise, intercept under constraints such as fuel limits and thrust vectoring within a 6-DOF physics model, and handle detection failures when radar loses lock or targets move outside sensor range. A 17-dimensional radar observation space provides only sensor-realistic information combined with perfect self-state knowledge, making trained policies more directly transferable to real hardware by reducing the sim-to-real gap of omniscient training environments.",
@@ -190,7 +250,7 @@
       "unity simulation"
     ]
   },
-  "7": {
+  "8": {
     "longDescription": [
       "Swap Studio is an AI-powered character transformation workbench that uses motion capture and video synthesis to replace a person in a video with any character of their choosing. Users record themselves directly from the browser or upload an existing clip, provide a character image, and the system generates a new video in which the character takes their place while preserving exact movements, gestures, and timing. Built by Roman Slack, the tool is positioned as a way to access powerful video-synthesis models through their direct APIs rather than paying marked-up middleman services.",
       "The application offers three distinct transformation modes. Character Swap replaces the person in a video with a supplied character image while keeping movement and scene context intact. Motion Control animates a static character image using motion extracted from a reference video, with an optional text prompt to guide the result. Lip Sync synchronizes a video's mouth movements to match a provided audio track. Quality can be tuned between Standard and Pro modes to balance fidelity against cost.",
@@ -230,7 +290,7 @@
       "ai video generation"
     ]
   },
-  "8": {
+  "9": {
     "longDescription": [
       "Her is a state-of-the-art real-time voice AI system built by Roman Slack that enables natural, hands-free spoken conversations with an artificial intelligence. The system is engineered for extremely low latency, achieving roughly 500ms end-to-end response times so that exchanges feel fluid and conversational rather than stilted or delayed.",
       "By minimizing the lag between a user speaking and the AI responding, Her demonstrates how voice-first interfaces can approach the responsiveness of human dialogue. The project is showcased in a video demo highlighting its real-time, low-latency performance."
@@ -251,7 +311,7 @@
       "roman slack"
     ]
   },
-  "9": {
+  "10": {
     "longDescription": [
       "NewLine is a lightweight, native task manager for Linux built by Roman Slack in Rust with the GTK4 desktop toolkit. Designed around the principle of getting out of the user's way, it deliberately avoids accounts, subscriptions, and unnecessary complexity, offering a fast keyboard-driven workflow that feels at home in a GNOME-style desktop environment.",
       "Rather than locking data into a proprietary format, NewLine stores tasks as plain text files, keeping everything portable, transparent, and easy to inspect. Tasks move through a simple three-stage workflow of pending, in-progress, and completed, and can be grouped into pinnable folders for organizing separate projects.",
@@ -283,7 +343,7 @@
       "native linux application"
     ]
   },
-  "10": {
+  "11": {
     "longDescription": [
       "Meetd is a command-line tool and API that lets AI assistants schedule meetings on your behalf by communicating directly with other people's AI agents. Instead of trading emails back and forth, your Claude can negotiate a compatible time with someone else's Claude, find mutual availability, and book the meeting automatically. Created by Roman Slack, it reframes calendar coordination as an agent-to-agent conversation backed by cryptographic trust.",
       "Trust is enforced through Ed25519 digital signatures: every meeting proposal is signed so the receiving agent can verify its authenticity. The typical flow has one user issue a propose command, the server create a signed proposal and notify the recipient's agent via webhook, the recipient's agent review the proposal against their calendar and accept or decline, and calendar events get created automatically on both sides once agreed. Privacy is configurable, letting users share only free/busy status, a masked 'Busy' label, or full event titles.",
@@ -319,7 +379,7 @@
       "webhook notifications"
     ]
   },
-  "11": {
+  "12": {
     "longDescription": [
       "Romans Cool Diagram Software (RCDS) is a free, open-source, browser-based diagram editor created by Roman Slack as an alternative to tools like Draw.io (diagrams.net), Lucidchart, and Figma. It is built for technical diagrams such as architecture diagrams, flowcharts, system designs, and network diagrams, with an emphasis on a modern, publication-ready aesthetic.",
       "The application runs entirely in the browser, letting users create new projects or import existing ones from JSON and save their work to local browser storage. A central canvas with a configurable grid, snap-to-grid behavior, adjustable dimensions, and zoom control gives users precise control over layout and composition.",
@@ -347,7 +407,7 @@
       "svg png export"
     ]
   },
-  "12": {
+  "13": {
     "longDescription": [
       "DailyStack is a gamified habit-tracking application built by Roman Slack and featured in his \"BUILD APPS\" video on YouTube. The app is designed around daily health protocols, turning consistent healthy routines into a game-like experience that rewards users for showing up every day.",
       "To keep users engaged, DailyStack layers familiar game mechanics onto habit formation: players earn XP for completing their protocols, build and maintain streaks for consecutive days, and track a biological age metric that reflects the long-term payoff of their daily choices. Roman Slack created the project as a fast, focused build demonstrating how gamification can make health and longevity habits stick."
@@ -372,7 +432,7 @@
       "habit gamification"
     ]
   },
-  "13": {
+  "14": {
     "longDescription": [
       "Free eSign Website is a free, open-source e-signature web application for signing documents online. Built by Roman Slack, it is a hosted single-page app that lets users upload a PDF, add a signature, text, and date stamps, then download the signed document instantly, with no login, no accounts, and no restrictions.",
       "The application emphasizes privacy by performing all processing fully client-side in the browser, so documents never leave the user's machine. It offers three signature creation methods, draw, type, or select from signature fonts, and allows placed elements to be dragged, resized, and edited before exporting a signed PDF with embedded signatures.",
@@ -408,7 +468,7 @@
       "privacy-first web app"
     ]
   },
-  "14": {
+  "15": {
     "longDescription": [
       "Emotional Design in Messaging Applications is a web-based case study by Roman Slack examining how messaging platforms deliberately engineer emotional responses in their users. The central thesis contrasts two dominant apps: Snapchat, which leverages symbolic manipulation, and WeChat, which embeds emotion through infrastructural necessity. The piece argues these represent two opposing emotional architectures.",
       "On the Snapchat side, the study analyzes mechanisms such as streak counters that exploit loss aversion, emoji-based relationship indicators, read receipts and screenshot notifications that create a sense of surveillance, the ambient intimacy of Snap Map, and the gamified, opaque Snapscore. These features manufacture urgency, social anxiety, and status hierarchies that users consciously experience.",
@@ -436,7 +496,7 @@
       "human-computer interaction"
     ]
   },
-  "15": {
+  "16": {
     "longDescription": [
       "Xscape lets developers build and run iOS apps entirely from Linux, removing the need for a Mac on the desk. It works by orchestrating a macOS virtual machine, or a remote physical Mac, that handles the actual Xcode builds and iOS Simulator runs, while the developer interacts through a clean terminal UI on Linux. The name is a play on 'escape' and 'Xcode,' reflecting Roman Slack's goal of freeing iOS development from requiring expensive Apple hardware on hand.",
       "The architecture splits responsibilities across machines. On the Linux host, the xscape CLI communicates over HTTP and WebSocket with an xscape-agent HTTP server running inside a QEMU/KVM macOS VM, which drives the iOS Simulator via simctl and xcodebuild. The running simulator is streamed back to the developer's browser through noVNC, so builds, simulator interaction, and real-time build logs are all accessible from Linux. Xscape supports two modes: a locally managed macOS VM, or connecting to a remote Mac over the network.",
@@ -475,7 +535,7 @@
       "terminal ui"
     ]
   },
-  "16": {
+  "17": {
     "longDescription": [
       "Objectionary.AI is an AI-powered sales coaching platform created by Roman Slack that listens to live sales calls in real time and delivers instant, AI-generated responses to every objection a prospect raises. As an objection is detected during a call, the system surfaces a proven, on-script suggestion through an elegant teleprompter-style interface, complete with picture-in-picture support so reps can keep guidance visible while they talk.",
       "The platform centers on customizable team playbooks, letting organizations build personalized response libraries tailored to specific products, industries, and scenarios and share them across their teams. Built-in analytics track which objection responses actually close deals, giving sales teams data-driven insight into how to refine their approach over time. Objectionary connects to existing phone systems and conferencing tools in under five minutes.",
@@ -505,7 +565,7 @@
       "roman slack"
     ]
   },
-  "17": {
+  "18": {
     "longDescription": [
       "AUS-Lab (Autonomous UAV Swarm Laboratory) is an experimental research platform created by Roman Slack for investigating LLM-driven cognitive control of UAV swarms. It links agentic reasoning with swarm simulation to explore the connection between swarm structures, hardware-in-the-loop (HIL) testing, agentic systems, and large language models, enabling autonomous coordination and adaptive behavior.",
       "The platform provides a complete ecosystem for UAV swarm simulation, built around a high-performance Rust physics engine, a React and Three.js web visualization frontend, and an agentic controller that translates natural language commands into structured drone operations. A FastAPI server exposes REST endpoints and a WebSocket stream for real-time state updates, while the Rust engine (with PyO3 bindings) handles physics for swarms of drones. A floating chat interface in the web frontend connects to a separate agentic API that uses the Google Gemini API to interpret operator commands.",
@@ -547,7 +607,7 @@
       "fastapi websocket"
     ]
   },
-  "18": {
+  "19": {
     "longDescription": [
       "Vibe OS (VOS) is a Virtual Operating System interface built with Flutter that simulates a modern desktop operating system inside a web browser. Created by Roman Slack, the project pairs a sleek, dark-themed design language with an AI-powered workspace and an elegant modal window management system, demonstrating how a polished, OS-like experience can be delivered entirely through Flutter web.",
       "At its core, VOS centers on a modal window system that supports up to four concurrent apps, each of which can be dragged, resized, minimized, and expanded to fullscreen within the workspace bounds. A left-hand App Rail launches nine apps including Phone, Calendar, Tasks, Notes, Browser, Analytics, Shop, Chat, and Notifications, with visual state indicators such as green dots for open windows and orange pulsing dots for minimized ones. A grid-based workspace with edge fade effects and smart auto-cascading positioning rounds out the desktop metaphor.",
@@ -583,7 +643,7 @@
       "material design"
     ]
   },
-  "19": {
+  "20": {
     "longDescription": [
       "VoiceDeck is a desktop voice recorder with speech-to-text transcription for Linux, macOS, and Windows, created by Roman Slack. The workflow is intentionally minimal: record from any microphone, click stop, and get your transcript. It uses OpenAI's Speech-to-Text API and supports recordings up to 60 minutes.",
       "The project positions itself as the simplest and cheapest way to talk to AI coding agents. Users speak their thoughts into VoiceDeck, copy the transcript, and paste it straight into their terminal for tools like Claude Code, Cursor, or Aider, avoiding complex integrations or extra subscriptions beyond an existing OpenAI API key. Long recordings of 30 to 60 minutes are handled through automatic chunking, with chunks transcribed sequentially.",
@@ -617,7 +677,7 @@
       "pyside6 qt app"
     ]
   },
-  "20": {
+  "21": {
     "longDescription": [
       "NextGen is a youth-focused coding initiative created by Roman Slack to foster computer programming skills among young people through an immersive, hands-on learning experience. Built as a day program, it introduces students to foundational technical concepts and helps them explore careers in computer science and computer engineering.",
       "The curriculum spans a progressive range of topics, beginning with visual programming in Scratch and advancing through web fundamentals such as HTML, CSS, JavaScript, and web UI/UX design. Students also work through Python logic and programming before being introduced to the basics of AI coding, giving them a broad and practical view of modern software development.",
@@ -650,7 +710,7 @@
       "computer science careers"
     ]
   },
-  "21": {
+  "22": {
     "longDescription": [
       "SimuVerse is a multi-agent simulation environment created by Roman Slack in which AI agents powered by large language models live and interact within a simulated Mars setting. The project explores how autonomous LLM-driven agents behave, communicate, and coordinate when placed together in a shared world.",
       "Conceived as a research-oriented sandbox, SimuVerse aims to advance understanding of emergent behavior and interaction among artificial intelligence agents. By situating these agents in a distinct Martian scenario, the project provides a framework for observing how LLM-based systems operate over extended, open-ended interactions."
@@ -675,7 +735,7 @@
       "generative agents"
     ]
   },
-  "22": {
+  "23": {
     "longDescription": [
       "Poly-DB, also called the Polymarket Vector Derivatives system, is a tool by Roman Slack that scrapes prediction markets from Polymarket and vectorizes them using semantic embeddings. By converting each market's question and text into a vector, Poly-DB makes it possible to reason about relationships between markets mathematically rather than by keyword matching, enabling fast similarity search across hundreds of markets.",
       "The system supports natural-language search, derivative detection, market clustering, and arbitrage discovery. Users can query in plain English to find relevant markets, identify near-duplicate or closely related markets through semantic similarity scores, and surface pricing inefficiencies between markets that describe substantially the same outcome. Similarity scores are interpreted on a graded scale, from near-duplicates at the top range down to unrelated markets, to classify how strongly two markets are connected.",
@@ -713,7 +773,7 @@
       "roman slack project"
     ]
   },
-  "23": {
+  "24": {
     "longDescription": [
       "Family House is an architectural concept home designed, built, and shot by Roman Slack, presented as a UE5 ArchViz cinematic titled \"Family House | UE5 ArchViz Cinematic.\" The project showcases a complete imagined residence rendered as a cinematic walkthrough video.",
       "The work was produced using a full 3D and post-production pipeline: Blender for modeling, Unreal Engine 5 for real-time architectural visualization and rendering, and DaVinci Resolve for color grading and final editing. The result is a polished, film-style presentation of the concept home.",
@@ -744,7 +804,7 @@
       "architecture cinematic"
     ]
   },
-  "24": {
+  "25": {
     "longDescription": [
       "Tujia is a concept building design by Roman Slack, inspired by traditional Tujia architecture. Roman designed, created, and shot the entire project himself, producing a cinematic visualization of the concept structure.",
       "The work blends architectural design with cinematic presentation, showcasing Roman Slack's ability to take an architectural concept from idea through to a polished, filmed visual piece."
@@ -761,7 +821,7 @@
       "roman slack"
     ]
   },
-  "25": {
+  "26": {
     "longDescription": [
       "RIT Formula SAE Live Telemetry is a prototype telemetry system created by Roman Slack as part of the RIT Formula SAE team's engineering effort. It served as the experimental groundwork for building a live telemetry module from scratch, intended to stream real-time data off a Formula SAE race car.",
       "The project explored long-range wireless data transmission using LoRa radio, paired with custom PCB design to handle the hardware integration. As a prototype repository that fed into a larger organization-owned project, it represents the early, from-scratch experimentation phase of the telemetry effort."
@@ -787,7 +847,7 @@
       "wireless data transmission"
     ]
   },
-  "26": {
+  "27": {
     "longDescription": [
       "AI Bootcamp is a free, open-source learning platform created by Roman Slack in partnership with the RIT AI Club to make AI education accessible to everyone. The project reflects a commitment to democratizing AI knowledge, offering a structured resource for learning AI tools and techniques amid a rapidly evolving landscape.",
       "The platform delivers a comprehensive learning pathway organized into pathways and modules that walk students and enthusiasts through a variety of AI tools and techniques. Its goal is to lower the barrier to entry so that anyone interested in artificial intelligence can begin learning regardless of background.",
@@ -818,7 +878,7 @@
       "ai for beginners"
     ]
   },
-  "27": {
+  "28": {
     "longDescription": [
       "GapRunner is a production-ready overnight gap trading system built by Roman Slack that implements a momentum-gap strategy with real-time data collection, advanced portfolio simulation, and comprehensive risk management. The system trades the top K gap-up stocks each session, using a sophisticated momentum strategy with multiple exit conditions including profit targets, trailing stops, hard stops, and time-based exits.",
       "The platform follows a two-tier architecture. Tier 1 is a data layer featuring a robust data pipeline with progress tracking, multi-source data providers (Yahoo Finance, Polygon, Tiingo), partitioned Parquet storage for efficient access, and data validation. Tier 2 is an analysis and trading layer that pairs a Streamlit dashboard with real-time gap detection and ranking, an advanced portfolio simulation engine, and comprehensive performance analytics.",
@@ -859,7 +919,7 @@
       "python trading system"
     ]
   },
-  "28": {
+  "29": {
     "longDescription": [
       "FengShui.fy is an AI-powered interior design analysis platform, created by Roman Slack, that evaluates rooms using traditional feng shui principles combined with modern computer vision and generative AI. It won Best Use of AI at Columbia. The project transforms a simple room photo into actionable feng shui insights, merging ancient wisdom with modern machine learning behind a calm, zen-inspired interface.",
       "The platform works by combining several AI services: YOLOv11x object detection identifies furniture and objects in a space, Google Gemini 2.5 Flash analyzes feng shui principles and generates personalized recommendations, and a Blender-based service converts 2D photos into interactive 3D meshes using depth mapping. Uploading a room photo returns an overall score from 1 to 10, detailed strengths and weaknesses, actionable suggestions to improve energy flow, and object-specific tooltips that appear when hovering over detected furniture. A background 3D generation pipeline produces FBX models that can be viewed in an embedded viewer, with a status-polling system tracking progress from pending to completed.",
@@ -910,7 +970,7 @@
       "\ud83e\udd47 Winner \u2014 Best Use of AI, Columbia hackathon"
     ]
   },
-  "29": {
+  "30": {
     "longDescription": [
       "EchoRidge Search is an AI-powered business intelligence platform created by Roman Slack that automates market research by combining business discovery, web scraping, and hybrid LLM scoring with real-time visualization. It is organized into three integrated systems: a batch-processing pipeline backend, an orchestration API, and a real-time frontend, all wired together through a cloud-native Google Cloud Storage pipeline.",
       "The pipeline backend, written in Python 3.11+ with asyncio, takes a natural-language query (for example, 'Private schools in Tampa'), resolves a geographic boundary, discovers businesses through the Google Places API, scrapes their web content with Firecrawl, and scores them using a hybrid approach that blends OpenAI GPT-4 analysis with a deterministic echo-ridge scoring component. Results are written as structured JSONL files (places, scrapes, scores, and hybrid results) to the local filesystem and uploaded to GCS in a date-organized hierarchy with run manifests and metadata.",
@@ -954,7 +1014,7 @@
       "hybrid ai scoring"
     ]
   },
-  "30": {
+  "31": {
     "longDescription": [
       "UltraThinkV2 is a Claude-driven prompt structure and automation framework created by Roman Slack that converts natural language instructions into structured AI workflows and executable code pipelines. It is designed to handle the full range of task complexities, from one-shot simple requests up to large projects, where the framework reports completing roughly 80 percent of the build. By combining task decomposition with AI reasoning and automated debugging, it streamlines SaaS project creation and significantly reduces development time on large builds.",
       "Built on top of the original UltraThink task command concept from the Claude community, this second version formalizes a pipeline that Roman Slack has used to sell SaaS projects. The repository includes a video demo of a product built with UltraThinkV2, a companion website explaining how to use it, and a diagram of the underlying pipeline, making it both a working tool and a guide for applying structured prompting to real product development."
@@ -980,7 +1040,7 @@
       "ultrathink"
     ]
   },
-  "31": {
+  "32": {
     "longDescription": [
       "\"World Record Speedrun: Children's Book Author\" is a project and YouTube video by Roman Slack in which he attempts to become a published author as fast as possible by leaning on AI tools. The resulting book, \"Understanding Nuclear Physics for Kids,\" turns an advanced scientific topic into accessible material aimed at young readers.",
       "Published under the title \"Children's Book Speedrun (WR)\" with a recorded time of 01:10:47, the video documents Roman Slack racing through the full authoring and publishing pipeline, treating the process like a speedrun with a world-record clock. It serves as a demonstration of how AI can compress writing, illustration, and self-publishing workflows into a little over an hour."
@@ -1000,7 +1060,7 @@
       "ai content generation"
     ]
   },
-  "32": {
+  "33": {
     "longDescription": [
       "FaceMusic (also presented as FacePlay Trigger) is a lightweight Python tool by Roman Slack that maps facial expressions to media playback, turning a webcam into an interactive controller. Using MediaPipe for real-time facial landmark detection, it recognizes gestures such as eyebrow raises and winks and uses them to trigger YouTube video playback or local audio files.",
       "The tool runs as a simple single-script application: launching it opens a webcam window that overlays a green facial mesh, and raising your eyebrows opens a configured YouTube video in the browser while a wink plays a local audio file through pygame. Expressions and their associated actions are fully configurable through a JSON config file, where users can set media paths, detection confidence, and an expression threshold to tune sensitivity.",
@@ -1032,7 +1092,7 @@
       "interactive audio"
     ]
   },
-  "33": {
+  "34": {
     "longDescription": [
       "Skema is a modern productivity platform created by Roman Slack that unifies task management, calendar scheduling, journaling, and AI-powered assistance into a single, elegant application. It brings idea management, scheduling, and journaling together under one seamless, AI-integrated dashboard.",
       "The application is built with a Next.js 15, React 19, TypeScript, and Tailwind CSS frontend, backed by a FastAPI, SQLModel, PostgreSQL, and Redis backend. AI capabilities are powered by OpenAI GPT-4 and the Serper Search API, while the infrastructure uses Docker, Nginx, and WebSocket support for real-time collaboration.",
@@ -1076,7 +1136,7 @@
       "openai gpt-4"
     ]
   },
-  "34": {
+  "35": {
     "longDescription": [
       "ClickUp Scrape is a Python tool created by Roman Slack for downloading every image attachment from a ClickUp workspace. It uses the official ClickUp API to scan an entire workspace and pull down all image attachments, automatically organizing them into folders that mirror the workspace's Space and List structure, making it well-suited for backups, migrations, and bulk image exports.",
       "The tool is built for reliability at scale. It includes resume capability that saves progress to metadata files (.download_metadata.json, .processed_tasks.json, and .failed_downloads.json) so interrupted downloads can continue from where they left off, along with smart duplicate detection and file-integrity checks that skip already downloaded images. Robust error handling gracefully manages 403 Forbidden responses, 30-second timeouts, and duplicate filenames, while real-time progress bars and download statistics keep the user informed. It respects ClickUp's API rate limits of roughly 85 requests per minute for stable operation.",
@@ -1109,7 +1169,7 @@
       "clickup migration"
     ]
   },
-  "35": {
+  "36": {
     "longDescription": [
       "Sonomancer is a vibe-aware ambient e-reader, created by Roman Slack, that syncs each chapter of a book with AI-curated background ambience sourced from YouTube. Users upload any EPUB or PDF and read through a clean, dark-mode, chapter-by-chapter interface while an autonomous AI agent generates ambient soundscapes that match the mood of the current chapter, producing an immersive, mood-aware reading experience.",
       "The system is built as a full-stack application with a Next.js 15 and React 19 frontend styled with Tailwind CSS, and a Python 3.11 FastAPI backend. Books are parsed using ebooklib for EPUB and PyMuPDF for PDF, and a small set of API endpoints handle uploading a book, listing chapters, fetching chapter content, and returning AI analysis that maps a chapter to a mood and a matching YouTube video ID. Ambient videos auto-play with cross-fading between chapters and can be toggled on or off via an on-page speaker control without leaving the reader.",
@@ -1152,7 +1212,7 @@
       "llm tool use"
     ]
   },
-  "36": {
+  "37": {
     "longDescription": [
       "OpenNote Discord Bot (OpenNoteV2) is a Discord bot that transcribes voice channels and generates AI-powered meeting summaries. Forked from volo_discord_bot and developed by Roman Slack, it brings real-time, professional-grade transcription directly into Discord voice meetings.",
       "The bot converts voice to text instantly during meetings, supports multiple speakers simultaneously, and maps Discord user IDs to participant names for clearer, better-organized transcripts. It uses OpenAI's Whisper API for accuracy, with thread-safe operations for reliable concurrent transcription. Once a session is captured, users can generate an AI summary and export a clean, professionally formatted PDF report.",
@@ -1187,7 +1247,7 @@
       "pycord bot"
     ]
   },
-  "37": {
+  "38": {
     "longDescription": [
       "ReFaceNet is a face reconstruction project by Roman Slack that intelligently rebuilds a complete 2D face from multiple occluded or cropped images of the same person. It combines visible face parts drawn from different images into a unified facial reconstruction, handling partial occlusions, hand-covered selfies, and cropped photos. The project is described as a DECA paper implementation.",
       "The pipeline works by detecting faces even when partially occluded, aligning all faces to a common template for consistent geometry, and using multi-scale blending to combine visible regions at different detail levels for natural results. It performs coverage analysis to track which facial regions are reconstructed versus missing, and applies quality weighting to prioritize clearer, higher-quality facial regions.",
@@ -1221,7 +1281,7 @@
       "2d face reconstruction"
     ]
   },
-  "38": {
+  "39": {
     "longDescription": [
       "QR Code Rater is a Flask web application by Roman Slack that lets users generate QR codes for rating machines or equipment. Each machine gets its own automatically generated QR code that, when scanned with a mobile device, leads to a unique rating page for that specific machine, enabling quick on-the-spot feedback collection in physical spaces.",
       "The application supports creating and managing machines, generating downloadable QR codes for printing and placement, and collecting ratings on a 1-to-5 scale. It also surfaces analytics by displaying average ratings and full rating history for each machine. Data is persisted in a SQLite database that is created automatically on first run, using two tables: machines, which stores each machine's ID, name, and location, and ratings, which stores every submitted rating. Built quickly as a test project, it remains a clean, practical example of a Flask plus SQLite QR feedback system that can be extended with custom styling and deployed behind a production WSGI server such as Gunicorn."
@@ -1254,7 +1314,7 @@
       "customer feedback qr"
     ]
   },
-  "39": {
+  "40": {
     "longDescription": [
       "LLM Collate Code is a simple Python script by Roman Slack that collects code from a set of specified file paths and aggregates it into a single JSON file, intended for feeding into a Large Language Model. It reads each file's content, identifies the programming language from the file extension, and compiles all the snippets into one file called aggregated_files.json.",
       "Using the tool involves providing a list of file paths in the script, running collate_code.py, and opening the resulting JSON output. It is easily customizable: users can extend an extension_map dictionary to support additional languages or file types, and can swap the JSON output for plain text or another format. The project is intentionally minimal, was written for a Windows 10 environment, and is released under the MIT license."
@@ -1280,7 +1340,7 @@
       "source code collation"
     ]
   },
-  "40": {
+  "41": {
     "longDescription": [
       "FirstChat is a full-stack system created by Roman Slack for generating personalized first messages for dating apps. It is organized into three main components that work together: a profile scraper, an API server, and a user-facing web interface, forming an end-to-end pipeline from raw profile data to an analytics-backed opening message.",
       "The profile scraper layer uses Playwright and Chrome to reliably extract profile data and images from dating apps (currently Tinder), saving the details and images into structured folders. The API server is built with FastAPI and processes that profile data and imagery, generating personalized first messages using OpenAI GPT models and Google Cloud Vision for image analysis, all exposed through a RESTful API. A Flask web application provides an intuitive user interface where users can upload images, enter profile information, and view generated messages alongside detailed analytics.",
@@ -1316,7 +1376,7 @@
       "personalized openers"
     ]
   },
-  "41": {
+  "42": {
     "longDescription": [
       "Akta.life is an AI-driven platform, created by Roman Slack and submitted to RIT HackCOMS 24, that serves as a personalized course hub for college students. It analyzes individual learning preferences, academic history, and career goals to recommend courses and professors tailored to each student's unique needs, with a particular focus on empowering first-generation and non-traditional students who often lack clear academic guidance.",
       "The platform gives students detailed insights into course expectations, professor teaching styles, and success rates, helping them find the best fit and avoid mismatches that can lead to academic setbacks. It was built with React and an AI recommendation engine that leverages data on course structures and professor profiles to deliver targeted recommendations, and it integrates accessibility features to serve diverse learning backgrounds.",
@@ -1343,7 +1403,7 @@
       "first-generation students"
     ]
   },
-  "42": {
+  "43": {
     "longDescription": [
       "UrbanSpark is an AI-driven platform built by Roman Slack that personalizes urban opportunity discovery for young adults. It recommends jobs, workshops, and community resources tailored to user profiles, helping empower local engagement and accessibility.",
       "Built at HackRPI 2024, where it won the Best Beginner Hack Award, UrbanSpark uses FastAPI and React on the application side and combines OpenAI with SerpAPI to surface and personalize relevant local opportunities for each user."
@@ -1377,7 +1437,7 @@
       "\ud83e\udd47 Winner \u2014 Best Beginner Hack, HackRPI 2024"
     ]
   },
-  "43": {
+  "44": {
     "longDescription": [
       "StereoToMono is a Chrome extension built by Roman Slack that forces stereo audio into a single mono channel on any web page. With a simple on/off toggle, users can collapse left and right channels into consistent mono sound across all tabs, which is especially useful when wearing a single earbud, using one speaker, or dealing with content that has audio in only one channel.",
       "The extension is intentionally minimal: version 1.0 is a lightweight package (around 23 KiB) that does one thing well. It is privacy-respecting by design, with the developer disclosing that no user data is collected, sold, or used for any purpose unrelated to its core audio-conversion function.",
@@ -1407,7 +1467,7 @@
       "sound utility"
     ]
   },
-  "44": {
+  "45": {
     "longDescription": [
       "Randomized-Timer is a lightweight web app built by Roman Slack that works like an ordinary countdown timer but adds a random amount of extra time at the end of each session. By letting users set a base duration in minutes and seconds along with a minimum and maximum random extension in seconds, the app produces an unpredictable finish time within those bounds.",
       "Roman built the tool for his own daily gym routine, particularly for exercises like planks, where not knowing exactly when the timer will end helps strengthen mental endurance and push through to the finish. It is a simple, focused utility that emphasizes function over complexity, with a minimal interface for entering durations and starting the countdown."
@@ -1434,7 +1494,7 @@
       "roman slack"
     ]
   },
-  "45": {
+  "46": {
     "longDescription": [
       "Roman Slack Portfolio 23 is the personal developer portfolio Roman Slack built in 2023. It combined his frontend development skills with his 3D modeling and Blender work to present his projects in a visually distinctive way.",
       "The portfolio showcased the intersection of web frontend craft and 3D design, using Blender-based assets to create an engaging presentation of Roman Slack's work."
@@ -1457,7 +1517,7 @@
       "creative portfolio"
     ]
   },
-  "46": {
+  "47": {
     "longDescription": [
       "Language Learning Website Tutorial is a beginner-friendly coding tutorial by Roman Slack that walks viewers through building a translation game website from scratch. Published on his YouTube channel as \"How to Make a Translation Game Website,\" it is structured as an approachable starter project for those new to web development.",
       "Through the tutorial, Roman Slack demonstrates how to assemble an interactive language-learning web app, making it a practical entry point for learners who want to build something functional while practicing core web development fundamentals."
@@ -1479,7 +1539,7 @@
       "web dev for beginners"
     ]
   },
-  "47": {
+  "48": {
     "longDescription": [
       "LiftView is a mobile application created by Roman Slack that helps gym owners understand how their facilities are actually used. The app gathers data on the utilization of specific machines along with member metrics, turning day-to-day gym activity into actionable insight for operators.",
       "By tracking which equipment sees the most use and surfacing member-related metrics, LiftView gives gym owners a clearer picture of demand, helping inform decisions about equipment, layout, and capacity. The app was built by Roman Slack with Flutter for the cross-platform mobile experience and Firebase for its backend and data storage."
@@ -1504,7 +1564,7 @@
       "equipment usage data"
     ]
   },
-  "48": {
+  "49": {
     "longDescription": [
       "TickIt is a product concept created by Roman Slack and built for a startup attempting to combine gambling and e-commerce through an innovative raffle system. It is implemented as a Flutter application, providing a cross-platform mobile starting point for the concept.",
       "As an early-stage Flutter project, TickIt represents the foundational scaffolding for the raffle-based commerce idea rather than a fully fleshed-out product."
@@ -1526,7 +1586,7 @@
       "cross-platform app"
     ]
   },
-  "49": {
+  "50": {
     "longDescription": [
       "ChatGPT-SEO-Description-Generator-from-Tags is a Python automation tool by Roman Slack, created while working with firearm parts supplier Jack First to optimize their product SEO using the early OpenAI API era of ChatGPT. The project addresses the practical problem of writing search-optimized product descriptions at scale for a large catalog of parts, using lists of tags as the input signal for each product.",
       "The tool works by reading product tags from a text file in fixed-size batches and driving the ChatGPT interface through desktop UI automation. For each batch it focuses the chat input, submits the tags, waits for a generated description, copies the result, and pastes it into the correct row of a Google Sheets spreadsheet, advancing cell by cell through the catalog. It includes an emergency-stop hotkey and a helper script for capturing on-screen mouse coordinates to calibrate the automation.",
@@ -1561,7 +1621,7 @@
       "openai api"
     ]
   },
-  "50": {
+  "51": {
     "longDescription": [
       "AI Language Tutor is a web development experiment by Roman Slack built as a video tutorial project using OpenAI's GPT-3.5 model. It demonstrates integrating a large language model into a web app to support language tutoring.",
       "The project requires an OpenAI API key, supplied via a local .env file, to power its GPT-3.5-based functionality."
@@ -1584,7 +1644,7 @@
       "tutorial project"
     ]
   },
-  "51": {
+  "52": {
     "longDescription": [
       "Vocal Language App is a language learning app experiment by Roman Slack built entirely with pure HTML, CSS, and JavaScript. Also referred to as a translation game, it explores voice-oriented language learning in a lightweight, dependency-free web project.",
       "As a from-scratch experiment, the app keeps its stack minimal, relying only on core web technologies."
@@ -1608,7 +1668,7 @@
       "voice learning"
     ]
   },
-  "52": {
+  "53": {
     "longDescription": [
       "Bike Across America documents Roman Slack's mountain-biking achievement as a Rapid City teenager who set out to ride 2,020 miles in 2020 and ended up exceeding 3,000 miles over the course of the year. The effort included a solo ride of the Mickelson Trail and a single day in which he covered 109 miles, and it was tied to supporting local trails through his love of mountain biking.",
       "The story, covered by KOTA TV, highlights the personal motivation behind the rides. Roman credits his grandfather, \"Papa Dave\" LaFrance, as his primary inspiration, recalling that his grandfather kept biking through and after cancer treatment and rode many of those miles alongside him.",

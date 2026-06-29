@@ -298,8 +298,60 @@ def build_page(p, details, slug):
     return page
 
 
+def update_noscript(grid, details, slug_for):
+    """Rewrite the <noscript> static fallback in projects.html from projects.json.
+
+    projects.html renders its grid client-side, so non-JS AI crawlers see nothing
+    without this block. It mirrors the main grid (projects.json only — NOT
+    extra_projects.json), one <article> per project, sorted by id. Regenerated here
+    so it can never drift out of sync by hand."""
+    path = os.path.join(ROOT, "projects.html")
+    with open(path) as f:
+        doc = f.read()
+
+    articles = []
+    for p in sorted(grid, key=lambda x: x["id"]):
+        slug = slug_for[p["id"]]
+        url = resolved_path(p, slug)
+        title = esc(p["title"])
+        # Match the established noscript style: lowercase category, raw MM-YYYY date, raw hours.
+        meta_bits = [esc(p.get("category", "")), esc(p.get("date", ""))]
+        hours = p.get("hours", "")
+        if hours not in (None, "", 0, "0"):
+            meta_bits.append(f"{esc(str(hours))} hours")
+        meta = " &middot; ".join(b for b in meta_bits if b)
+        desc = esc((p.get("description") or "").strip())
+        link = p.get("link") or ""
+        more = f'<a href="{url}">Read more about {title} by Roman Slack</a>'
+        # External (http) or root-relative (/polydb/...) links get a "live / source" CTA.
+        # Relative own-page links (projects/<slug>.html on customPage entries) get none.
+        if link.startswith(("http", "/")):
+            more += f' &middot; <a href="{esc(abs_url(link))}" rel="noopener">live / source</a>'
+        articles.append(
+            f"""            <article>
+                <h2><a href="{url}">{title}</a></h2>
+                <p class="meta">{meta}</p>
+                <p>{desc}</p>
+                <p>{more}</p>
+            </article>""")
+
+    block = (
+        "        <noscript>\n"
+        '        <div class="noscript-projects">\n'
+        f'            <p>Roman Slack has built {len(grid)} projects. The interactive grid requires '
+        'JavaScript; each project also has its own page linked below (and the full text is in '
+        '<a href="/llms-full.txt">llms-full.txt</a>).</p>\n'
+        + "\n".join(articles)
+        + "\n        </div>\n        </noscript>"
+    )
+    new_doc = re.sub(r"        <noscript>.*?        </noscript>", lambda _: block, doc, count=1, flags=re.S)
+    with open(path, "w") as f:
+        f.write(new_doc)
+
+
 def main():
-    projects = json.load(open(os.path.join(ROOT, "projects.json")))
+    grid = json.load(open(os.path.join(ROOT, "projects.json")))
+    projects = list(grid)
     # extra_projects.json: projects that get a detail page + hub entry but are NOT in the
     # main projects.html grid (e.g. flagship work like JTAI). Optional.
     extra_path = os.path.join(ROOT, "extra_projects.json")
@@ -335,9 +387,10 @@ def main():
 
     write_index(written, details)
     update_sitemap(written)
+    update_noscript(grid, details, slug_for)
     # expose slug map for the noscript regenerator
     json.dump({p["id"]: s for p, s in written}, open(os.path.join(ROOT, ".project_slugs.json"), "w"))
-    print(f"Generated {len(written)} project pages + projects/index.html")
+    print(f"Generated {len(written)} project pages + projects/index.html + projects.html noscript")
     return written
 
 

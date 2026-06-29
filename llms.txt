@@ -19,6 +19,7 @@
 - [Contact](https://romanslack.com/contact.html): Email and social links.
 
 ## Selected work
+- [Dual Cameras](https://github.com/RomanSlack/dual_cameras): A native dual-camera recorder for Flutter that records the front and back cameras at the same time, composited live on the GPU into a single portrait .mp4 and photo (picture-in-picture, circle, or split). The first Flutter plugin to actually record a composited dual-cam video, open-source and federated across Android and iOS. Live: https://dualcameras.com
 - [How I Build with AI Agents](https://romanslack.com/projects/ai-agent-workflow.html): A visual guide to Roman Slack's AI coding-agent workflow as an Agent Fleet Engineer — the three methods he uses (from zero, a small feature in a large codebase, and a massive rework) plus copyable prompts to set up the same workflow.
 - [Just-Tech AI (JTAI)](https://jtai.law): Production legal-AI platform deployed to 60,000+ users.
 - [Hlynr Intercept](https://github.com/RomanSlack/Hlynr_Intercept): Radar-based missile-interception reinforcement learning environment with a custom Unity simulation layer.
