@@ -8,7 +8,8 @@
     "hours": 6,
     "image": "images/resized_1_portfolio/dual_cameras.jpg",
     "link": "https://github.com/RomanSlack/dual_cameras",
-    "inProgress": true
+    "inProgress": true,
+    "cardLink": "/projects/dual-cameras.html"
   },
   {
     "id": 2,

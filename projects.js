@@ -35,12 +35,14 @@ function renderProjects(projects) {
 // Create a project card element
 function createProjectCard(project) {
     const card = document.createElement('a');
-    card.href = project.link || '#';
+    // cardLink (an on-site detail page) wins over the raw external link, so the card
+    // opens the project's own page (with its SEO + links) instead of jumping to GitHub.
+    card.href = project.cardLink || project.link || '#';
     card.className = 'project-card';
     card.dataset.order = project.id;
 
-    // All links open in new tab
-    if (project.link && project.link !== '#') {
+    // External links open in a new tab; an on-site cardLink navigates in place.
+    if (!project.cardLink && project.link && project.link !== '#') {
         card.target = '_blank';
     }
 
