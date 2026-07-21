@@ -7,16 +7,13 @@
 // All are driven by WORKOS_AUTHKIT_DOMAIN. If it is unset, every path returns
 // 404: we never advertise an authorization server that does not exist.
 
-const ORIGIN = "https://romanslack.com";
-const RESOURCE = `${ORIGIN}/mcp`;
-
 const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body, null, 2), {
     status,
     headers: {
       "content-type": "application/json; charset=utf-8",
       "access-control-allow-origin": "*",
-      "cache-control": "public, max-age=3600",
+      "cache-control": "public, max-age=60",
     },
   });
 
@@ -27,16 +24,20 @@ export async function GET(req: Request) {
   // Accept either a bare host or a full URL, with or without a trailing slash.
   const host = domain.replace(/^https?:\/\//, "").replace(/\/+$/, "");
   const issuer = `https://${host}`;
-  const path = new URL(req.url).pathname;
+  const url = new URL(req.url);
+  const path = url.pathname;
+  // Bind the resource to the origin actually being served (apex or www) so the
+  // resource identifier always matches the requesting host.
+  const origin = url.origin;
 
   if (path.includes("oauth-protected-resource")) {
     return json({
-      resource: RESOURCE,
+      resource: `${origin}/mcp`,
       authorization_servers: [issuer],
       scopes_supported: ["portfolio:read"],
       bearer_methods_supported: ["header"],
       resource_name: "Roman Slack Portfolio MCP",
-      resource_documentation: `${ORIGIN}/llms.txt`,
+      resource_documentation: `${origin}/llms.txt`,
     });
   }
 
@@ -62,12 +63,19 @@ export async function GET(req: Request) {
     // fall back to the minimal base above
   }
 
+  // Prefer WorkOS's real registration endpoint if it advertises one.
+  const registration = (base.registration_endpoint as string) || `${issuer}/oauth2/register`;
+
   return json({
     ...base,
     scopes_supported: ["portfolio:read"],
     // auth.md (WorkOS) profile: points agents at the registration runbook.
     agent_auth: {
-      skill: `${ORIGIN}/auth.md`,
+      skill: `${origin}/auth.md`,
+      register_uri: registration,
+      identity_endpoint: `${issuer}/agent/identity`,
+      claim_endpoint: `${issuer}/agent/identity/claim`,
+      revocation_endpoint: (base.revocation_endpoint as string) || `${issuer}/oauth2/revoke`,
       identity_types_supported: ["anonymous", "identity_assertion", "service_auth"],
       identity_assertion: {
         assertion_types_supported: ["urn:ietf:params:oauth:token-type:id-jag"],

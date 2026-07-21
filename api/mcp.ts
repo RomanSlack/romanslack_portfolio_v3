@@ -5,7 +5,6 @@ import { createRemoteJWKSet, jwtVerify } from "jose";
 // Canonical origin. Portfolio data is fetched from the live static JSON so the
 // MCP server stays single-sourced with the site (no bundled copy to drift).
 const ORIGIN = "https://romanslack.com";
-const RESOURCE = `${ORIGIN}/mcp`;
 
 async function getJson(path: string): Promise<any> {
   const res = await fetch(`${ORIGIN}${path}`, { headers: { accept: "application/json" } });
@@ -99,10 +98,14 @@ if (authkitDomain) {
     if (!bearer) return undefined;
     try {
       const { payload } = await jwtVerify(bearer, jwks, { issuer });
-      // RFC 8707: the token audience must be bound to this resource.
-      const aud = payload.aud;
-      const audOk = Array.isArray(aud) ? aud.includes(RESOURCE) : aud === RESOURCE;
-      if (!audOk) return undefined;
+      // RFC 8707: the token audience must be bound to this resource. Accept
+      // either host (apex or www) since both serve the same MCP server.
+      const allowed = new Set([
+        "https://romanslack.com/mcp",
+        "https://www.romanslack.com/mcp",
+      ]);
+      const auds = Array.isArray(payload.aud) ? payload.aud : [payload.aud];
+      if (!auds.some((a) => typeof a === "string" && allowed.has(a))) return undefined;
       const scope = typeof payload.scope === "string" ? payload.scope.split(" ") : [];
       return {
         token: bearer,
