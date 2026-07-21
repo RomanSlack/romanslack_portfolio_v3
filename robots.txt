@@ -71,7 +71,12 @@ User-agent: Bingbot
 Allow: /
 
 # ----- Everyone else -----
+# Content usage: this is a public professional portfolio. Every use is welcome:
+# search indexing, real-time AI grounding, and model training are all permitted.
+# Content-Signal (contentsignals.org) and Content-Usage (IETF AIPREF draft) both stated.
 User-agent: *
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Content-Usage: search=y, train-ai=y
 
 Sitemap: https://romanslack.com/sitemap.xml

@@ -265,5 +265,97 @@
         </div>
     </footer>
     <script defer src="/_vercel/insights/script.js"></script>
+
+    <!-- WebMCP: expose read-only portfolio tools to AI agents.
+         Self-contained provider (no third-party code). Implements the additive
+         registerTool() API on document.modelContext, per the WebMCP spec, and
+         mirrors it on navigator.modelContext for clients that read the older
+         location. If a browser ships a native implementation, we use it and do
+         not overwrite it. -->
+    <script>
+    (function () {
+      function makeContext() {
+        var tools = [];
+        return {
+          registerTool: function (tool) {
+            for (var i = 0; i < tools.length; i++) {
+              if (tools[i].name === tool.name) { tools[i] = tool; return Promise.resolve(); }
+            }
+            tools.push(tool);
+            return Promise.resolve();
+          },
+          getTools: function () { return Promise.resolve(tools.slice()); },
+          _tools: tools
+        };
+      }
+
+      // Use a native ModelContext if present; otherwise install our shim.
+      var ctx = (self.document && document.modelContext) ||
+                (self.navigator && navigator.modelContext);
+      if (!ctx || typeof ctx.registerTool !== "function") {
+        ctx = makeContext();
+        try { Object.defineProperty(document, "modelContext", { value: ctx, configurable: true }); } catch (e) {}
+        try {
+          if (!navigator.modelContext) {
+            Object.defineProperty(navigator, "modelContext", { value: ctx, configurable: true });
+          }
+        } catch (e) {}
+      }
+
+      function projectMatches(p, q) {
+        q = q.toLowerCase();
+        return (p.title && p.title.toLowerCase().indexOf(q) !== -1) ||
+               (p.description && p.description.toLowerCase().indexOf(q) !== -1) ||
+               (p.category && p.category.toLowerCase().indexOf(q) !== -1);
+      }
+
+      ctx.registerTool({
+        name: "search_projects",
+        title: "Search Roman Slack's projects",
+        description: "Search Roman Slack's portfolio projects by keyword and return matching titles, dates, categories, and links. Read-only.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            query: { type: "string", description: "Keyword to match against project title, description, or category." },
+            limit: { type: "integer", minimum: 1, maximum: 25, description: "Max results (default 10)." }
+          },
+          required: ["query"]
+        },
+        annotations: { readOnlyHint: true },
+        execute: async function (input) {
+          var res = await fetch("/projects.json", { headers: { accept: "application/json" } });
+          var all = await res.json();
+          var hits = all.filter(function (p) { return projectMatches(p, input.query); })
+                        .slice(0, input.limit || 10)
+                        .map(function (p) {
+                          return { id: p.id, title: p.title, date: p.date, category: p.category, link: p.link || null, description: p.description };
+                        });
+          return { content: [{ type: "text", text: JSON.stringify({ count: hits.length, results: hits }, null, 2) }] };
+        }
+      });
+
+      ctx.registerTool({
+        name: "get_project",
+        title: "Get one of Roman Slack's projects in detail",
+        description: "Return full detail (long description, features, tech stack, tags) for a single project by its numeric id. Read-only.",
+        inputSchema: {
+          type: "object",
+          properties: { id: { type: "integer", description: "Project id from search_projects." } },
+          required: ["id"]
+        },
+        annotations: { readOnlyHint: true },
+        execute: async function (input) {
+          var pr = await fetch("/projects.json", { headers: { accept: "application/json" } });
+          var projects = await pr.json();
+          var project = projects.filter(function (p) { return p.id === input.id; })[0];
+          if (!project) return { content: [{ type: "text", text: "No project with id " + input.id }] };
+          var dr = await fetch("/project_details.json", { headers: { accept: "application/json" } });
+          var details = await dr.json();
+          var merged = Object.assign({}, project, details[String(input.id)] || {});
+          return { content: [{ type: "text", text: JSON.stringify(merged, null, 2) }] };
+        }
+      });
+    })();
+    </script>
 </body>
 </html>

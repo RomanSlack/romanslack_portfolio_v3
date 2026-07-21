@@ -1,0 +1,38 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://romanslack.com/projects.json",
+      "service-desc": [
+        {
+          "href": "https://romanslack.com/openapi.json",
+          "type": "application/vnd.oai.openapi+json;version=3.1",
+          "title": "Roman Slack portfolio data API (OpenAPI 3.1)"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://romanslack.com/llms.txt",
+          "type": "text/plain",
+          "title": "Human- and agent-readable site overview"
+        }
+      ],
+      "service-meta": [
+        {
+          "href": "https://romanslack.com/robots.txt",
+          "type": "text/plain",
+          "title": "Crawl and content-usage policy"
+        }
+      ]
+    },
+    {
+      "anchor": "https://romanslack.com/mcp",
+      "service-desc": [
+        {
+          "href": "https://romanslack.com/mcp/server-card",
+          "type": "application/mcp-server-card+json",
+          "title": "Portfolio MCP server card"
+        }
+      ]
+    }
+  ]
+}

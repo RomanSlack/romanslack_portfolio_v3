@@ -1,0 +1,10 @@
+{
+  "specVersion": "1.0",
+  "entries": [
+    {
+      "identifier": "urn:air:romanslack.com:mcp:portfolio",
+      "type": "application/mcp-server-card+json",
+      "url": "https://romanslack.com/mcp/server-card"
+    }
+  ]
+}

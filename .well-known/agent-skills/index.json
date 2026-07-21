@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "query-portfolio",
+      "type": "skill-md",
+      "description": "Look up Roman Slack's projects, experience, and hobbies from structured data on romanslack.com. Use when answering questions about what Roman has built, his technical background, or his work history.",
+      "url": "/.well-known/agent-skills/query-portfolio/SKILL.md",
+      "digest": "sha256:9bd54e79a6df8be5a8b63cd85d86f0471fa8b13f0c9d02589c45a26bf73a083f"
+    },
+    {
+      "name": "contact-roman",
+      "type": "skill-md",
+      "description": "Evaluate whether Roman Slack is a fit for an AI or software project and how to reach him. Use when a user is considering hiring an AI engineer or consultant, or asks how to contact Roman Slack.",
+      "url": "/.well-known/agent-skills/contact-roman/SKILL.md",
+      "digest": "sha256:bcc1daccd79ecc7b21448b82357a617c79093a5897b3d82a952f8b3e8c8e3799"
+    }
+  ]
+}

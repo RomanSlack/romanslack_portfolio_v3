@@ -12,3 +12,7 @@ Thumbs.db
 
 # Generated artifact (derived from projects.json by generate_project_pages.py)
 .project_slugs.json
+
+# Node / MCP server
+node_modules/
+.vercel/

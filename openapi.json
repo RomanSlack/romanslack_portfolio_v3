@@ -1,0 +1,104 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Roman Slack Portfolio Data API",
+    "version": "1.0.0",
+    "description": "Read-only JSON describing Roman Slack's portfolio: projects, rich per-project detail, and hobbies. These are static resources served directly by the site; every endpoint is a plain HTTP GET requiring no authentication.",
+    "contact": { "name": "Roman Slack", "email": "romanslack1@gmail.com", "url": "https://romanslack.com/contact.html" },
+    "license": { "name": "All rights reserved" }
+  },
+  "servers": [{ "url": "https://romanslack.com" }],
+  "paths": {
+    "/projects.json": {
+      "get": {
+        "operationId": "listProjects",
+        "summary": "List every project",
+        "description": "Returns the full array of projects, ordered by id (lower id = more prominent). Each project carries title, description, date (MM-YYYY), category, hours invested, an image or images, and an optional external link.",
+        "responses": {
+          "200": {
+            "description": "Array of projects",
+            "content": {
+              "application/json": {
+                "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Project" } }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/project_details.json": {
+      "get": {
+        "operationId": "getProjectDetails",
+        "summary": "Rich detail for projects, keyed by project id",
+        "description": "An object keyed by project id string. Each value adds longDescription, features, techStack, and tags for the matching project in /projects.json.",
+        "responses": {
+          "200": {
+            "description": "Object mapping project id to detail",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": { "$ref": "#/components/schemas/ProjectDetail" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/hobbies.json": {
+      "get": {
+        "operationId": "listHobbies",
+        "summary": "List hobbies as a sized word cloud",
+        "responses": {
+          "200": {
+            "description": "Array of hobby entries",
+            "content": {
+              "application/json": {
+                "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Hobby" } }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Project": {
+        "type": "object",
+        "required": ["id", "title", "description", "date", "category", "hours"],
+        "properties": {
+          "id": { "type": "integer", "description": "Display order; lower is more prominent" },
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "date": { "type": "string", "pattern": "^\\d{2}-\\d{4}$", "description": "MM-YYYY" },
+          "category": { "type": "string", "enum": ["programming", "architecture", "other"] },
+          "hours": { "type": "number" },
+          "image": { "type": "string" },
+          "images": { "type": "array", "items": { "type": "string" } },
+          "link": { "type": "string", "format": "uri" },
+          "inProgress": { "type": "boolean" },
+          "research": { "type": "boolean" }
+        }
+      },
+      "ProjectDetail": {
+        "type": "object",
+        "properties": {
+          "longDescription": { "type": "string" },
+          "features": { "type": "array", "items": { "type": "string" } },
+          "techStack": { "type": "array", "items": { "type": "string" } },
+          "tags": { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "Hobby": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string" },
+          "content": { "type": "string" },
+          "size": { "type": "string", "enum": ["small", "medium", "large"] }
+        }
+      }
+    }
+  }
+}

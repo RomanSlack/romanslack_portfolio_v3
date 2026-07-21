@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
+  "name": "romanslack.com/portfolio",
+  "version": "1.0.0",
+  "title": "Roman Slack Portfolio",
+  "description": "Read-only access to Roman Slack's projects, experience, and hobbies.",
+  "websiteUrl": "https://romanslack.com",
+  "repository": {
+    "url": "https://github.com/romanslack/romanslack_portfolio_v3",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://romanslack.com/android-chrome-512x512.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://romanslack.com/mcp",
+      "supportedProtocolVersions": ["2025-06-18", "2025-11-25"]
+    }
+  ]
+}
