@@ -20,7 +20,7 @@ const json = (body: unknown, status = 200) =>
     },
   });
 
-export function GET(req: Request) {
+export async function GET(req: Request) {
   const domain = process.env.WORKOS_AUTHKIT_DOMAIN;
   if (!domain) return json({ error: "authorization not configured" }, 404);
 
@@ -40,25 +40,34 @@ export function GET(req: Request) {
     });
   }
 
-  // oauth-authorization-server and openid-configuration
-  return json({
+  // Authorization Server metadata (also aliased at openid-configuration).
+  // Proxy WorkOS's real document so we never advertise more than the tenant
+  // actually supports (no registration_endpoint or CIMD unless WorkOS truly
+  // serves them). We add only the resource scope and the auth.md pointer.
+  let base: Record<string, unknown> = {
     issuer,
     authorization_endpoint: `${issuer}/oauth2/authorize`,
     token_endpoint: `${issuer}/oauth2/token`,
-    registration_endpoint: `${issuer}/oauth2/register`,
     jwks_uri: `${issuer}/oauth2/jwks`,
-    revocation_endpoint: `${issuer}/oauth2/revoke`,
     response_types_supported: ["code"],
     grant_types_supported: ["authorization_code", "refresh_token"],
-    token_endpoint_auth_methods_supported: ["client_secret_basic", "client_secret_post", "none"],
     code_challenge_methods_supported: ["S256"],
+  };
+  try {
+    const upstream = await fetch(`${issuer}/.well-known/oauth-authorization-server`, {
+      headers: { accept: "application/json" },
+    });
+    if (upstream.ok) base = (await upstream.json()) as Record<string, unknown>;
+  } catch {
+    // fall back to the minimal base above
+  }
+
+  return json({
+    ...base,
     scopes_supported: ["portfolio:read"],
-    client_id_metadata_document_supported: true,
-    // auth.md (WorkOS) profile: how an agent registers and claims an identity.
+    // auth.md (WorkOS) profile: points agents at the registration runbook.
     agent_auth: {
       skill: `${ORIGIN}/auth.md`,
-      identity_endpoint: `${issuer}/agent/identity`,
-      claim_endpoint: `${issuer}/agent/identity/claim`,
       identity_types_supported: ["anonymous", "identity_assertion", "service_auth"],
       identity_assertion: {
         assertion_types_supported: ["urn:ietf:params:oauth:token-type:id-jag"],
