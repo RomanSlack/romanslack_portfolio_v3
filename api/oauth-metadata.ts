@@ -24,7 +24,9 @@ export function GET(req: Request) {
   const domain = process.env.WORKOS_AUTHKIT_DOMAIN;
   if (!domain) return json({ error: "authorization not configured" }, 404);
 
-  const issuer = `https://${domain}`;
+  // Accept either a bare host or a full URL, with or without a trailing slash.
+  const host = domain.replace(/^https?:\/\//, "").replace(/\/+$/, "");
+  const issuer = `https://${host}`;
   const path = new URL(req.url).pathname;
 
   if (path.includes("oauth-protected-resource")) {

@@ -90,7 +90,9 @@ const authkitDomain = process.env.WORKOS_AUTHKIT_DOMAIN;
 let exported = handler;
 
 if (authkitDomain) {
-  const issuer = `https://${authkitDomain}`;
+  // Accept either a bare host or a full URL, with or without a trailing slash.
+  const host = authkitDomain.replace(/^https?:\/\//, "").replace(/\/+$/, "");
+  const issuer = `https://${host}`;
   const jwks = createRemoteJWKSet(new URL(`${issuer}/oauth2/jwks`));
 
   const verifyToken = async (_req: Request, bearer?: string) => {
