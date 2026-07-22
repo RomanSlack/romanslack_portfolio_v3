@@ -30,6 +30,22 @@ export async function GET(req: Request) {
   // resource identifier always matches the requesting host.
   const origin = url.origin;
 
+  // Shared auth.md agent_auth block, embedded in both discovery documents so
+  // any scanner interpretation finds it.
+  const agentAuth = {
+    skill: `${origin}/auth.md`,
+    register_uri: `${issuer}/oauth2/register`,
+    registration_endpoint: `${issuer}/oauth2/register`,
+    identity_endpoint: `${issuer}/agent/identity`,
+    claim_endpoint: `${issuer}/agent/identity/claim`,
+    revocation_endpoint: `${issuer}/oauth2/revoke`,
+    identity_types_supported: ["anonymous", "identity_assertion", "service_auth"],
+    credential_types_supported: ["access_token", "refresh_token"],
+    identity_assertion: {
+      assertion_types_supported: ["urn:ietf:params:oauth:token-type:id-jag"],
+    },
+  };
+
   if (path.includes("oauth-protected-resource")) {
     return json({
       resource: `${origin}/mcp`,
@@ -38,6 +54,7 @@ export async function GET(req: Request) {
       bearer_methods_supported: ["header"],
       resource_name: "Roman Slack Portfolio MCP",
       resource_documentation: `${origin}/llms.txt`,
+      agent_auth: agentAuth,
     });
   }
 
@@ -63,24 +80,12 @@ export async function GET(req: Request) {
     // fall back to the minimal base above
   }
 
-  // Prefer WorkOS's real registration endpoint if it advertises one.
-  const registration = (base.registration_endpoint as string) || `${issuer}/oauth2/register`;
-
   return json({
     ...base,
     scopes_supported: ["portfolio:read"],
+    registration_endpoint: (base.registration_endpoint as string) || `${issuer}/oauth2/register`,
     // auth.md (WorkOS) profile: points agents at the registration runbook.
-    agent_auth: {
-      skill: `${origin}/auth.md`,
-      register_uri: registration,
-      identity_endpoint: `${issuer}/agent/identity`,
-      claim_endpoint: `${issuer}/agent/identity/claim`,
-      revocation_endpoint: (base.revocation_endpoint as string) || `${issuer}/oauth2/revoke`,
-      identity_types_supported: ["anonymous", "identity_assertion", "service_auth"],
-      identity_assertion: {
-        assertion_types_supported: ["urn:ietf:params:oauth:token-type:id-jag"],
-      },
-    },
+    agent_auth: agentAuth,
   });
 }
 
