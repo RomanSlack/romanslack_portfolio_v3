@@ -31,5 +31,13 @@
 - [PompCheer AI](https://ai.pompcheer.com): AI product built for PompCheer.
 - [PompCheer Team Store](https://teamstore.pompcheer.com): Team store web app built for PompCheer.
 
+## Developer resources
+- [Developer portal](https://romanslack.com/developers): The Roman Slack Portfolio API hub, covering quickstart, REST/JSON endpoints, the MCP server, auth, and error format. No API key required.
+- [OpenAPI spec](https://romanslack.com/openapi.json): OpenAPI 3.1 description of the read-only portfolio data API (projects, project details, hobbies).
+- [Portfolio MCP server](https://romanslack.com/mcp): Read-only Model Context Protocol server. Tools: list_projects, search_projects, get_project, list_hobbies.
+- [MCP server card](https://romanslack.com/mcp/server-card): Machine-readable description of the MCP server.
+- [Authentication guide](https://romanslack.com/auth.md): How agents authenticate (OAuth 2.1) when bearer auth is enabled; open by default for public data.
+- [API catalog](https://romanslack.com/.well-known/api-catalog): RFC 9727 linkset pointing at every machine-readable resource.
+
 ## Optional
 - [Full content for AI models](https://romanslack.com/llms-full.txt): Complete site export — every project, role, and hobby in clean markdown.

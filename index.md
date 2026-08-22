@@ -29,6 +29,7 @@ multi-agent LLM simulation, and full-stack web applications.
 
 ## Machine-readable data
 
+- Developer portal: https://romanslack.com/developers
 - Overview: https://romanslack.com/llms.txt
 - Full site export: https://romanslack.com/llms-full.txt
 - Projects API (OpenAPI): https://romanslack.com/openapi.json

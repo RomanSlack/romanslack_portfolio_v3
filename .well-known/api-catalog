@@ -11,6 +11,11 @@
       ],
       "service-doc": [
         {
+          "href": "https://romanslack.com/developers",
+          "type": "text/html",
+          "title": "Roman Slack Portfolio API developer portal"
+        },
+        {
           "href": "https://romanslack.com/llms.txt",
           "type": "text/plain",
           "title": "Human- and agent-readable site overview"
