@@ -1,0 +1,37 @@
+{
+  "name": "romanslack",
+  "version": "1.0.0",
+  "description": "Official CLI for the Roman Slack portfolio API (romanslack.com): query projects, project detail, and hobbies from the terminal.",
+  "type": "module",
+  "bin": {
+    "romanslack": "index.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "lib.mjs",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "romanslack",
+    "roman slack",
+    "portfolio",
+    "api",
+    "cli",
+    "mcp",
+    "ai"
+  ],
+  "author": "Roman Slack",
+  "license": "MIT",
+  "homepage": "https://romanslack.com/developers",
+  "bugs": {
+    "url": "https://github.com/RomanSlack/romanslack_portfolio_v3/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomanSlack/romanslack_portfolio_v3.git",
+    "directory": "cli"
+  }
+}

@@ -47,7 +47,7 @@
 <body>
     <header>
         <a href="index.html" class="back-arrow">&larr;</a>
-        <h1>Developers</h1>
+        <h1>Roman Slack API</h1>
     </header>
 
     <main class="dev-main">
@@ -70,6 +70,22 @@
                 <li><a href="/hobbies.json">/hobbies.json</a>: hobbies as a sized word cloud.</li>
             </ul>
 
+            <h2>Command-line tool (CLI)</h2>
+            <p>The official <code>romanslack</code> CLI wraps the same read-only endpoints so agents and developers can script against the portfolio without writing HTTP calls. Zero dependencies; no API key.</p>
+            <pre><code>npx romanslack projects --limit 5
+npx romanslack search "reinforcement learning"
+npx romanslack project 1 --json
+npx romanslack hobbies</code></pre>
+            <p>Source and install instructions: <a href="https://github.com/RomanSlack/romanslack_portfolio_v3/tree/main/cli" target="_blank" rel="noopener">cli/ on GitHub</a>.</p>
+
+            <h2>Versioning and deprecation</h2>
+            <p>This is API version 1. Every resource is available both unversioned and under the stable <code>/v1</code> base path; the two are identical aliases.</p>
+            <ul class="dev-list">
+                <li><a href="/v1/projects.json">/v1/projects.json</a> mirrors <a href="/projects.json">/projects.json</a>.</li>
+                <li>Breaking changes ship under a new prefix such as <code>/v2</code>, so an integration pinned to <code>/v1</code> keeps working.</li>
+                <li>A deprecated endpoint responds for at least 6 months and carries the standard <code>Deprecation</code> and <code>Sunset</code> response headers (RFC 8594) pointing at its replacement. Nothing is currently deprecated.</li>
+            </ul>
+
             <h2>MCP server</h2>
             <p>A read-only <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener">Model Context Protocol</a> server exposes the same portfolio data as callable tools.</p>
             <ul class="dev-list">
@@ -86,7 +102,7 @@
             </ul>
 
             <h2>Error responses</h2>
-            <p>Unknown API paths return a real HTTP <code>404</code> with a structured JSON body so agents can parse and recover:</p>
+            <p>Unknown API paths and failures return a real HTTP 4xx or 5xx status with a typed JSON error object (documented as the <code>Error</code> schema in <a href="/openapi.json">/openapi.json</a>) so agents can parse and recover:</p>
             <pre><code>{
   "error": {
     "code": "not_found",

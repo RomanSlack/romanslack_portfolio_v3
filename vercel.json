@@ -10,6 +10,10 @@
     { "source": "/.well-known/oauth-authorization-server", "destination": "/api/oauth-metadata" },
     { "source": "/.well-known/openid-configuration", "destination": "/api/oauth-metadata" },
     { "source": "/developers", "destination": "/developers.html" },
+    { "source": "/v1/projects.json", "destination": "/projects.json" },
+    { "source": "/v1/project_details.json", "destination": "/project_details.json" },
+    { "source": "/v1/hobbies.json", "destination": "/hobbies.json" },
+    { "source": "/v1/openapi.json", "destination": "/openapi.json" },
     { "source": "/(.*)", "destination": "/api/not-found" }
   ],
   "headers": [

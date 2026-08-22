@@ -3,11 +3,14 @@
   "info": {
     "title": "Roman Slack Portfolio Data API",
     "version": "1.0.0",
-    "description": "Read-only JSON describing Roman Slack's portfolio: projects, rich per-project detail, and hobbies. These are static resources served directly by the site; every endpoint is a plain HTTP GET requiring no authentication.",
+    "description": "Read-only JSON describing Roman Slack's portfolio: projects, rich per-project detail, and hobbies. These are static resources served directly by the site; every endpoint is a plain HTTP GET requiring no authentication.\n\nVersioning: this is API version 1. Every resource is available both unversioned (for example /projects.json) and under the stable /v1 base path (for example /v1/projects.json); the two are identical aliases. Breaking changes ship under a new base path such as /v2, so an integration pinned to /v1 keeps working.\n\nDeprecation policy: when an endpoint is deprecated it continues to respond for at least 6 months and carries the standard Deprecation and Sunset HTTP response headers (RFC 8594) pointing at the replacement. No endpoint is currently deprecated.\n\nErrors: unknown paths and failures return a real 4xx or 5xx status with the typed Error object documented below (a machine-readable code plus a human-readable message), served as application/json.",
     "contact": { "name": "Roman Slack", "email": "romanslack1@gmail.com", "url": "https://romanslack.com/contact.html" },
     "license": { "name": "All rights reserved" }
   },
-  "servers": [{ "url": "https://romanslack.com" }],
+  "servers": [
+    { "url": "https://romanslack.com", "description": "Unversioned base path; aliases the current stable version (v1)." },
+    { "url": "https://romanslack.com/v1", "description": "Version 1 (current stable). Breaking changes will ship under a new prefix such as /v2." }
+  ],
   "paths": {
     "/projects.json": {
       "get": {
@@ -22,7 +25,8 @@
                 "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Project" } }
               }
             }
-          }
+          },
+          "default": { "$ref": "#/components/responses/Error" }
         }
       }
     },
@@ -42,7 +46,8 @@
                 }
               }
             }
-          }
+          },
+          "default": { "$ref": "#/components/responses/Error" }
         }
       }
     },
@@ -58,13 +63,45 @@
                 "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Hobby" } }
               }
             }
-          }
+          },
+          "default": { "$ref": "#/components/responses/Error" }
         }
       }
     }
   },
   "components": {
+    "responses": {
+      "Error": {
+        "description": "Structured error response. Served as application/json with a machine-readable code and a human-readable message so agents can handle failures without parsing HTML.",
+        "content": {
+          "application/json": {
+            "schema": { "$ref": "#/components/schemas/Error" }
+          }
+        }
+      }
+    },
     "schemas": {
+      "Error": {
+        "type": "object",
+        "description": "Typed error object returned for 4xx and 5xx responses.",
+        "required": ["error"],
+        "properties": {
+          "error": {
+            "type": "object",
+            "required": ["code", "status", "message"],
+            "properties": {
+              "code": { "type": "string", "description": "Stable, machine-readable error code", "examples": ["not_found"] },
+              "status": { "type": "integer", "description": "HTTP status code", "examples": [404] },
+              "message": { "type": "string", "description": "Human-readable explanation" },
+              "hint": { "type": "string", "description": "Suggested next step for recovery" },
+              "documentation": { "type": "string", "format": "uri", "description": "Developer portal URL" },
+              "openapi": { "type": "string", "format": "uri", "description": "URL of this OpenAPI document" },
+              "sitemap": { "type": "string", "format": "uri" },
+              "llms": { "type": "string", "format": "uri" }
+            }
+          }
+        }
+      },
       "Project": {
         "type": "object",
         "required": ["id", "title", "description", "date", "category", "hours"],
