@@ -3,7 +3,7 @@
 **Lead AI Platform Engineer** at [Just-Tech LLC](https://jtai.law)
 
 Roman Slack builds production AI systems for the legal sector, deployed to leading legal
-aid organizations across the country, helping citizens in 5 states. He works remotely from Salt Lake City, Utah,
+aid organizations across the country, helping millions of citizens across 5 states. He works remotely from Salt Lake City, Utah,
 and is available for work in New York City. He also takes on independent AI consulting
 for companies and founders. Previously an AI research intern at the Air Force Research
 Laboratory (AFRL) Information Directorate.
