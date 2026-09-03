@@ -2,15 +2,15 @@
   "0": {
     "longDescription": [
       "Just-Tech AI (JTAI) is an AI-powered legal document intelligence platform that Roman Slack solo-built from the ground up. As Lead AI Platform Engineer at Just-Tech LLC, he took the product from zero to a working, client-facing system serving the legal sector, owning every layer of the stack himself \u2014 the frontend, the backend, the cloud infrastructure, and the deployment.",
-      "Branded \"JT AI \u2014 AI-Powered Legal Document Intelligence,\" the platform applies machine learning and large language models to process, understand, and analyze legal documents. It was built in close, direct collaboration with real clients \u2014 including the New York State Bar Association and numerous state legal service leaders \u2014 deployed to over 60,000 users with more than $130,000 in sales generated.",
+      "Branded \"JT AI \u2014 AI-Powered Legal Document Intelligence,\" the platform applies machine learning and large language models to process, understand, and analyze legal documents. It was built in close, direct collaboration with real clients \u2014 including the New York State Bar Association and numerous state legal service leaders \u2014 deployed to leading legal aid organizations across the country, helping citizens in 5 states.",
       "Roman Slack architected and operated the entire system single-handedly, integrating Google Cloud and Azure for a scalable, performant, production-grade backend. JTAI stands as an end-to-end legal-AI product owned solo from concept through infrastructure, engineering, and client delivery \u2014 a complete platform shipped by one engineer."
     ],
     "features": [
       "AI-powered legal document intelligence and analysis",
       "Solo-built end to end \u2014 frontend, backend, and cloud infrastructure",
       "Built in direct collaboration with legal-sector clients",
-      "Deployed to 60,000+ users",
-      "$130,000+ in sales generated",
+      "Deployed to leading legal aid organizations across the country",
+      "Helping citizens in 5 states",
       "Scalable cloud backend integrating Google Cloud and Azure"
     ],
     "techStack": [
